@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://fortnitehubpro.com/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://fortnitehubpro.com/beginner.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fortnitehubpro.com/weapons.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fortnitehubpro.com/building.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://fortnitehubpro.com/map.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fortnitehubpro.com/battlepass.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fortnitehubpro.com/esports.html</loc><priority>0.8</priority><changefreq>daily</changefreq></url>
+</urlset>
