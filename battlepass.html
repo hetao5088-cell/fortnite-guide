@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>战斗通行证攻略 · 堡垒攻略 ForniteHubPro</title>
+<meta name="description" content="堡垒之夜第七章第三赛季战斗通行证全任务攻略，最快刷满V币、解锁全皮肤。">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
+.logo span{color:var(--accent2);}
+.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);}
+.nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
+.page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
+.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
+.breadcrumb a{color:var(--accent);text-decoration:none;}
+.breadcrumb span{margin:0 8px;}
+.page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
+.page-title em{color:var(--accent);font-style:normal;}
+.page-desc{color:var(--muted);font-size:16px;max-width:600px;}
+.wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;display:grid;grid-template-columns:1fr 280px;gap:40px;}
+.main{min-width:0;}
+.sidebar{position:sticky;top:80px;height:fit-content;}
+.sec-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.sec-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
+.mb-32{margin-bottom:32px;}
+
+/* Progress overview */
+.bp-overview{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:28px;}
+.bp-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.bp-season{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;}
+.bp-price{font-size:13px;color:var(--accent2);background:rgba(246,185,59,0.1);border:1px solid rgba(246,185,59,0.2);padding:4px 12px;border-radius:6px;}
+.bp-progress-row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px;}
+.bp-bar{height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;margin-bottom:20px;}
+.bp-fill{height:100%;width:62%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:4px;}
+.bp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.bp-stat{text-align:center;}
+.bp-stat-num{font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:var(--accent);}
+.bp-stat-label{font-size:11px;color:var(--muted);}
+
+/* Reward track */
+.reward-track{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;}
+.reward-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:16px;transition:all 0.15s;cursor:pointer;}
+.reward-item:hover{border-color:rgba(79,195,247,0.2);}
+.reward-item.unlocked{border-color:rgba(82,196,26,0.2);background:rgba(82,196,26,0.04);}
+.reward-lv{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--muted);width:36px;flex-shrink:0;}
+.reward-icon{font-size:24px;width:40px;text-align:center;flex-shrink:0;}
+.reward-info{flex:1;}
+.reward-name{font-weight:700;font-size:14px;}
+.reward-type{font-size:12px;color:var(--muted);margin-top:2px;}
+.reward-vbucks{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);margin-left:auto;flex-shrink:0;}
+.check{color:#52C41A;font-size:18px;margin-left:auto;flex-shrink:0;}
+
+/* Weekly quests */
+.quest-list{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;}
+.quest-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+.quest-header{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+.quest-icon{font-size:18px;}
+.quest-name{font-weight:700;font-size:14px;flex:1;}
+.quest-xp{font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;color:var(--accent2);}
+.quest-bar{height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin-bottom:6px;}
+.quest-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent3));}
+.quest-progress{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;}
+
+/* Tips */
+.tip-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.tip-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+.tip-card-title{font-weight:700;font-size:14px;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.tip-card-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* Sidebar */
+.sb-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px;}
+.sb-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;margin-bottom:14px;}
+.xp-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.xp-row:last-child{border-bottom:none;}
+.xp-source{color:var(--muted);}
+.xp-val{font-weight:700;color:var(--accent2);}
+
+@media(max-width:900px){.wrap{grid-template-columns:1fr;}.sidebar{position:static;}.tip-cards{grid-template-columns:1fr;}.bp-stats{grid-template-columns:repeat(2,1fr);}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html"><div class="logo-dot"></div>堡垒<span>攻略</span></a>
+  <div class="nav-links">
+    <a href="index.html">首页</a>
+    <a href="beginner.html">新手教程</a>
+    <a href="weapons.html">武器图鉴</a>
+    <a href="map.html">地图攻略</a>
+    <a href="building.html">建造技巧</a>
+    <a class="active" href="battlepass.html">战斗通行证</a>
+    <a href="esports.html">赛事资讯 <span class="nav-badge">LIVE</span></a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">首页</a><span>›</span>战斗通行证</div>
+  <div class="page-title">🎟 <em>战斗通行证</em>攻略</div>
+  <p class="page-desc">第七章第三赛季全奖励一览，每周任务攻略 + 最快升级刷 V 币方法。</p>
+</div>
+
+<div class="wrap">
+  <div class="main">
+    <!-- Overview -->
+    <div class="bp-overview">
+      <div class="bp-header">
+        <div class="bp-season">第七章 · 第三赛季战斗通行证</div>
+        <div class="bp-price">950 V币 购入</div>
+      </div>
+      <div class="bp-progress-row"><span>当前进度：62级</span><span>满级：100级</span></div>
+      <div class="bp-bar"><div class="bp-fill"></div></div>
+      <div class="bp-stats">
+        <div class="bp-stat"><div class="bp-stat-num">100</div><div class="bp-stat-label">总奖励数</div></div>
+        <div class="bp-stat"><div class="bp-stat-num">1500</div><div class="bp-stat-label">可返 V币</div></div>
+        <div class="bp-stat"><div class="bp-stat-num">8</div><div class="bp-stat-label">独家皮肤</div></div>
+        <div class="bp-stat"><div class="bp-stat-num">38</div><div class="bp-stat-label">剩余天数</div></div>
+      </div>
+    </div>
+
+    <!-- Reward track -->
+    <div class="sec-title mb-32">核心奖励一览</div>
+    <div class="reward-track">
+      <div class="reward-item unlocked"><div class="reward-lv">1</div><div class="reward-icon">🧥</div><div class="reward-info"><div class="reward-name">风暴猎手·初始皮肤</div><div class="reward-type">皮肤</div></div><div class="check">✓</div></div>
+      <div class="reward-item unlocked"><div class="reward-lv">5</div><div class="reward-icon">🪓</div><div class="reward-info"><div class="reward-name">雷击镐</div><div class="reward-type">收割工具</div></div><div class="check">✓</div></div>
+      <div class="reward-item unlocked"><div class="reward-lv">10</div><div class="reward-icon">💎</div><div class="reward-info"><div class="reward-name">V 币返还</div><div class="reward-type">货币</div></div><div class="reward-vbucks">+200 V</div></div>
+      <div class="reward-item unlocked"><div class="reward-lv">20</div><div class="reward-icon">🛹</div><div class="reward-info"><div class="reward-name">闪电滑板·滑翔伞</div><div class="reward-type">滑翔伞</div></div><div class="check">✓</div></div>
+      <div class="reward-item unlocked"><div class="reward-lv">25</div><div class="reward-icon">💎</div><div class="reward-info"><div class="reward-name">V 币返还</div><div class="reward-type">货币</div></div><div class="reward-vbucks">+200 V</div></div>
+      <div class="reward-item unlocked"><div class="reward-lv">40</div><div class="reward-icon">🧥</div><div class="reward-info"><div class="reward-name">幽灵行者·皮肤</div><div class="reward-type">皮肤（主角）</div></div><div class="check">✓</div></div>
+      <div class="reward-item unlocked"><div class="reward-lv">50</div><div class="reward-icon">💎</div><div class="reward-info"><div class="reward-name">V 币返还</div><div class="reward-type">货币</div></div><div class="reward-vbucks">+300 V</div></div>
+      <div class="reward-item"><div class="reward-lv">60</div><div class="reward-icon">🎆</div><div class="reward-info"><div class="reward-name">暴风特效·背饰</div><div class="reward-type">背饰</div></div><div style="font-size:12px;color:var(--muted)">未解锁</div></div>
+      <div class="reward-item"><div class="reward-lv">75</div><div class="reward-icon">💎</div><div class="reward-info"><div class="reward-name">V 币返还</div><div class="reward-type">货币</div></div><div class="reward-vbucks">+500 V</div></div>
+      <div class="reward-item"><div class="reward-lv">100</div><div class="reward-icon">👑</div><div class="reward-info"><div class="reward-name">至高领主·终极皮肤</div><div class="reward-type">皮肤（限定）</div></div><div style="font-size:12px;color:var(--muted)">未解锁</div></div>
+    </div>
+
+    <!-- Weekly quests -->
+    <div class="sec-title mb-32">本周任务攻略</div>
+    <div class="quest-list">
+      <div class="quest-item">
+        <div class="quest-header"><div class="quest-icon">🎯</div><div class="quest-name">在不同比赛中造成 1000 点伤害</div><div class="quest-xp">+25000 XP</div></div>
+        <div class="quest-bar"><div class="quest-fill" style="width:40%"></div></div>
+        <div class="quest-progress"><span>400 / 1000</span><span>💡 打满再走，不用吃鸡</span></div>
+      </div>
+      <div class="quest-item">
+        <div class="quest-header"><div class="quest-icon">🪂</div><div class="quest-name">从战斗巴士跳出后在 30 秒内降落</div><div class="quest-xp">+15000 XP</div></div>
+        <div class="quest-bar"><div class="quest-fill" style="width:0%"></div></div>
+        <div class="quest-progress"><span>0 / 3</span><span>💡 跳出后立刻俯冲即可</span></div>
+      </div>
+      <div class="quest-item">
+        <div class="quest-header"><div class="quest-icon">🏗</div><div class="quest-name">在单场比赛中建造 50 个结构</div><div class="quest-xp">+20000 XP</div></div>
+        <div class="quest-bar"><div class="quest-fill" style="width:100%"></div></div>
+        <div class="quest-progress"><span>✓ 已完成</span><span>💡 随便建造一局即可</span></div>
+      </div>
+      <div class="quest-item">
+        <div class="quest-header"><div class="quest-icon">💊</div><div class="quest-name">使用治疗物品恢复 500 点生命值</div><div class="quest-xp">+15000 XP</div></div>
+        <div class="quest-bar"><div class="quest-fill" style="width:60%"></div></div>
+        <div class="quest-progress"><span>300 / 500</span><span>💡 多囤医疗包，每局都用</span></div>
+      </div>
+      <div class="quest-item">
+        <div class="quest-header"><div class="quest-icon">🗺</div><div class="quest-name">在极地前哨区域存活 3 分钟</div><div class="quest-xp">+20000 XP</div></div>
+        <div class="quest-bar"><div class="quest-fill" style="width:0%"></div></div>
+        <div class="quest-progress"><span>0 / 3</span><span>💡 落在该区域边缘搜刮</span></div>
+      </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="sec-title mb-32">快速升级技巧</div>
+    <div class="tip-cards">
+      <div class="tip-card"><div class="tip-card-title">📅 每天登录</div><div class="tip-card-desc">每日首次登录奖励 XP，一周坚持登录额外有周登录奖励，累计非常可观。</div></div>
+      <div class="tip-card"><div class="tip-card-title">📋 优先完成每周任务</div><div class="tip-card-desc">每周任务奖励 XP 远高于日常任务，每周四刷新，第一时间完成效率最高。</div></div>
+      <div class="tip-card"><div class="tip-card-title">🎮 玩创意模式刷 XP</div><div class="tip-card-desc">部分创意模式地图 XP 加成高，每天在创意模式玩 15 分钟可额外获得大量 XP。</div></div>
+      <div class="tip-card"><div class="tip-card-title">👥 组队加成</div><div class="tip-card-desc">和朋友组队游戏有额外 XP 加成，同时完成组队任务可以加速通行证进度。</div></div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sb-card">
+      <div class="sb-title">⚡ XP 来源速查</div>
+      <div class="xp-row"><div class="xp-source">每日任务</div><div class="xp-val">~50k XP</div></div>
+      <div class="xp-row"><div class="xp-source">每周任务</div><div class="xp-val">~150k XP</div></div>
+      <div class="xp-row"><div class="xp-source">赛季任务</div><div class="xp-val">~200k XP</div></div>
+      <div class="xp-row"><div class="xp-source">正常对局</div><div class="xp-val">~20k XP</div></div>
+      <div class="xp-row"><div class="xp-source">创意模式</div><div class="xp-val">~30k XP</div></div>
+      <div class="xp-row"><div class="xp-source">好友加成</div><div class="xp-val">+10%</div></div>
+    </div>
+    <div class="sb-card">
+      <div class="sb-title">💎 V 币返还计算</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.8">
+        <div>购入费用：<strong style="color:var(--text)">950 V币</strong></div>
+        <div>总返还：<strong style="color:var(--accent2)">1500 V币</strong></div>
+        <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">净赚：<strong style="color:#52C41A;font-size:15px">+550 V币</strong></div>
+        <div style="margin-top:6px;font-size:12px">买通行证等于白嫖，还能攒V币买下赛季</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

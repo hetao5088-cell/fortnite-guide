@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>堡垒攻略 · Fortnite Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080b12;
+    --surface: #0d1220;
+    --card: #111827;
+    --border: rgba(99,179,237,0.12);
+    --accent: #4FC3F7;
+    --accent2: #F6B93B;
+    --accent3: #6C63FF;
+    --danger: #FF6B6B;
+    --text: #E2E8F0;
+    --muted: #64748B;
+    --glow: 0 0 24px rgba(79,195,247,0.18);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ---------- NOISE TEXTURE OVERLAY ---------- */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* ---------- GRID BG ---------- */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(79,195,247,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,195,247,0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ---------- NAVBAR ---------- */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 60px;
+    background: rgba(8,11,18,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo span { color: var(--accent2); }
+  .logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+  .nav-badge {
+    background: var(--danger);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin-left: 4px;
+    letter-spacing: 0;
+  }
+  .nav-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .nav-search:hover { border-color: var(--accent); color: var(--text); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    z-index: 1;
+    padding: 72px 32px 56px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-season-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(79,195,247,0.08);
+    border: 1px solid rgba(79,195,247,0.25);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+  .hero-title em { color: var(--accent); font-style: normal; }
+  .hero-title .line2 { color: var(--accent2); }
+  .hero-desc {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 440px;
+    line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #080b12;
+    box-shadow: 0 0 20px rgba(79,195,247,0.3);
+  }
+  .btn-primary:hover { box-shadow: 0 0 32px rgba(79,195,247,0.5); transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* hero stats */
+  .hero-stats { display: flex; gap: 28px; margin-top: 32px; }
+  .stat { display: flex; flex-direction: column; }
+  .stat-num { font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 12px; color: var(--muted); letter-spacing: 0.5px; }
+
+  /* hero visual */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-card-big {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  .season-banner {
+    height: 220px;
+    background: linear-gradient(135deg, #0d1220 0%, #1a2744 40%, #0d2144 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .season-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 50%, rgba(79,195,247,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(246,185,59,0.08) 0%, transparent 50%);
+  }
+  .season-gfx {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 88px;
+    font-weight: 700;
+    color: rgba(79,195,247,0.08);
+    letter-spacing: -4px;
+    position: absolute;
+    user-select: none;
+  }
+  .season-badge {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  .season-badge .ch { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: 3px; text-transform: uppercase; }
+  .season-badge .num { font-family: 'Rajdhani', sans-serif; font-size: 52px; font-weight: 700; line-height: 1; background: linear-gradient(135deg, #4FC3F7, #6C63FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .season-badge .name { font-size: 13px; color: var(--accent2); letter-spacing: 2px; font-weight: 500; }
+  .season-info { padding: 20px; }
+  .season-progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .progress-bar { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 62%; background: linear-gradient(90deg, var(--accent), var(--accent3)); border-radius: 2px; }
+  .season-chips { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .chip {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(79,195,247,0.08);
+    border: 1px solid rgba(79,195,247,0.15);
+    color: var(--accent);
+  }
+  .chip.gold { background: rgba(246,185,59,0.08); border-color: rgba(246,185,59,0.2); color: var(--accent2); }
+  .chip.purple { background: rgba(108,99,255,0.1); border-color: rgba(108,99,255,0.2); color: #9D8FFF; }
+
+  /* ---------- SECTION ---------- */
+  .section {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 64px;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .section-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--accent);
+  }
+  .section-link { font-size: 13px; color: var(--muted); text-decoration: none; cursor: pointer; }
+  .section-link:hover { color: var(--accent); }
+
+  /* ---------- CARDS GRID ---------- */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .guide-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+  }
+  .guide-card:hover {
+    border-color: rgba(79,195,247,0.3);
+    transform: translateY(-3px);
+    box-shadow: var(--glow);
+  }
+  .guide-card-thumb {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .thumb-beginner { background: linear-gradient(135deg, #0d2744, #1a3a5c); }
+  .thumb-weapon   { background: linear-gradient(135deg, #2d1a00, #4a3000); }
+  .thumb-build    { background: linear-gradient(135deg, #1a0d2d, #2d1a4a); }
+  .thumb-map      { background: linear-gradient(135deg, #0d2d1a, #1a4a2d); }
+  .thumb-bp       { background: linear-gradient(135deg, #2d1a1a, #4a2020); }
+  .thumb-ranked   { background: linear-gradient(135deg, #1a1a2d, #20204a); }
+  .guide-card-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(17,24,39,0.8));
+  }
+  .guide-card-body { padding: 14px 16px; }
+  .guide-cat {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .guide-title { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.4; margin-bottom: 6px; }
+  .guide-meta { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+  .hot-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background: var(--danger);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+  }
+  .new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background: var(--accent2);
+    color: #080b12;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+
+  /* ---------- WEAPON TABLE ---------- */
+  .weapon-table {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .weapon-filters {
+    display: flex;
+    gap: 8px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+  }
+  .filter-btn:hover { color: var(--text); border-color: rgba(79,195,247,0.3); }
+  .filter-btn.active { background: rgba(79,195,247,0.1); color: var(--accent); border-color: rgba(79,195,247,0.3); }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    background: rgba(13,18,32,0.5);
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(79,195,247,0.04); }
+  td { padding: 12px 20px; font-size: 14px; }
+  .weapon-name { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .weapon-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .rarity-legendary { background: rgba(255,165,0,0.15); border: 1px solid rgba(255,165,0,0.3); }
+  .rarity-epic      { background: rgba(108,99,255,0.15); border: 1px solid rgba(108,99,255,0.3); }
+  .rarity-rare      { background: rgba(79,195,247,0.12); border: 1px solid rgba(79,195,247,0.25); }
+  .rarity-uncommon  { background: rgba(82,196,26,0.12); border: 1px solid rgba(82,196,26,0.2); }
+
+  .rarity-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .tag-legendary { background: rgba(255,165,0,0.12); color: #FFA500; }
+  .tag-epic      { background: rgba(108,99,255,0.12); color: #9D8FFF; }
+  .tag-rare      { background: rgba(79,195,247,0.1);  color: var(--accent); }
+  .tag-uncommon  { background: rgba(82,196,26,0.1);   color: #52C41A; }
+
+  .dmg-bar-wrap { display: flex; align-items: center; gap: 8px; }
+  .dmg-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; max-width: 100px; }
+  .dmg-fill { height: 100%; border-radius: 2px; }
+  .fill-red { background: #FF6B6B; }
+  .fill-orange { background: #FFA500; }
+  .fill-blue { background: var(--accent); }
+  .fill-purple { background: #9D8FFF; }
+
+  .tier {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .tier-s { color: #FF6B6B; }
+  .tier-a { color: #FFA500; }
+  .tier-b { color: #52C41A; }
+
+  /* ---------- TIPS SECTION ---------- */
+  .tips-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .tip-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tip-card:hover { border-color: rgba(79,195,247,0.25); transform: translateY(-2px); }
+  .tip-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .tip-content { flex: 1; }
+  .tip-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+  .tip-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .tip-tag {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+
+  /* ---------- NEWS STRIP ---------- */
+  .news-row { display: flex; flex-direction: column; gap: 10px; }
+  .news-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .news-item:hover { border-color: rgba(79,195,247,0.25); padding-left: 22px; }
+  .news-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-red    { background: var(--danger); box-shadow: 0 0 6px var(--danger); }
+  .dot-gold   { background: var(--accent2); box-shadow: 0 0 6px var(--accent2); }
+  .dot-blue   { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+  .dot-purple { background: #9D8FFF; box-shadow: 0 0 6px #9D8FFF; }
+  .news-text { flex: 1; font-size: 14px; font-weight: 500; }
+  .news-date { font-size: 12px; color: var(--muted); flex-shrink: 0; }
+
+  /* ---------- BOTTOM CTA ---------- */
+  .cta-strip {
+    position: relative;
+    z-index: 1;
+    margin: 0 32px 64px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, rgba(79,195,247,0.08), rgba(108,99,255,0.08));
+    border: 1px solid rgba(79,195,247,0.2);
+    border-radius: 16px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    overflow: hidden;
+  }
+  .cta-strip::before {
+    content: 'FORTNITE';
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: rgba(79,195,247,0.04);
+    letter-spacing: -2px;
+    pointer-events: none;
+    user-select: none;
+  }
+  .cta-title { font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+  .cta-desc { color: var(--muted); font-size: 14px; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: var(--muted); text-decoration: none; cursor: pointer; }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ---------- ANIMATIONS ---------- */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero, .section { animation: fadeUp 0.5s ease both; }
+  .section:nth-child(2) { animation-delay: 0.1s; }
+  .section:nth-child(3) { animation-delay: 0.15s; }
+  .section:nth-child(4) { animation-delay: 0.2s; }
+  .section:nth-child(5) { animation-delay: 0.25s; }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 32px; }
+    .hero-title { font-size: 40px; }
+    .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .tips-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .cta-strip { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 600px) {
+    .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+    nav, .section, .hero { padding-left: 16px; padding-right: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <div class="logo-dot"></div>
+    堡垒<span>攻略</span>
+  </div>
+  <div class="nav-links">
+    <a class="active" href="index.html">首页</a>
+    <a href="beginner.html">新手教程</a>
+    <a href="weapons.html">武器图鉴</a>
+    <a href="map.html">地图攻略</a>
+    <a href="building.html">建造技巧</a>
+    <a href="battlepass.html">战斗通行证</a>
+    <a href="esports.html">赛事资讯 <span class="nav-badge">LIVE</span></a>
+  </div>
+  <div class="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    搜索攻略...
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-season-tag">
+      <div class="logo-dot" style="width:6px;height:6px"></div>
+      第七章 · 第三赛季
+    </div>
+    <h1 class="hero-title">
+      <em>堡垒之夜</em><br>
+      <span class="line2">全面攻略</span><br>
+      中文站
+    </h1>
+    <p class="hero-desc">从新手入门到竞技排位，覆盖武器图鉴、建造技巧、赛季任务、地图热点。跟上每次更新，比敌人多走一步。</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary">🎮 新手入门</button>
+      <button class="btn btn-ghost">📖 查看武器图鉴</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">200+</div><div class="stat-label">篇攻略</div></div>
+      <div class="stat"><div class="stat-num">Ch.7 S3</div><div class="stat-label">当前赛季</div></div>
+      <div class="stat"><div class="stat-num">每周</div><div class="stat-label">任务更新</div></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card-big">
+      <div class="season-banner">
+        <div class="season-gfx">S3</div>
+        <div class="season-badge">
+          <div class="ch">Chapter 7</div>
+          <div class="num">Season 3</div>
+          <div class="name">· STORM SURGE ·</div>
+        </div>
+      </div>
+      <div class="season-info">
+        <div class="season-progress-label">
+          <span>赛季进度</span>
+          <span>62%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <div class="season-chips">
+          <div class="chip">🗡 新武器 ×8</div>
+          <div class="chip gold">🎟 BP 满级 100</div>
+          <div class="chip purple">⚡ 神话道具 ×3</div>
+          <div class="chip">🗺 地图更新</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWS / UPDATES -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-title">最新动态</div>
+    <a class="section-link">查看全部 →</a>
+  </div>
+  <div class="news-row">
+    <div class="news-item">
+      <div class="news-dot dot-red"></div>
+      <div class="news-text">【v34.20 补丁】Boss 神话道具被削弱，超级护盾移除、Boss 套装限一人</div>
+      <div class="news-date">今天</div>
+    </div>
+    <div class="news-item">
+      <div class="news-dot dot-gold"></div>
+      <div class="news-text">第七章第三赛季战斗通行证全皮肤一览，马蒂·麦克弗莱返场确认</div>
+      <div class="news-date">2天前</div>
+    </div>
+    <div class="news-item">
+      <div class="news-dot dot-blue"></div>
+      <div class="news-text">FNCS 2026 全球总决赛将采用双人模式，比赛时间表公布</div>
+      <div class="news-date">5天前</div>
+    </div>
+    <div class="news-item">
+      <div class="news-dot dot-purple"></div>
+      <div class="news-text">Epic Games 宣布 Rank 2.0 排位系统将在本赛季末正式上线</div>
+      <div class="news-date">1周前</div>
+    </div>
+  </div>
+</div>
+
+<!-- GUIDES -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-title">热门攻略</div>
+    <a class="section-link">全部分类 →</a>
+  </div>
+  <div class="grid-3">
+    <div class="guide-card">
+      <div class="hot-badge">HOT</div>
+      <div class="guide-card-thumb thumb-beginner">🪂</div>
+      <div class="guide-card-body">
+        <div class="guide-cat">新手入门</div>
+        <div class="guide-title">2026 新手完全指南：从跳机到吃鸡</div>
+        <div class="guide-meta"><span>👁 12.4k</span><span>· 8 分钟阅读</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="new-badge">NEW</div>
+      <div class="guide-card-thumb thumb-weapon">🔫</div>
+      <div class="guide-card-body">
+        <div class="guide-cat">武器图鉴</div>
+        <div class="guide-title">S3 武器强度排行：哪把枪最值得捡？</div>
+        <div class="guide-meta"><span>👁 9.8k</span><span>· 6 分钟阅读</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-card-thumb thumb-build">🏗</div>
+      <div class="guide-card-body">
+        <div class="guide-cat">建造技巧</div>
+        <div class="guide-title">90° 快速建造完整教程，从零练到实战</div>
+        <div class="guide-meta"><span>👁 8.1k</span><span>· 10 分钟阅读</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-card-thumb thumb-map">🗺</div>
+      <div class="guide-card-body">
+        <div class="guide-cat">地图攻略</div>
+        <div class="guide-title">S3 地图热点分析：物资密度 & 安全落点</div>
+        <div class="guide-meta"><span>👁 7.3k</span><span>· 5 分钟阅读</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="hot-badge">HOT</div>
+      <div class="guide-card-thumb thumb-bp">🎟</div>
+      <div class="guide-card-body">
+        <div class="guide-cat">战斗通行证</div>
+        <div class="guide-title">S3 通行证全任务攻略 & 最快刷 V 币</div>
+        <div class="guide-meta"><span>👁 15.2k</span><span>· 7 分钟阅读</span></div>
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-card-thumb thumb-ranked">🏆</div>
+      <div class="guide-card-body">
+        <div class="guide-cat">竞技排位</div>
+        <div class="guide-title">排位上分思路：走位、换区时机与团队配合</div>
+        <div class="guide-meta"><span>👁 6.5k</span><span>· 9 分钟阅读</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WEAPON TIER TABLE -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-title">武器强度速查</div>
+    <a class="section-link">完整图鉴 →</a>
+  </div>
+  <div class="weapon-table">
+    <div class="weapon-filters">
+      <button class="filter-btn active">全部</button>
+      <button class="filter-btn">冲锋枪</button>
+      <button class="filter-btn">霰弹枪</button>
+      <button class="filter-btn">步枪</button>
+      <button class="filter-btn">神话</button>
+      <button class="filter-btn">狙击</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>武器</th>
+          <th>稀有度</th>
+          <th>伤害</th>
+          <th>DPS</th>
+          <th>强度</th>
+          <th>适合场景</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="weapon-name">
+              <div class="weapon-icon rarity-legendary">⚡</div>
+              雷暴冲锋枪
+            </div>
+          </td>
+          <td><span class="rarity-tag tag-legendary">传说</span></td>
+          <td>
+            <div class="dmg-bar-wrap">
+              <div class="dmg-bar"><div class="dmg-fill fill-orange" style="width:82%"></div></div>
+              82
+            </div>
+          </td>
+          <td>245</td>
+          <td><span class="tier tier-s">S</span></td>
+          <td><span style="color:var(--muted);font-size:13px">近战爆发</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="weapon-name">
+              <div class="weapon-icon rarity-epic">🔥</div>
+              重型霰弹枪
+            </div>
+          </td>
+          <td><span class="rarity-tag tag-epic">史诗</span></td>
+          <td>
+            <div class="dmg-bar-wrap">
+              <div class="dmg-bar"><div class="dmg-fill fill-red" style="width:95%"></div></div>
+              114
+            </div>
+          </td>
+          <td>128</td>
+          <td><span class="tier tier-s">S</span></td>
+          <td><span style="color:var(--muted);font-size:13px">零距离</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="weapon-name">
+              <div class="weapon-icon rarity-rare">🎯</div>
+              战术步枪 MK-7
+            </div>
+          </td>
+          <td><span class="rarity-tag tag-rare">稀有</span></td>
+          <td>
+            <div class="dmg-bar-wrap">
+              <div class="dmg-bar"><div class="dmg-fill fill-blue" style="width:68%"></div></div>
+              68
+            </div>
+          </td>
+          <td>198</td>
+          <td><span class="tier tier-a">A</span></td>
+          <td><span style="color:var(--muted);font-size:13px">中远距离</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="weapon-name">
+              <div class="weapon-icon rarity-epic">🌀</div>
+              Boss 神话步枪
+            </div>
+          </td>
+          <td><span class="rarity-tag tag-epic">神话</span></td>
+          <td>
+            <div class="dmg-bar-wrap">
+              <div class="dmg-bar"><div class="dmg-fill fill-purple" style="width:100%"></div></div>
+              120
+            </div>
+          </td>
+          <td>312</td>
+          <td><span class="tier tier-s">S</span></td>
+          <td><span style="color:var(--muted);font-size:13px">全场景</span></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="weapon-name">
+              <div class="weapon-icon rarity-uncommon">🎪</div>
+              战略霰弹枪
+            </div>
+          </td>
+          <td><span class="rarity-tag tag-uncommon">非凡</span></td>
+          <td>
+            <div class="dmg-bar-wrap">
+              <div class="dmg-bar"><div class="dmg-fill fill-blue" style="width:55%"></div></div>
+              55
+            </div>
+          </td>
+          <td>110</td>
+          <td><span class="tier tier-b">B</span></td>
+          <td><span style="color:var(--muted);font-size:13px">新手友好</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TIPS -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-title">实战技巧</div>
+    <a class="section-link">更多技巧 →</a>
+  </div>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon" style="background:rgba(79,195,247,0.1)">🪂</div>
+      <div class="tip-content">
+        <div class="tip-title">跳机时机：等巴士快到终点再跳</div>
+        <div class="tip-desc">战斗巴士接近终点前 3 秒跳出，可落在远离大多数玩家的区域，减少早期遭遇风险，为搜刮争取时间。</div>
+        <div class="tip-tag">↗ 新手必读</div>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:rgba(246,185,59,0.1)">🏗</div>
+      <div class="tip-content">
+        <div class="tip-title">收集材料：边跑边拆，木头优先</div>
+        <div class="tip-desc">树木、灌木、木制家具都能拆，跑图途中随手收材料，保证随时有资源建造临时掩体。</div>
+        <div class="tip-tag">↗ 建造入门</div>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:rgba(255,107,107,0.1)">🎯</div>
+      <div class="tip-content">
+        <div class="tip-title">蹲姿提升精度，远程先蹲后开枪</div>
+        <div class="tip-desc">Fortnite 枪械弹道有随机扩散，保持蹲姿能显著降低散布，中远距离先蹲再点射效果最佳。</div>
+        <div class="tip-tag">↗ 枪法提升</div>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon" style="background:rgba(108,99,255,0.1)">🛡</div>
+      <div class="tip-content">
+        <div class="tip-title">高地优势：占高打低，注意防坠</div>
+        <div class="tip-desc">高处视野好、伤害角度占优，但护盾不吸收坠落伤害。建坡道上高后，随手在脚下补一层地板防跌落。</div>
+        <div class="tip-tag">↗ 进阶战术</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-strip" style="margin-bottom:48px">
+  <div>
+    <div class="cta-title">📬 每周更新不漏看</div>
+    <div class="cta-desc">订阅赛季速报，第一时间收到武器调整、新任务、赛事资讯</div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center;flex-shrink:0">
+    <input type="email" placeholder="输入邮箱地址" style="padding:10px 16px;border-radius:8px;border:1px solid rgba(79,195,247,0.25);background:rgba(79,195,247,0.06);color:var(--text);font-size:14px;width:220px;outline:none">
+    <button class="btn btn-primary" style="white-space:nowrap">订阅</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:1px;color:var(--muted)">堡垒攻略 · FORTGUIDE.CN</div>
+  <div class="footer-links">
+    <a>关于我们</a>
+    <a>投稿攻略</a>
+    <a>隐私政策</a>
+    <a>Discord</a>
+  </div>
+  <div>© 2026 非官方粉丝站 · 非 Epic Games 官方</div>
+</footer>
+
+<script>
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+  // Card hover ripple feel
+  document.querySelectorAll('.guide-card, .tip-card, .news-item').forEach(card => {
+    card.style.cursor = 'pointer';
+  });
+</script>
+</body>
+</html>
