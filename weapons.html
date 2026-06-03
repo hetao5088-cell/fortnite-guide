@@ -2,36 +2,32 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>武器图鉴 S3强度排行 · 堡垒攻略 FortnifeHubPro</title>
-<meta name="description" content="堡垒之夜第七章第三赛季武器强度排行，神话、传说、史诗全武器数据对比，哪把枪最值得捡？">
-<meta property="og:title" content="武器图鉴 S3强度排行 · 堡垒攻略 FortnifeHubPro">
-<meta property="og:description" content="堡垒之夜第七章第三赛季武器强度排行，神话、传说、史诗全武器数据对比，哪把枪最值得捡？">
+<title>Weapon Tier List S3 · FortnifeHubPro | 武器图鉴强度排行</title>
+<meta name="description" content="Fortnite Chapter 7 Season 3 weapon tier list — Mythic, Legendary, Epic stats compared. Best guns to pick up. 堡垒之夜武器强度排行。">
+<meta property="og:title" content="Weapon Tier List · FortnifeHubPro">
 <meta property="og:url" content="https://fortnitehubpro.com/weapons.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fortnitehubpro.com/weapons.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
-<meta property="og:type" content="website">
-
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B; }
+  :root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
   body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
-
   nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
   .logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
   .logo span{color:var(--accent2);}
   .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links{display:flex;gap:24px;align-items:center;}
   .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
   .nav-links a:hover,.nav-links a.active{color:var(--accent);}
   .nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
-
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .lang-btn{background:rgba(79,195,247,0.1);border:1px solid rgba(79,195,247,0.3);color:var(--accent);font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s;letter-spacing:1px;}
+  .lang-btn:hover{background:rgba(79,195,247,0.2);}
   .page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
   .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
   .breadcrumb a{color:var(--accent);text-decoration:none;}
@@ -39,16 +35,19 @@
   .page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
   .page-title em{color:var(--accent);font-style:normal;}
   .page-desc{color:var(--muted);font-size:16px;max-width:600px;}
-
   .section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 64px;}
-
-  /* Filter tabs */
+  .section-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  .section-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
   .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
   .filter-btn{padding:6px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.15s;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:'Noto Sans SC',sans-serif;}
   .filter-btn:hover{color:var(--text);border-color:rgba(79,195,247,0.3);}
   .filter-btn.active{background:rgba(79,195,247,0.1);color:var(--accent);border-color:rgba(79,195,247,0.3);}
-
-  /* Weapon cards */
+  .tier-row{display:flex;align-items:flex-start;gap:16px;margin-bottom:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+  .tier-label{width:48px;min-height:60px;display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;flex-shrink:0;}
+  .tier-s-bg{background:rgba(255,107,107,0.12);} .tier-a-bg{background:rgba(255,165,0,0.1);} .tier-b-bg{background:rgba(82,196,26,0.08);} .tier-c-bg{background:rgba(100,116,139,0.1);}
+  .tier-s{color:#FF6B6B;} .tier-a{color:#FFA500;} .tier-b{color:#52C41A;}
+  .tier-weapons{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;align-items:center;}
+  .tier-chip{padding:6px 14px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:500;}
   .weapons-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;}
   .weapon-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.25s;cursor:pointer;}
   .weapon-card:hover{border-color:rgba(79,195,247,0.3);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.3);}
@@ -69,8 +68,6 @@
   .tag-uncommon{background:rgba(82,196,26,0.1);color:#52C41A;}
   .tag-mythic{background:rgba(255,215,0,0.12);color:#FFD700;}
   .tier-badge{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;margin-left:auto;flex-shrink:0;}
-  .tier-s{color:#FF6B6B;} .tier-a{color:#FFA500;} .tier-b{color:#52C41A;} .tier-c{color:var(--muted);}
-
   .weapon-stats{padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   .stat-row{display:flex;flex-direction:column;gap:4px;}
   .stat-label{font-size:11px;color:var(--muted);letter-spacing:0.5px;text-transform:uppercase;}
@@ -79,301 +76,190 @@
   .stat-bar{flex:1;height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;}
   .stat-fill{height:100%;border-radius:2px;}
   .fill-red{background:#FF6B6B;} .fill-orange{background:#FFA500;} .fill-blue{background:var(--accent);} .fill-purple{background:#9D8FFF;} .fill-gold{background:#FFD700;}
-
   .weapon-desc{padding:0 20px 16px;font-size:13px;color:var(--muted);line-height:1.6;}
   .weapon-scene{padding:0 20px 20px;display:flex;gap:6px;flex-wrap:wrap;}
   .scene-tag{padding:3px 10px;border-radius:6px;font-size:12px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--muted);}
-
-  /* Tier list */
-  .tier-section{margin-bottom:48px;}
-  .tier-row{display:flex;align-items:flex-start;gap:16px;margin-bottom:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
-  .tier-label{width:48px;min-height:60px;display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;flex-shrink:0;}
-  .tier-s-bg{background:rgba(255,107,107,0.12);} .tier-a-bg{background:rgba(255,165,0,0.1);} .tier-b-bg{background:rgba(82,196,26,0.08);} .tier-c-bg{background:rgba(100,116,139,0.1);}
-  .tier-weapons{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;align-items:center;}
-  .tier-weapon-chip{padding:6px 14px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:500;}
-
-  .section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;}
-  .section-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px;}
-  .section-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
-
+  .comments-section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;}
+  .comments-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+  .comments-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
   @media(max-width:900px){.weapons-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </head>
 <body>
 <nav>
-  <a class="logo" href="index.html"><div class="logo-dot"></div>堡垒<span>攻略</span></a>
+  <a class="logo" href="index.html"><div class="logo-dot"></div>Fortnite<span>Hub</span></a>
   <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a href="beginner.html">新手教程</a>
-    <a class="active" href="weapons.html">武器图鉴</a>
-    <a href="map.html">地图攻略</a>
-    <a href="building.html">建造技巧</a>
-    <a href="battlepass.html">战斗通行证</a>
-    <a href="esports.html">赛事资讯 <span class="nav-badge">LIVE</span></a>
+    <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+    <a href="beginner.html" data-zh="新手教程" data-en="Beginner Guide">新手教程</a>
+    <a class="active" href="weapons.html" data-zh="武器图鉴" data-en="Weapons">武器图鉴</a>
+    <a href="map.html" data-zh="地图攻略" data-en="Map Guide">地图攻略</a>
+    <a href="building.html" data-zh="建造技巧" data-en="Building">建造技巧</a>
+    <a href="battlepass.html" data-zh="战斗通行证" data-en="Battle Pass">战斗通行证</a>
+    <a href="esports.html"><span data-zh="赛事资讯" data-en="Esports">赛事资讯</span> <span class="nav-badge">LIVE</span></a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" id="lang-btn" onclick="setLang(getLang()==='zh'?'en':'zh')">EN</button>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="breadcrumb"><a href="index.html">首页</a><span>›</span>武器图鉴</div>
-  <div class="page-title">🔫 <em>武器</em>图鉴</div>
-  <p class="page-desc">第七章第三赛季全武器强度排行，含神话、传说、史诗稀有度详细数据对比。</p>
+  <div class="breadcrumb"><a href="index.html" data-zh="首页" data-en="Home">首页</a><span>›</span><span data-zh="武器图鉴" data-en="Weapons">武器图鉴</span></div>
+  <div class="page-title">🔫 <em data-zh="武器" data-en="Weapon">武器</em><span data-zh="图鉴" data-en="Tier List">图鉴</span></div>
+  <p class="page-desc" data-zh="第七章第三赛季全武器强度排行，含神话、传说、史诗稀有度详细数据对比。" data-en="Chapter 7 Season 3 full weapon tier list — Mythic, Legendary, and Epic rarity stats compared in detail.">第七章第三赛季全武器强度排行，含神话、传说、史诗稀有度详细数据对比。</p>
 </div>
 
 <div class="section">
-  <!-- Tier List -->
-  <div class="tier-section">
-    <div class="section-header"><div class="section-title">强度排行总览</div></div>
-    <div class="tier-row">
-      <div class="tier-label tier-s tier-s-bg">S</div>
-      <div class="tier-weapons">
-        <div class="tier-weapon-chip">⚡ Boss神话步枪</div>
-        <div class="tier-weapon-chip">💥 重型霰弹枪</div>
-        <div class="tier-weapon-chip">🌀 雷暴冲锋枪</div>
-      </div>
-    </div>
-    <div class="tier-row">
-      <div class="tier-label tier-a tier-a-bg">A</div>
-      <div class="tier-weapons">
-        <div class="tier-weapon-chip">🎯 战术步枪MK-7</div>
-        <div class="tier-weapon-chip">🔥 爆破手雷发射器</div>
-        <div class="tier-weapon-chip">⚔️ 狙击步枪</div>
-      </div>
-    </div>
-    <div class="tier-row">
-      <div class="tier-label tier-b tier-b-bg">B</div>
-      <div class="tier-weapons">
-        <div class="tier-weapon-chip">🎪 战略霰弹枪</div>
-        <div class="tier-weapon-chip">🔫 突击步枪</div>
-        <div class="tier-weapon-chip">🌊 冲锋手枪</div>
-      </div>
-    </div>
-    <div class="tier-row">
-      <div class="tier-label tier-c" style="color:var(--muted);background:rgba(100,116,139,0.1);">C</div>
-      <div class="tier-weapons">
-        <div class="tier-weapon-chip">🗡 普通手枪</div>
-        <div class="tier-weapon-chip">💨 轻型冲锋枪</div>
-      </div>
-    </div>
-  </div>
+  <div class="section-title" data-zh="强度排行总览" data-en="Overall Tier Rankings">强度排行总览</div>
+  <div class="tier-row"><div class="tier-label tier-s tier-s-bg">S</div><div class="tier-weapons"><div class="tier-chip" data-zh="⚡ Boss神话步枪" data-en="⚡ Boss Mythic Rifle">⚡ Boss神话步枪</div><div class="tier-chip" data-zh="💥 重型霰弹枪" data-en="💥 Heavy Shotgun">💥 重型霰弹枪</div><div class="tier-chip" data-zh="🌀 雷暴冲锋枪" data-en="🌀 Thunder SMG">🌀 雷暴冲锋枪</div></div></div>
+  <div class="tier-row"><div class="tier-label tier-a tier-a-bg">A</div><div class="tier-weapons"><div class="tier-chip" data-zh="🎯 战术步枪MK-7" data-en="🎯 Tactical AR MK-7">🎯 战术步枪MK-7</div><div class="tier-chip" data-zh="🔥 爆破手雷发射器" data-en="🔥 Grenade Launcher">🔥 爆破手雷发射器</div><div class="tier-chip" data-zh="⚔️ 狙击步枪" data-en="⚔️ Sniper Rifle">⚔️ 狙击步枪</div></div></div>
+  <div class="tier-row"><div class="tier-label tier-b tier-b-bg">B</div><div class="tier-weapons"><div class="tier-chip" data-zh="🎪 战略霰弹枪" data-en="🎪 Tactical Shotgun">🎪 战略霰弹枪</div><div class="tier-chip" data-zh="🔫 突击步枪" data-en="🔫 Assault Rifle">🔫 突击步枪</div><div class="tier-chip" data-zh="🌊 冲锋手枪" data-en="🌊 Machine Pistol">🌊 冲锋手枪</div></div></div>
+  <div class="tier-row"><div class="tier-label" style="color:var(--muted);background:rgba(100,116,139,0.1)">C</div><div class="tier-weapons"><div class="tier-chip" data-zh="🗡 普通手枪" data-en="🗡 Common Pistol">🗡 普通手枪</div><div class="tier-chip" data-zh="💨 轻型冲锋枪" data-en="💨 Light SMG">💨 轻型冲锋枪</div></div></div>
+</div>
 
-  <!-- Weapon Cards -->
-  <div class="section-header"><div class="section-title">详细数据</div></div>
-
+<div class="section">
+  <div class="section-title" data-zh="详细数据" data-en="Detailed Stats">详细数据</div>
   <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterWeapons('all',this)">全部</button>
-    <button class="filter-btn" onclick="filterWeapons('冲锋枪',this)">冲锋枪</button>
-    <button class="filter-btn" onclick="filterWeapons('霰弹枪',this)">霰弹枪</button>
-    <button class="filter-btn" onclick="filterWeapons('步枪',this)">步枪</button>
-    <button class="filter-btn" onclick="filterWeapons('神话',this)">神话</button>
-    <button class="filter-btn" onclick="filterWeapons('狙击',this)">狙击</button>
+    <button class="filter-btn active" onclick="filterWeapons('all',this)" data-zh="全部" data-en="All">全部</button>
+    <button class="filter-btn" onclick="filterWeapons('smg',this)" data-zh="冲锋枪" data-en="SMG">冲锋枪</button>
+    <button class="filter-btn" onclick="filterWeapons('shotgun',this)" data-zh="霰弹枪" data-en="Shotgun">霰弹枪</button>
+    <button class="filter-btn" onclick="filterWeapons('rifle',this)" data-zh="步枪" data-en="Rifle">步枪</button>
+    <button class="filter-btn" onclick="filterWeapons('mythic',this)" data-zh="神话" data-en="Mythic">神话</button>
+    <button class="filter-btn" onclick="filterWeapons('sniper',this)" data-zh="狙击" data-en="Sniper">狙击</button>
   </div>
 
   <div class="weapons-grid" id="weaponsGrid">
-
-    <div class="weapon-card" data-type="神话 步枪">
+    <div class="weapon-card" data-type="mythic rifle">
       <div class="weapon-header">
         <div class="weapon-emoji bg-mythic">🌀</div>
         <div class="weapon-info">
-          <div class="weapon-name">Boss 神话步枪</div>
-          <div class="weapon-tags"><span class="tag tag-mythic">神话</span><span class="tag tag-rare">步枪</span></div>
+          <div class="weapon-name" data-zh="Boss 神话步枪" data-en="Boss Mythic Rifle">Boss 神话步枪</div>
+          <div class="weapon-tags"><span class="tag tag-mythic" data-zh="神话" data-en="Mythic">神话</span><span class="tag tag-rare" data-zh="步枪" data-en="Rifle">步枪</span></div>
         </div>
         <div class="tier-badge tier-s">S</div>
       </div>
       <div class="weapon-stats">
-        <div class="stat-row">
-          <div class="stat-label">单发伤害</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-gold" style="width:100%"></div></div><div class="stat-val">120</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">DPS</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-gold" style="width:100%"></div></div><div class="stat-val">312</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">弹夹容量</div>
-          <div class="stat-val">30</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">射速</div>
-          <div class="stat-val">2.6/s</div>
-        </div>
+        <div class="stat-row"><div class="stat-label" data-zh="单发伤害" data-en="Damage">单发伤害</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-gold" style="width:100%"></div></div><div class="stat-val">120</div></div></div>
+        <div class="stat-row"><div class="stat-label">DPS</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-gold" style="width:100%"></div></div><div class="stat-val">312</div></div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="弹夹容量" data-en="Magazine">弹夹容量</div><div class="stat-val">30</div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="射速" data-en="Fire Rate">射速</div><div class="stat-val">2.6/s</div></div>
       </div>
-      <div class="weapon-desc">当前赛季最强武器，从 Boss 处击杀获得。全距离适用，配合神话技能效果翻倍。已被削弱但仍是 S 级。</div>
-      <div class="weapon-scene"><span class="scene-tag">近战</span><span class="scene-tag">中距离</span><span class="scene-tag">远距离</span></div>
+      <div class="weapon-desc" data-zh="当前赛季最强武器，从 Boss 处击杀获得。全距离适用，配合神话技能效果翻倍。已被削弱但仍是 S 级。" data-en="The strongest weapon this season, dropped by the Boss. Effective at all ranges and pairs with Mythic abilities. Nerfed but still S-tier.">当前赛季最强武器，从 Boss 处击杀获得。全距离适用，配合神话技能效果翻倍。已被削弱但仍是 S 级。</div>
+      <div class="weapon-scene"><span class="scene-tag" data-zh="近战" data-en="Close">近战</span><span class="scene-tag" data-zh="中距离" data-en="Mid">中距离</span><span class="scene-tag" data-zh="远距离" data-en="Long">远距离</span></div>
     </div>
 
-    <div class="weapon-card" data-type="霰弹枪">
+    <div class="weapon-card" data-type="shotgun">
       <div class="weapon-header">
         <div class="weapon-emoji bg-epic">💥</div>
         <div class="weapon-info">
-          <div class="weapon-name">重型霰弹枪</div>
-          <div class="weapon-tags"><span class="tag tag-epic">史诗</span><span class="tag tag-rare">霰弹枪</span></div>
+          <div class="weapon-name" data-zh="重型霰弹枪" data-en="Heavy Shotgun">重型霰弹枪</div>
+          <div class="weapon-tags"><span class="tag tag-epic" data-zh="史诗" data-en="Epic">史诗</span><span class="tag tag-rare" data-zh="霰弹枪" data-en="Shotgun">霰弹枪</span></div>
         </div>
         <div class="tier-badge tier-s">S</div>
       </div>
       <div class="weapon-stats">
-        <div class="stat-row">
-          <div class="stat-label">单发伤害</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-red" style="width:95%"></div></div><div class="stat-val">114</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">DPS</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-orange" style="width:42%"></div></div><div class="stat-val">128</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">弹夹容量</div>
-          <div class="stat-val">6</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">射速</div>
-          <div class="stat-val">1.1/s</div>
-        </div>
+        <div class="stat-row"><div class="stat-label" data-zh="单发伤害" data-en="Damage">单发伤害</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-red" style="width:95%"></div></div><div class="stat-val">114</div></div></div>
+        <div class="stat-row"><div class="stat-label">DPS</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-orange" style="width:42%"></div></div><div class="stat-val">128</div></div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="弹夹容量" data-en="Magazine">弹夹容量</div><div class="stat-val">6</div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="射速" data-en="Fire Rate">射速</div><div class="stat-val">1.1/s</div></div>
       </div>
-      <div class="weapon-desc">零距离爆发伤害最高，一发可打出 114 点满伤，完整两发可直接秒人。需要贴近距离使用，远距离效果差。</div>
-      <div class="weapon-scene"><span class="scene-tag">近战必备</span><span class="scene-tag">零距离</span></div>
+      <div class="weapon-desc" data-zh="零距离爆发伤害最高，一发可打出 114 点满伤，完整两发可直接秒人。需要贴近距离使用，远距离效果差。" data-en="Highest burst damage at point-blank — one shot deals 114 full damage, two shots can eliminate a full-HP player. Requires close range; weak at distance.">零距离爆发伤害最高，一发可打出 114 点满伤，完整两发可直接秒人。需要贴近距离使用，远距离效果差。</div>
+      <div class="weapon-scene"><span class="scene-tag" data-zh="近战必备" data-en="Close Range Essential">近战必备</span><span class="scene-tag" data-zh="零距离" data-en="Point Blank">零距离</span></div>
     </div>
 
-    <div class="weapon-card" data-type="冲锋枪">
+    <div class="weapon-card" data-type="smg">
       <div class="weapon-header">
         <div class="weapon-emoji bg-legendary">⚡</div>
         <div class="weapon-info">
-          <div class="weapon-name">雷暴冲锋枪</div>
-          <div class="weapon-tags"><span class="tag tag-legendary">传说</span><span class="tag tag-rare">冲锋枪</span></div>
+          <div class="weapon-name" data-zh="雷暴冲锋枪" data-en="Thunder SMG">雷暴冲锋枪</div>
+          <div class="weapon-tags"><span class="tag tag-legendary" data-zh="传说" data-en="Legendary">传说</span><span class="tag tag-rare" data-zh="冲锋枪" data-en="SMG">冲锋枪</span></div>
         </div>
         <div class="tier-badge tier-s">S</div>
       </div>
       <div class="weapon-stats">
-        <div class="stat-row">
-          <div class="stat-label">单发伤害</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-orange" style="width:82%"></div></div><div class="stat-val">82</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">DPS</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:78%"></div></div><div class="stat-val">245</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">弹夹容量</div>
-          <div class="stat-val">25</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">射速</div>
-          <div class="stat-val">3.0/s</div>
-        </div>
+        <div class="stat-row"><div class="stat-label" data-zh="单发伤害" data-en="Damage">单发伤害</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-orange" style="width:82%"></div></div><div class="stat-val">82</div></div></div>
+        <div class="stat-row"><div class="stat-label">DPS</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:78%"></div></div><div class="stat-val">245</div></div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="弹夹容量" data-en="Magazine">弹夹容量</div><div class="stat-val">25</div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="射速" data-en="Fire Rate">射速</div><div class="stat-val">3.0/s</div></div>
       </div>
-      <div class="weapon-desc">本赛季新增冲锋枪，DPS 极高，近中距离都好用，爆发伤害仅次于霰弹枪。弹夹偏小，需要精准射击。</div>
-      <div class="weapon-scene"><span class="scene-tag">近战爆发</span><span class="scene-tag">中距离</span></div>
+      <div class="weapon-desc" data-zh="本赛季新增冲锋枪，DPS 极高，近中距离都好用，爆发伤害仅次于霰弹枪。弹夹偏小，需要精准射击。" data-en="New this season — extremely high DPS, effective at both close and mid range. Burst damage second only to shotguns. Small magazine demands accurate shots.">本赛季新增冲锋枪，DPS 极高，近中距离都好用，爆发伤害仅次于霰弹枪。弹夹偏小，需要精准射击。</div>
+      <div class="weapon-scene"><span class="scene-tag" data-zh="近战爆发" data-en="Close Burst">近战爆发</span><span class="scene-tag" data-zh="中距离" data-en="Mid Range">中距离</span></div>
     </div>
 
-    <div class="weapon-card" data-type="步枪">
+    <div class="weapon-card" data-type="rifle">
       <div class="weapon-header">
         <div class="weapon-emoji bg-rare">🎯</div>
         <div class="weapon-info">
-          <div class="weapon-name">战术步枪 MK-7</div>
-          <div class="weapon-tags"><span class="tag tag-rare">稀有</span><span class="tag tag-rare">步枪</span></div>
+          <div class="weapon-name" data-zh="战术步枪 MK-7" data-en="Tactical AR MK-7">战术步枪 MK-7</div>
+          <div class="weapon-tags"><span class="tag tag-rare" data-zh="稀有" data-en="Rare">稀有</span><span class="tag tag-rare" data-zh="步枪" data-en="Rifle">步枪</span></div>
         </div>
         <div class="tier-badge tier-a">A</div>
       </div>
       <div class="weapon-stats">
-        <div class="stat-row">
-          <div class="stat-label">单发伤害</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:68%"></div></div><div class="stat-val">68</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">DPS</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:63%"></div></div><div class="stat-val">198</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">弹夹容量</div>
-          <div class="stat-val">30</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">射速</div>
-          <div class="stat-val">2.9/s</div>
-        </div>
+        <div class="stat-row"><div class="stat-label" data-zh="单发伤害" data-en="Damage">单发伤害</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:68%"></div></div><div class="stat-val">68</div></div></div>
+        <div class="stat-row"><div class="stat-label">DPS</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:63%"></div></div><div class="stat-val">198</div></div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="弹夹容量" data-en="Magazine">弹夹容量</div><div class="stat-val">30</div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="射速" data-en="Fire Rate">射速</div><div class="stat-val">2.9/s</div></div>
       </div>
-      <div class="weapon-desc">稳定可靠的中远距离主力，准度好，弹夹大，全场景适用。新手友好，容错率高。稀有度容易获得。</div>
-      <div class="weapon-scene"><span class="scene-tag">中距离</span><span class="scene-tag">远距离</span><span class="scene-tag">新手友好</span></div>
+      <div class="weapon-desc" data-zh="稳定可靠的中远距离主力，准度好，弹夹大，全场景适用。新手友好，容错率高。稀有度容易获得。" data-en="A reliable mid/long range workhorse — good accuracy, large magazine, works everywhere. Beginner-friendly with high forgiveness. Easy to find on the map.">稳定可靠的中远距离主力，准度好，弹夹大，全场景适用。新手友好，容错率高。稀有度容易获得。</div>
+      <div class="weapon-scene"><span class="scene-tag" data-zh="中距离" data-en="Mid Range">中距离</span><span class="scene-tag" data-zh="远距离" data-en="Long Range">远距离</span><span class="scene-tag" data-zh="新手友好" data-en="Beginner Friendly">新手友好</span></div>
     </div>
 
-    <div class="weapon-card" data-type="狙击">
+    <div class="weapon-card" data-type="sniper">
       <div class="weapon-header">
         <div class="weapon-emoji bg-epic">🎣</div>
         <div class="weapon-info">
-          <div class="weapon-name">重型狙击步枪</div>
-          <div class="weapon-tags"><span class="tag tag-epic">史诗</span><span class="tag tag-rare">狙击</span></div>
+          <div class="weapon-name" data-zh="重型狙击步枪" data-en="Heavy Sniper Rifle">重型狙击步枪</div>
+          <div class="weapon-tags"><span class="tag tag-epic" data-zh="史诗" data-en="Epic">史诗</span><span class="tag tag-rare" data-zh="狙击" data-en="Sniper">狙击</span></div>
         </div>
         <div class="tier-badge tier-a">A</div>
       </div>
       <div class="weapon-stats">
-        <div class="stat-row">
-          <div class="stat-label">单发伤害</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-purple" style="width:100%"></div></div><div class="stat-val">132</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">DPS</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-purple" style="width:24%"></div></div><div class="stat-val">75</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">弹夹容量</div>
-          <div class="stat-val">3</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">射速</div>
-          <div class="stat-val">0.57/s</div>
-        </div>
+        <div class="stat-row"><div class="stat-label" data-zh="单发伤害" data-en="Damage">单发伤害</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-purple" style="width:100%"></div></div><div class="stat-val">132</div></div></div>
+        <div class="stat-row"><div class="stat-label">DPS</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-purple" style="width:24%"></div></div><div class="stat-val">75</div></div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="弹夹容量" data-en="Magazine">弹夹容量</div><div class="stat-val">3</div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="射速" data-en="Fire Rate">射速</div><div class="stat-val">0.57/s</div></div>
       </div>
-      <div class="weapon-desc">爆头伤害极高，适合远距离精准狙击。操作难度大，不适合新手，但熟练后是远距离最强选择。</div>
-      <div class="weapon-scene"><span class="scene-tag">远距离</span><span class="scene-tag">高手向</span></div>
+      <div class="weapon-desc" data-zh="爆头伤害极高，适合远距离精准狙击。操作难度大，不适合新手，但熟练后是远距离最强选择。" data-en="Extremely high headshot damage, built for long-range precision. High skill ceiling — not recommended for beginners, but the strongest long-range option when mastered.">爆头伤害极高，适合远距离精准狙击。操作难度大，不适合新手，但熟练后是远距离最强选择。</div>
+      <div class="weapon-scene"><span class="scene-tag" data-zh="远距离" data-en="Long Range">远距离</span><span class="scene-tag" data-zh="高手向" data-en="Advanced">高手向</span></div>
     </div>
 
-    <div class="weapon-card" data-type="霰弹枪">
+    <div class="weapon-card" data-type="shotgun">
       <div class="weapon-header">
         <div class="weapon-emoji bg-uncommon">🎪</div>
         <div class="weapon-info">
-          <div class="weapon-name">战略霰弹枪</div>
-          <div class="weapon-tags"><span class="tag tag-uncommon">非凡</span><span class="tag tag-rare">霰弹枪</span></div>
+          <div class="weapon-name" data-zh="战略霰弹枪" data-en="Tactical Shotgun">战略霰弹枪</div>
+          <div class="weapon-tags"><span class="tag tag-uncommon" data-zh="非凡" data-en="Uncommon">非凡</span><span class="tag tag-rare" data-zh="霰弹枪" data-en="Shotgun">霰弹枪</span></div>
         </div>
         <div class="tier-badge tier-b">B</div>
       </div>
       <div class="weapon-stats">
-        <div class="stat-row">
-          <div class="stat-label">单发伤害</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:55%"></div></div><div class="stat-val">55</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">DPS</div>
-          <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:35%"></div></div><div class="stat-val">110</div></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">弹夹容量</div>
-          <div class="stat-val">8</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-label">射速</div>
-          <div class="stat-val">2.0/s</div>
-        </div>
+        <div class="stat-row"><div class="stat-label" data-zh="单发伤害" data-en="Damage">单发伤害</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:55%"></div></div><div class="stat-val">55</div></div></div>
+        <div class="stat-row"><div class="stat-label">DPS</div><div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill fill-blue" style="width:35%"></div></div><div class="stat-val">110</div></div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="弹夹容量" data-en="Magazine">弹夹容量</div><div class="stat-val">8</div></div>
+        <div class="stat-row"><div class="stat-label" data-zh="射速" data-en="Fire Rate">射速</div><div class="stat-val">2.0/s</div></div>
       </div>
-      <div class="weapon-desc">射速快、弹夹大、容错率高，新手最推荐的霰弹枪。伤害不如重型霰弹枪，但更容易操作，地图掉落率高。</div>
-      <div class="weapon-scene"><span class="scene-tag">近战</span><span class="scene-tag">新手推荐</span></div>
+      <div class="weapon-desc" data-zh="射速快、弹夹大、容错率高，新手最推荐的霰弹枪。伤害不如重型霰弹枪，但更容易操作，地图掉落率高。" data-en="Fast fire rate, large magazine, high forgiveness — the best shotgun for beginners. Lower damage than the Heavy Shotgun but much easier to use and commonly found on the map.">射速快、弹夹大、容错率高，新手最推荐的霰弹枪。伤害不如重型霰弹枪，但更容易操作，地图掉落率高。</div>
+      <div class="weapon-scene"><span class="scene-tag" data-zh="近战" data-en="Close Range">近战</span><span class="scene-tag" data-zh="新手推荐" data-en="Beginner Pick">新手推荐</span></div>
     </div>
-
   </div>
 </div>
 
+<div class="comments-section">
+  <div class="comments-title">💬 <span data-zh="评论区" data-en="Comments">评论区</span></div>
+  <script src="https://giscus.app/client.js" data-repo="hetao5088-cell/fortnite-guide" data-repo-id="R_kgDOSuhZyQ" data-category="General" data-category-id="DIC_kwDOSuhZyc4C-UyT" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" async></script>
+</div>
+
+<script src="lang.js"></script>
 <script>
-function filterWeapons(type, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+function filterWeapons(type,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.weapon-card').forEach(card => {
-    if (type === 'all' || card.dataset.type.includes(type)) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
+  document.querySelectorAll('.weapon-card').forEach(card=>{
+    card.style.display=(type==='all'||card.dataset.type.includes(type))?'':'none';
   });
 }
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </body>
 </html>

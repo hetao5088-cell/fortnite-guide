@@ -2,36 +2,32 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>建造技巧教程 · 堡垒攻略 FortnifeHubPro</title>
-<meta name="description" content="堡垒之夜建造技巧全教程，从基础建墙到90度快速建造，含材料对比和快捷键配置。">
-<meta property="og:title" content="建造技巧教程 · 堡垒攻略 FortnifeHubPro">
-<meta property="og:description" content="堡垒之夜建造技巧全教程，从基础建墙到90度快速建造，含材料对比和快捷键配置。">
+<title>Building Guide · FortnifeHubPro | 建造技巧教程</title>
+<meta name="description" content="Complete Fortnite building guide — material comparison, keybinds, basic walls to advanced 90s. 堡垒之夜建造技巧全教程。">
+<meta property="og:title" content="Building Guide · FortnifeHubPro">
 <meta property="og:url" content="https://fortnitehubpro.com/building.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fortnitehubpro.com/building.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
-<meta property="og:type" content="website">
-
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
   body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
-
   nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
   .logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
   .logo span{color:var(--accent2);}
   .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links{display:flex;gap:24px;align-items:center;}
   .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
   .nav-links a:hover,.nav-links a.active{color:var(--accent);}
   .nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
-
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .lang-btn{background:rgba(79,195,247,0.1);border:1px solid rgba(79,195,247,0.3);color:var(--accent);font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s;letter-spacing:1px;}
+  .lang-btn:hover{background:rgba(79,195,247,0.2);}
   .page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
   .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
   .breadcrumb a{color:var(--accent);text-decoration:none;}
@@ -39,19 +35,12 @@
   .page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
   .page-title em{color:var(--accent);font-style:normal;}
   .page-desc{color:var(--muted);font-size:16px;max-width:600px;}
-
   .content-wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;display:grid;grid-template-columns:1fr 260px;gap:40px;}
   .main-content{min-width:0;}
   .sidebar{position:sticky;top:80px;height:fit-content;}
-
-  .level-tabs{display:flex;gap:8px;margin-bottom:32px;}
-  .level-tab{padding:8px 20px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:'Noto Sans SC',sans-serif;transition:all 0.15s;}
-  .level-tab.active{background:rgba(79,195,247,0.1);color:var(--accent);border-color:rgba(79,195,247,0.3);}
-
   .build-section{margin-bottom:48px;}
   .build-section-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
   .build-section-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
-
   .build-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px;transition:border-color 0.2s;}
   .build-card:hover{border-color:rgba(79,195,247,0.2);}
   .build-card-header{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
@@ -71,8 +60,6 @@
   .build-step:last-child{border-bottom:none;padding-bottom:0;}
   .step-key{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;color:var(--accent);width:20px;flex-shrink:0;}
   .build-tip{margin-top:10px;background:rgba(79,195,247,0.06);border:1px solid rgba(79,195,247,0.15);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--accent);}
-
-  /* Material table */
   .material-table{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px;}
   table{width:100%;border-collapse:collapse;}
   thead th{padding:12px 20px;text-align:left;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);background:rgba(13,18,32,0.5);}
@@ -80,17 +67,13 @@
   tbody tr:last-child{border-bottom:none;}
   td{padding:14px 20px;font-size:14px;}
   .mat-name{font-weight:700;display:flex;align-items:center;gap:8px;}
-
-  /* Hotkey grid */
   .hotkey-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px;}
   .hotkey-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px;}
   .key-badge{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:#080b12;background:var(--accent);padding:4px 10px;border-radius:6px;min-width:36px;text-align:center;flex-shrink:0;}
   .key-action{font-size:13px;font-weight:500;}
   .key-desc{font-size:12px;color:var(--muted);margin-top:2px;}
-
-  /* Sidebar */
   .sidebar-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px;}
-  .sidebar-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;margin-bottom:14px;color:var(--text);}
+  .sidebar-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;margin-bottom:14px;}
   .toc-list{list-style:none;}
   .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);}
   .toc-list li:last-child{border-bottom:none;}
@@ -99,158 +82,168 @@
   .toc-list a::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;}
   .next-btn{display:block;background:var(--accent);color:#080b12;font-weight:700;font-size:14px;padding:12px 20px;border-radius:10px;text-decoration:none;text-align:center;transition:all 0.2s;}
   .next-btn:hover{box-shadow:0 0 20px rgba(79,195,247,0.4);transform:translateY(-1px);}
-
+  .comments-section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;}
+  .comments-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+  .comments-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
   @media(max-width:900px){.content-wrap{grid-template-columns:1fr;}.sidebar{position:static;}.hotkey-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </head>
 <body>
 <nav>
-  <a class="logo" href="index.html"><div class="logo-dot"></div>堡垒<span>攻略</span></a>
+  <a class="logo" href="index.html"><div class="logo-dot"></div>Fortnite<span>Hub</span></a>
   <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a href="beginner.html">新手教程</a>
-    <a href="weapons.html">武器图鉴</a>
-    <a href="map.html">地图攻略</a>
-    <a class="active" href="building.html">建造技巧</a>
-    <a href="battlepass.html">战斗通行证</a>
-    <a href="esports.html">赛事资讯 <span class="nav-badge">LIVE</span></a>
+    <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+    <a href="beginner.html" data-zh="新手教程" data-en="Beginner Guide">新手教程</a>
+    <a href="weapons.html" data-zh="武器图鉴" data-en="Weapons">武器图鉴</a>
+    <a href="map.html" data-zh="地图攻略" data-en="Map Guide">地图攻略</a>
+    <a class="active" href="building.html" data-zh="建造技巧" data-en="Building">建造技巧</a>
+    <a href="battlepass.html" data-zh="战斗通行证" data-en="Battle Pass">战斗通行证</a>
+    <a href="esports.html"><span data-zh="赛事资讯" data-en="Esports">赛事资讯</span><span class="nav-badge">LIVE</span></a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" id="lang-btn" onclick="setLang(getLang()==='zh'?'en':'zh')">EN</button>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="breadcrumb"><a href="index.html">首页</a><span>›</span>建造技巧</div>
-  <div class="page-title">🏗 <em>建造</em>技巧</div>
-  <p class="page-desc">从基础建墙到高级 90°，系统化学习堡垒之夜的核心技能，全图文详解。</p>
+  <div class="breadcrumb"><a href="index.html" data-zh="首页" data-en="Home">首页</a><span>›</span><span data-zh="建造技巧" data-en="Building Guide">建造技巧</span></div>
+  <div class="page-title">🏗 <em data-zh="建造" data-en="Building">建造</em><span data-zh="技巧" data-en="Guide">技巧</span></div>
+  <p class="page-desc" data-zh="从基础建墙到高级 90°，系统化学习堡垒之夜的核心技能，全图文详解。" data-en="From basic walls to advanced 90s — a systematic guide to mastering Fortnite's core skill, fully illustrated.">从基础建墙到高级 90°，系统化学习堡垒之夜的核心技能，全图文详解。</p>
 </div>
 
 <div class="content-wrap">
   <div class="main-content">
 
-    <!-- 材料 -->
+    <!-- Materials -->
     <div class="build-section" id="material">
-      <div class="build-section-title">建造材料对比</div>
+      <div class="build-section-title" data-zh="建造材料对比" data-en="Material Comparison">建造材料对比</div>
       <div class="material-table">
         <table>
-          <thead><tr><th>材料</th><th>建造速度</th><th>初始血量</th><th>最大血量</th><th>来源</th></tr></thead>
+          <thead>
+            <tr>
+              <th data-zh="材料" data-en="Material">材料</th>
+              <th data-zh="建造速度" data-en="Build Speed">建造速度</th>
+              <th data-zh="初始血量" data-en="Initial HP">初始血量</th>
+              <th data-zh="最大血量" data-en="Max HP">最大血量</th>
+              <th data-zh="来源" data-en="Sources">来源</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><td><div class="mat-name">🌲 木头</div></td><td><span style="color:#52C41A;font-weight:700">最快</span></td><td>90</td><td>150</td><td>树木、木制家具</td></tr>
-            <tr><td><div class="mat-name">🪨 石头</div></td><td><span style="color:var(--accent2);font-weight:700">中等</span></td><td>100</td><td>300</td><td>岩石、砖墙</td></tr>
-            <tr><td><div class="mat-name">⚙️ 金属</div></td><td><span style="color:var(--danger);font-weight:700">最慢</span></td><td>110</td><td>500</td><td>车辆、金属结构</td></tr>
+            <tr><td><div class="mat-name">🌲 <span data-zh="木头" data-en="Wood">木头</span></div></td><td><span style="color:#52C41A;font-weight:700" data-zh="最快" data-en="Fastest">最快</span></td><td>90</td><td>150</td><td><span data-zh="树木、木制家具" data-en="Trees, wooden furniture">树木、木制家具</span></td></tr>
+            <tr><td><div class="mat-name">🪨 <span data-zh="石头" data-en="Stone">石头</span></div></td><td><span style="color:var(--accent2);font-weight:700" data-zh="中等" data-en="Medium">中等</span></td><td>100</td><td>300</td><td><span data-zh="岩石、砖墙" data-en="Rocks, brick walls">岩石、砖墙</span></td></tr>
+            <tr><td><div class="mat-name">⚙️ <span data-zh="金属" data-en="Metal">金属</span></div></td><td><span style="color:var(--danger);font-weight:700" data-zh="最慢" data-en="Slowest">最慢</span></td><td>110</td><td>500</td><td><span data-zh="车辆、金属结构" data-en="Vehicles, metal structures">车辆、金属结构</span></td></tr>
           </tbody>
         </table>
       </div>
       <div style="background:rgba(79,195,247,0.06);border:1px solid rgba(79,195,247,0.15);border-radius:10px;padding:14px 18px;font-size:14px;color:var(--accent);margin-bottom:24px;">
-        💡 战斗中优先用<strong style="color:var(--accent2)">木头</strong>（建得快），防守时换<strong style="color:var(--accent2)">金属</strong>（耐久高）。始终保持木头 500+ 的库存。
+        💡 <span data-zh="战斗中优先用木头（建得快），防守时换金属（耐久高）。始终保持木头 500+ 的库存。" data-en="Use wood in fights (builds fastest); switch to metal for defense (highest HP). Always keep 500+ wood in your inventory.">战斗中优先用木头（建得快），防守时换金属（耐久高）。始终保持木头 500+ 的库存。</span>
       </div>
     </div>
 
-    <!-- 快捷键 -->
+    <!-- Keybinds -->
     <div class="build-section" id="hotkey">
-      <div class="build-section-title">推荐快捷键配置</div>
+      <div class="build-section-title" data-zh="推荐快捷键配置" data-en="Recommended Keybinds">推荐快捷键配置</div>
       <div class="hotkey-grid">
-        <div class="hotkey-card"><div class="key-badge">Q</div><div><div class="key-action">切换建造模式</div><div class="key-desc">最重要的键，务必顺手</div></div></div>
-        <div class="hotkey-card"><div class="key-badge">F1</div><div><div class="key-action">墙</div><div class="key-desc">最常用的建造类型</div></div></div>
-        <div class="hotkey-card"><div class="key-badge">F2</div><div><div class="key-action">坡道</div><div class="key-desc">占高地必用</div></div></div>
-        <div class="hotkey-card"><div class="key-badge">F3</div><div><div class="key-action">地板</div><div class="key-desc">搭建平台防坠落</div></div></div>
-        <div class="hotkey-card"><div class="key-badge">F4</div><div><div class="key-action">锥形/屋顶</div><div class="key-desc">封顶防狙</div></div></div>
-        <div class="hotkey-card"><div class="key-badge">G</div><div><div class="key-action">编辑建筑</div><div class="key-desc">开门开窗用</div></div></div>
+        <div class="hotkey-card"><div class="key-badge">Q</div><div><div class="key-action" data-zh="切换建造模式" data-en="Toggle Build Mode">切换建造模式</div><div class="key-desc" data-zh="最重要的键，务必顺手" data-en="Most important key — make it comfortable">最重要的键，务必顺手</div></div></div>
+        <div class="hotkey-card"><div class="key-badge">F1</div><div><div class="key-action" data-zh="墙" data-en="Wall">墙</div><div class="key-desc" data-zh="最常用的建造类型" data-en="Most used build type">最常用的建造类型</div></div></div>
+        <div class="hotkey-card"><div class="key-badge">F2</div><div><div class="key-action" data-zh="坡道" data-en="Ramp">坡道</div><div class="key-desc" data-zh="占高地必用" data-en="Essential for taking high ground">占高地必用</div></div></div>
+        <div class="hotkey-card"><div class="key-badge">F3</div><div><div class="key-action" data-zh="地板" data-en="Floor">地板</div><div class="key-desc" data-zh="搭建平台防坠落" data-en="Platform to prevent fall damage">搭建平台防坠落</div></div></div>
+        <div class="hotkey-card"><div class="key-badge">F4</div><div><div class="key-action" data-zh="锥形/屋顶" data-en="Cone/Roof">锥形/屋顶</div><div class="key-desc" data-zh="封顶防狙" data-en="Cap your box to block snipers">封顶防狙</div></div></div>
+        <div class="hotkey-card"><div class="key-badge">G</div><div><div class="key-action" data-zh="编辑建筑" data-en="Edit Build">编辑建筑</div><div class="key-desc" data-zh="开门开窗用" data-en="Open doors and windows">开门开窗用</div></div></div>
       </div>
     </div>
 
-    <!-- 基础技巧 -->
+    <!-- Basic -->
     <div class="build-section" id="basic">
-      <div class="build-section-title">基础建造技巧</div>
+      <div class="build-section-title" data-zh="基础建造技巧" data-en="Basic Building Techniques">基础建造技巧</div>
 
       <div class="build-card">
         <div class="build-card-header">
           <div class="build-icon icon-blue">🧱</div>
           <div>
-            <div class="build-card-title">紧急建墙（最重要）</div>
+            <div class="build-card-title" data-zh="紧急建墙（最重要）" data-en="Emergency Wall (Most Important)">紧急建墙（最重要）</div>
             <div class="build-diff"><div class="diff-dot diff-on"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div></div>
           </div>
         </div>
-        <div class="build-card-desc">被打时第一反应是在自己和敌人之间建一堵墙。这是建造的第一课，也是最重要的一课。哪怕只有这一个技能也能大幅提升生存率。</div>
+        <div class="build-card-desc" data-zh="被打时第一反应是在自己和敌人之间建一堵墙。这是建造的第一课，也是最重要的一课。哪怕只有这一个技能也能大幅提升生存率。" data-en="The moment you take damage, your first instinct should be to build a wall between you and the enemy. This is Lesson 1 of building — and the most important. Even just this skill dramatically improves your survival rate.">被打时第一反应是在自己和敌人之间建一堵墙。这是建造的第一课，也是最重要的一课。哪怕只有这一个技能也能大幅提升生存率。</div>
         <div class="build-steps">
-          <div class="build-step"><div class="step-key">1</div><div>被打时立刻按 Q 切换建造模式</div></div>
-          <div class="build-step"><div class="step-key">2</div><div>按 F1 选择墙，对准自己前方点击</div></div>
-          <div class="build-step"><div class="step-key">3</div><div>墙建好后退到墙后回血</div></div>
+          <div class="build-step"><div class="step-key">1</div><div data-zh="被打时立刻按 Q 切换建造模式" data-en="Take damage → instantly press Q to enter build mode">被打时立刻按 Q 切换建造模式</div></div>
+          <div class="build-step"><div class="step-key">2</div><div data-zh="按 F1 选择墙，对准自己前方点击" data-en="Press F1 for wall, aim toward the enemy and click">按 F1 选择墙，对准自己前方点击</div></div>
+          <div class="build-step"><div class="step-key">3</div><div data-zh="墙建好后退到墙后回血" data-en="Wall placed → step behind it and heal">墙建好后退到墙后回血</div></div>
         </div>
-        <div class="build-tip">💡 木墙建造只需 0.1 秒，被打第一下就要立刻建，不要等打多了才想起来建。</div>
+        <div class="build-tip" data-zh="💡 木墙建造只需 0.1 秒，被打第一下就要立刻建，不要等打多了才想起来建。" data-en="💡 Wood walls place in 0.1 seconds. React on the first hit — don't wait until you're low to remember to build.">💡 <span data-zh="木墙建造只需 0.1 秒，被打第一下就要立刻建，不要等打多了才想起来建。" data-en="Wood walls place in 0.1 seconds. React on the first hit — don't wait until you're low to remember to build.">木墙建造只需 0.1 秒，被打第一下就要立刻建，不要等打多了才想起来建。</span></div>
       </div>
 
       <div class="build-card">
         <div class="build-card-header">
           <div class="build-icon icon-gold">📐</div>
           <div>
-            <div class="build-card-title">坡道占高地</div>
+            <div class="build-card-title" data-zh="坡道占高地" data-en="Ramp for High Ground">坡道占高地</div>
             <div class="build-diff"><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div></div>
           </div>
         </div>
-        <div class="build-card-desc">高地在堡垒之夜中有巨大优势：视野好、射击角度占优、对手仰角射击精度差。快速建坡道上高是进阶的第一步。</div>
+        <div class="build-card-desc" data-zh="高地在堡垒之夜中有巨大优势：视野好、射击角度占优、对手仰角射击精度差。快速建坡道上高是进阶的第一步。" data-en="High ground is a massive advantage in Fortnite — better sightlines, superior shooting angles, and enemies shoot with less accuracy upward. Ramping up fast is the first step to going advanced.">高地在堡垒之夜中有巨大优势：视野好、射击角度占优、对手仰角射击精度差。快速建坡道上高是进阶的第一步。</div>
         <div class="build-steps">
-          <div class="build-step"><div class="step-key">1</div><div>按 F2 选择坡道（斜坡）</div></div>
-          <div class="build-step"><div class="step-key">2</div><div>面向想上去的方向，连续点击建造并向前走</div></div>
-          <div class="build-step"><div class="step-key">3</div><div>每层坡道下面补一堵墙，防止被打断</div></div>
-          <div class="build-step"><div class="step-key">4</div><div>到达高位后建地板站稳，避免掉落</div></div>
+          <div class="build-step"><div class="step-key">1</div><div data-zh="按 F2 选择坡道（斜坡）" data-en="Press F2 to select the ramp piece">按 F2 选择坡道（斜坡）</div></div>
+          <div class="build-step"><div class="step-key">2</div><div data-zh="面向想上去的方向，连续点击建造并向前走" data-en="Face your target direction, hold click and walk forward">面向想上去的方向，连续点击建造并向前走</div></div>
+          <div class="build-step"><div class="step-key">3</div><div data-zh="每层坡道下面补一堵墙，防止被打断" data-en="Place a wall under each ramp to prevent it being shot out">每层坡道下面补一堵墙，防止被打断</div></div>
+          <div class="build-step"><div class="step-key">4</div><div data-zh="到达高位后建地板站稳，避免掉落" data-en="Once high, place a floor to stand on — prevents fall damage">到达高位后建地板站稳，避免掉落</div></div>
         </div>
-        <div class="build-tip">💡 <strong style="color:var(--accent2)">防坠要点：</strong>护盾不吸收坠落伤害，爬高后随时在脚下补一块地板。</div>
+        <div class="build-tip" data-zh="💡 防坠要点：护盾不吸收坠落伤害，爬高后随时在脚下补一块地板。" data-en="💡 Fall damage tip: Shields don't absorb fall damage. Always place a floor under yourself after climbing.">💡 <span data-zh="防坠要点：护盾不吸收坠落伤害，爬高后随时在脚下补一块地板。" data-en="Fall damage tip: Shields don't absorb fall damage. Always place a floor under yourself after climbing.">防坠要点：护盾不吸收坠落伤害，爬高后随时在脚下补一块地板。</span></div>
       </div>
 
       <div class="build-card">
         <div class="build-card-header">
           <div class="build-icon icon-purple">🏠</div>
           <div>
-            <div class="build-card-title">1×1 防御小屋</div>
+            <div class="build-card-title" data-zh="1×1 防御小屋" data-en="1×1 Box (Defensive Box)">1×1 防御小屋</div>
             <div class="build-diff"><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div></div>
           </div>
         </div>
-        <div class="build-card-desc">四面建墙 + 一个屋顶，建一个能完全保护自己的临时掩体。在决赛圈或交换物资时非常实用。</div>
+        <div class="build-card-desc" data-zh="四面建墙 + 一个屋顶，建一个能完全保护自己的临时掩体。在决赛圈或交换物资时非常实用。" data-en="Four walls plus a roof — a temporary shelter that fully protects you. Extremely useful in the final circle or when healing mid-fight.">四面建墙 + 一个屋顶，建一个能完全保护自己的临时掩体。在决赛圈或交换物资时非常实用。</div>
         <div class="build-steps">
-          <div class="build-step"><div class="step-key">1</div><div>原地转一圈，四个方向各建一堵墙</div></div>
-          <div class="build-step"><div class="step-key">2</div><div>按 F4 选锥形，在头顶建屋顶封顶</div></div>
-          <div class="build-step"><div class="step-key">3</div><div>按 G 编辑一面墙，开一个窗口观察敌情</div></div>
+          <div class="build-step"><div class="step-key">1</div><div data-zh="原地转一圈，四个方向各建一堵墙" data-en="Spin 360° and place a wall in each of the four directions">原地转一圈，四个方向各建一堵墙</div></div>
+          <div class="build-step"><div class="step-key">2</div><div data-zh="按 F4 选锥形，在头顶建屋顶封顶" data-en="Press F4 for cone, place it above your head to cap the box">按 F4 选锥形，在头顶建屋顶封顶</div></div>
+          <div class="build-step"><div class="step-key">3</div><div data-zh="按 G 编辑一面墙，开一个窗口观察敌情" data-en="Press G to edit a wall and open a window to watch the enemy">按 G 编辑一面墙，开一个窗口观察敌情</div></div>
         </div>
       </div>
     </div>
 
-    <!-- 进阶技巧 -->
+    <!-- Advanced -->
     <div class="build-section" id="advanced">
-      <div class="build-section-title">进阶建造技巧</div>
+      <div class="build-section-title" data-zh="进阶建造技巧" data-en="Advanced Building Techniques">进阶建造技巧</div>
 
       <div class="build-card">
         <div class="build-card-header">
           <div class="build-icon icon-red">⚡</div>
           <div>
-            <div class="build-card-title">90° 快速建造</div>
+            <div class="build-card-title" data-zh="90° 快速建造" data-en="90° Fast Build">90° 快速建造</div>
             <div class="build-diff"><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-off"></div></div>
           </div>
         </div>
-        <div class="build-card-desc">堡垒之夜最经典的进阶建造技术，每次建造转 90°，能快速抢占高地并保护自己，是竞技场标配操作。</div>
+        <div class="build-card-desc" data-zh="堡垒之夜最经典的进阶建造技术，每次建造转 90°，能快速抢占高地并保护自己，是竞技场标配操作。" data-en="The most iconic advanced technique in Fortnite — each cycle turns 90°, letting you rapidly gain high ground while protecting yourself. Standard in every competitive lobby.">堡垒之夜最经典的进阶建造技术，每次建造转 90°，能快速抢占高地并保护自己，是竞技场标配操作。</div>
         <div class="build-steps">
-          <div class="build-step"><div class="step-key">1</div><div>建一堵墙 + 一个坡道</div></div>
-          <div class="build-step"><div class="step-key">2</div><div>走上坡道，立刻向左转 90°</div></div>
-          <div class="build-step"><div class="step-key">3</div><div>再建一堵墙 + 一个坡道，继续往上走</div></div>
-          <div class="build-step"><div class="step-key">4</div><div>重复上述动作，每次转向 90°</div></div>
+          <div class="build-step"><div class="step-key">1</div><div data-zh="建一堵墙 + 一个坡道" data-en="Place one wall + one ramp">建一堵墙 + 一个坡道</div></div>
+          <div class="build-step"><div class="step-key">2</div><div data-zh="走上坡道，立刻向左转 90°" data-en="Walk up the ramp, immediately turn 90° left">走上坡道，立刻向左转 90°</div></div>
+          <div class="build-step"><div class="step-key">3</div><div data-zh="再建一堵墙 + 一个坡道，继续往上走" data-en="Place another wall + ramp, keep walking up">再建一堵墙 + 一个坡道，继续往上走</div></div>
+          <div class="build-step"><div class="step-key">4</div><div data-zh="重复上述动作，每次转向 90°" data-en="Repeat — turn 90° each cycle">重复上述动作，每次转向 90°</div></div>
         </div>
-        <div class="build-tip">💡 需要大量练习，建议先在创意模式中专门训练 30 分钟再上实战。</div>
+        <div class="build-tip" data-zh="💡 需要大量练习，建议先在创意模式中专门训练 30 分钟再上实战。" data-en="💡 This takes serious practice. Spend at least 30 minutes in Creative Mode drilling it before taking it into a real match.">💡 <span data-zh="需要大量练习，建议先在创意模式中专门训练 30 分钟再上实战。" data-en="This takes serious practice. Spend at least 30 minutes in Creative Mode drilling it before taking it into a real match.">需要大量练习，建议先在创意模式中专门训练 30 分钟再上实战。</span></div>
       </div>
 
       <div class="build-card">
         <div class="build-card-header">
           <div class="build-icon icon-blue">🔄</div>
           <div>
-            <div class="build-card-title">双墙坡冲锋</div>
+            <div class="build-card-title" data-zh="双墙坡冲锋" data-en="Double Ramp Rush">双墙坡冲锋</div>
             <div class="build-diff"><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div></div>
           </div>
         </div>
-        <div class="build-card-desc">推进时在前方同时建墙和坡道，既保护自己又能快速靠近敌人，是攻击时的标准操作。</div>
+        <div class="build-card-desc" data-zh="推进时在前方同时建墙和坡道，既保护自己又能快速靠近敌人，是攻击时的标准操作。" data-en="While pushing, simultaneously build a wall and ramp in front of you — protects you while closing distance fast. Standard technique for aggression.">推进时在前方同时建墙和坡道，既保护自己又能快速靠近敌人，是攻击时的标准操作。</div>
         <div class="build-steps">
-          <div class="build-step"><div class="step-key">1</div><div>向敌人方向冲，先建一堵正面墙</div></div>
-          <div class="build-step"><div class="step-key">2</div><div>紧接着在墙上建坡道，从坡道上跑过去</div></div>
-          <div class="build-step"><div class="step-key">3</div><div>站在坡道高位向下攻击，占据高地优势</div></div>
+          <div class="build-step"><div class="step-key">1</div><div data-zh="向敌人方向冲，先建一堵正面墙" data-en="Rush toward the enemy, place a front-facing wall first">向敌人方向冲，先建一堵正面墙</div></div>
+          <div class="build-step"><div class="step-key">2</div><div data-zh="紧接着在墙上建坡道，从坡道上跑过去" data-en="Immediately ramp over the wall and run across it">紧接着在墙上建坡道，从坡道上跑过去</div></div>
+          <div class="build-step"><div class="step-key">3</div><div data-zh="站在坡道高位向下攻击，占据高地优势" data-en="Attack from the ramp height — you now have high ground advantage">站在坡道高位向下攻击，占据高地优势</div></div>
         </div>
       </div>
     </div>
@@ -260,25 +253,34 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <div class="sidebar-card">
-      <div class="sidebar-title">📋 本文目录</div>
+      <div class="sidebar-title" data-zh="📋 本文目录" data-en="📋 Contents">📋 本文目录</div>
       <ul class="toc-list">
-        <li><a href="#material">建造材料对比</a></li>
-        <li><a href="#hotkey">快捷键配置</a></li>
-        <li><a href="#basic">基础建造技巧</a></li>
-        <li><a href="#advanced">进阶建造技巧</a></li>
+        <li><a href="#material" data-zh="建造材料对比" data-en="Material Comparison">建造材料对比</a></li>
+        <li><a href="#hotkey" data-zh="快捷键配置" data-en="Keybinds">快捷键配置</a></li>
+        <li><a href="#basic" data-zh="基础建造技巧" data-en="Basic Techniques">基础建造技巧</a></li>
+        <li><a href="#advanced" data-zh="进阶建造技巧" data-en="Advanced Techniques">进阶建造技巧</a></li>
       </ul>
     </div>
     <div class="sidebar-card">
-      <div class="sidebar-title">⚡ 练习建议</div>
+      <div class="sidebar-title" data-zh="⚡ 练习建议" data-en="⚡ Practice Tips">⚡ 练习建议</div>
       <div style="font-size:13px;color:var(--muted);line-height:1.7;">
-        <p style="margin-bottom:8px">1. 先在<strong style="color:var(--text)">创意模式</strong>练习，不用担心被击杀</p>
-        <p style="margin-bottom:8px">2. 每天练习 <strong style="color:var(--text)">15-30 分钟</strong>，一周内能明显提升</p>
-        <p style="margin-bottom:8px">3. 新手先掌握<strong style="color:var(--text)">紧急建墙</strong>，其他慢慢学</p>
-        <p>4. 看职业选手直播，学习实战建造思路</p>
+        <p style="margin-bottom:8px"><span data-zh="先在" data-en="Start in">先在</span><strong style="color:var(--text)" data-zh="创意模式" data-en="Creative Mode">创意模式</strong><span data-zh="练习，不用担心被击杀" data-en="— no pressure from getting eliminated">练习，不用担心被击杀</span></p>
+        <p style="margin-bottom:8px"><span data-zh="每天练习" data-en="Practice">每天练习</span> <strong style="color:var(--text)" data-zh="15-30 分钟" data-en="15–30 min/day">15-30 分钟</strong><span data-zh="，一周内能明显提升" data-en=" — noticeable improvement within a week">, 一周内能明显提升</span></p>
+        <p style="margin-bottom:8px"><span data-zh="新手先掌握" data-en="Beginners: master">新手先掌握</span><strong style="color:var(--text)" data-zh="紧急建墙" data-en="emergency walls">紧急建墙</strong><span data-zh="，其他慢慢学" data-en=" first, learn the rest gradually">，其他慢慢学</span></p>
+        <p data-zh="看职业选手直播，学习实战建造思路" data-en="Watch pro players stream to learn real-match building decision-making">看职业选手直播，学习实战建造思路</p>
       </div>
     </div>
-    <a class="next-btn" href="battlepass.html">下一篇：战斗通行证 →</a>
+    <a class="next-btn" href="battlepass.html" data-zh="下一篇：战斗通行证 →" data-en="Next: Battle Pass →">下一篇：战斗通行证 →</a>
   </div>
 </div>
+
+<div class="comments-section">
+  <div class="comments-title">💬 <span data-zh="评论区" data-en="Comments">评论区</span></div>
+  <script src="https://giscus.app/client.js" data-repo="hetao5088-cell/fortnite-guide" data-repo-id="R_kgDOSuhZyQ" data-category="General" data-category-id="DIC_kwDOSuhZyc4C-UyT" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" async></script>
+</div>
+
+<script src="lang.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </body>
 </html>
