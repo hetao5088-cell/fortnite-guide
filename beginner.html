@@ -2,324 +2,325 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>新手完全指南 · 堡垒攻略 FortnifeHubPro</title>
-<meta name="description" content="堡垒之夜新手入门教程，从跳机落地到战斗建造，5个章节带你从零到吃鸡。">
-<meta property="og:title" content="新手完全指南 · 堡垒攻略 FortnifeHubPro">
-<meta property="og:description" content="堡垒之夜新手入门教程，从跳机落地到战斗建造，5个章节带你从零到吃鸡。">
+<title>Beginner Guide · FortnifeHubPro | 新手完全指南</title>
+<meta name="description" content="Complete Fortnite beginner guide for Chapter 7 Season 3 — drop spots, looting, combat, building and storm survival. 堡垒之夜新手完全教程。">
+<meta property="og:title" content="Beginner Guide · FortnifeHubPro">
+<meta property="og:description" content="Complete Fortnite beginner guide — from dropping to Victory Royale.">
 <meta property="og:url" content="https://fortnitehubpro.com/beginner.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fortnitehubpro.com/beginner.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
-<meta property="og:type" content="website">
-
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #080b12; --surface: #0d1220; --card: #111827;
-    --border: rgba(99,179,237,0.12); --accent: #4FC3F7;
-    --accent2: #F6B93B; --accent3: #6C63FF; --danger: #FF6B6B;
-    --text: #E2E8F0; --muted: #64748B; --glow: 0 0 24px rgba(79,195,247,0.18);
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: 'Noto Sans SC', sans-serif; font-size: 15px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
-  body::after { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(79,195,247,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(79,195,247,0.03) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; z-index: 0; }
+  :root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;--glow:0 0 24px rgba(79,195,247,0.18);}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+  body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+  .logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
+  .logo span{color:var(--accent2);}
+  .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .nav-links{display:flex;gap:24px;align-items:center;}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+  .nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .lang-btn{background:rgba(79,195,247,0.1);border:1px solid rgba(79,195,247,0.3);color:var(--accent);font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s;letter-spacing:1px;}
+  .lang-btn:hover{background:rgba(79,195,247,0.2);}
 
-  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 60px; background: rgba(8,11,18,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-  .logo { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; display: flex; align-items: center; gap: 8px; text-decoration: none; }
-  .logo span { color: var(--accent2); }
-  .logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2s ease-in-out infinite; }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-  .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s; }
-  .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-  .nav-badge { background: var(--danger); color: #fff; font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 4px; margin-left: 4px; }
+  .page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
+  .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
+  .breadcrumb a{color:var(--accent);text-decoration:none;}
+  .breadcrumb span{margin:0 8px;}
+  .page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
+  .page-title em{color:var(--accent);font-style:normal;}
+  .page-desc{color:var(--muted);font-size:16px;max-width:600px;}
 
-  .page-hero { position: relative; z-index: 1; padding: 56px 32px 40px; max-width: 1200px; margin: 0 auto; }
-  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-  .breadcrumb a { color: var(--accent); text-decoration: none; }
-  .breadcrumb span { margin: 0 8px; }
-  .page-title { font-family: 'Rajdhani', sans-serif; font-size: 48px; font-weight: 700; line-height: 1.1; margin-bottom: 12px; }
-  .page-title em { color: var(--accent); font-style: normal; }
-  .page-desc { color: var(--muted); font-size: 16px; max-width: 600px; }
+  .content-wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;display:grid;grid-template-columns:1fr 280px;gap:40px;}
+  .main-content{min-width:0;}
+  .sidebar{position:sticky;top:80px;height:fit-content;}
 
-  .content-wrap { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: 1fr 280px; gap: 40px; }
-  .main-content { min-width: 0; }
-  .sidebar { position: sticky; top: 80px; height: fit-content; }
+  .step-section{margin-bottom:48px;}
+  .step-section-title{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
+  .step-section-title::before{content:'';display:block;width:4px;height:22px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
+  .step-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px;display:flex;gap:20px;transition:all 0.25s;}
+  .step-card:hover{border-color:rgba(79,195,247,0.25);}
+  .step-num{font-family:'Rajdhani',sans-serif;font-size:32px;font-weight:700;color:rgba(79,195,247,0.2);line-height:1;flex-shrink:0;width:40px;}
+  .step-body{flex:1;}
+  .step-title{font-weight:700;font-size:16px;margin-bottom:8px;color:var(--text);}
+  .step-desc{color:var(--muted);font-size:14px;line-height:1.7;}
+  .step-tip{margin-top:10px;background:rgba(79,195,247,0.06);border:1px solid rgba(79,195,247,0.15);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--accent);}
+  .step-tip strong{color:var(--accent2);}
 
-  /* Steps */
-  .step-section { margin-bottom: 48px; }
-  .step-section-title { font-family: 'Rajdhani', sans-serif; font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
-  .step-section-title::before { content: ''; display: block; width: 4px; height: 22px; background: var(--accent); border-radius: 2px; box-shadow: 0 0 8px var(--accent); }
+  .tip-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+  .tip-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .tip-box-icon{font-size:24px;margin-bottom:8px;}
+  .tip-box-title{font-weight:700;font-size:14px;margin-bottom:4px;}
+  .tip-box-desc{font-size:13px;color:var(--muted);line-height:1.5;}
+  .warn-box{background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.2);border-radius:10px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#FFB3B3;}
+  .warn-box strong{color:var(--danger);}
+  .good-box{background:rgba(82,196,26,0.06);border:1px solid rgba(82,196,26,0.2);border-radius:10px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#B7EB8F;}
+  .good-box strong{color:#52C41A;}
 
-  .step-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 16px; display: flex; gap: 20px; transition: border-color 0.2s; }
-  .step-card:hover { border-color: rgba(79,195,247,0.25); }
-  .step-num { font-family: 'Rajdhani', sans-serif; font-size: 32px; font-weight: 700; color: rgba(79,195,247,0.2); line-height: 1; flex-shrink: 0; width: 40px; }
-  .step-body { flex: 1; }
-  .step-title { font-weight: 700; font-size: 16px; margin-bottom: 8px; color: var(--text); }
-  .step-desc { color: var(--muted); font-size: 14px; line-height: 1.7; }
-  .step-tip { margin-top: 10px; background: rgba(79,195,247,0.06); border: 1px solid rgba(79,195,247,0.15); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--accent); }
-  .step-tip strong { color: var(--accent2); }
+  .sidebar-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px;}
+  .sidebar-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;margin-bottom:14px;color:var(--text);}
+  .toc-list{list-style:none;}
+  .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);}
+  .toc-list li:last-child{border-bottom:none;}
+  .toc-list a{font-size:13px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s;}
+  .toc-list a:hover{color:var(--accent);}
+  .toc-list a::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+  .next-btn{display:block;background:var(--accent);color:#080b12;font-weight:700;font-size:14px;padding:12px 20px;border-radius:10px;text-decoration:none;text-align:center;transition:all 0.2s;}
+  .next-btn:hover{box-shadow:0 0 20px rgba(79,195,247,0.4);transform:translateY(-1px);}
+  .diff-bar{display:flex;gap:4px;margin-top:6px;}
+  .diff-dot{width:10px;height:10px;border-radius:50%;}
+  .diff-on{background:var(--accent2);}
+  .diff-off{background:rgba(255,255,255,0.1);}
 
-  .tip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-  .tip-box { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
-  .tip-box-icon { font-size: 24px; margin-bottom: 8px; }
-  .tip-box-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
-  .tip-box-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  /* Comments */
+  .comments-section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;}
+  .comments-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+  .comments-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
 
-  .warn-box { background: rgba(255,107,107,0.06); border: 1px solid rgba(255,107,107,0.2); border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; font-size: 14px; color: #FFB3B3; }
-  .warn-box strong { color: var(--danger); }
-
-  .good-box { background: rgba(82,196,26,0.06); border: 1px solid rgba(82,196,26,0.2); border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; font-size: 14px; color: #B7EB8F; }
-  .good-box strong { color: #52C41A; }
-
-  /* Sidebar */
-  .sidebar-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-  .sidebar-title { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
-  .toc-list { list-style: none; }
-  .toc-list li { padding: 6px 0; border-bottom: 1px solid var(--border); }
-  .toc-list li:last-child { border-bottom: none; }
-  .toc-list a { font-size: 13px; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
-  .toc-list a:hover { color: var(--accent); }
-  .toc-list a::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-
-  .next-btn { display: block; background: var(--accent); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px 20px; border-radius: 10px; text-decoration: none; text-align: center; transition: all 0.2s; }
-  .next-btn:hover { box-shadow: 0 0 20px rgba(79,195,247,0.4); transform: translateY(-1px); }
-
-  .difficulty-bar { display: flex; gap: 4px; margin-top: 6px; }
-  .diff-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .diff-on { background: var(--accent2); }
-  .diff-off { background: rgba(255,255,255,0.1); }
-
-  @media(max-width:900px){ .content-wrap{grid-template-columns:1fr;} .sidebar{position:static;} .tip-grid{grid-template-columns:1fr;} .nav-links{display:none;} }
+  @media(max-width:900px){.content-wrap{grid-template-columns:1fr;}.sidebar{position:static;}.tip-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </head>
 <body>
 <nav>
-  <a class="logo" href="index.html"><div class="logo-dot"></div>堡垒<span>攻略</span></a>
+  <a class="logo" href="index.html"><div class="logo-dot"></div>Fortnite<span>Hub</span></a>
   <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a class="active" href="beginner.html">新手教程</a>
-    <a href="weapons.html">武器图鉴</a>
-    <a href="map.html">地图攻略</a>
-    <a href="building.html">建造技巧</a>
-    <a href="battlepass.html">战斗通行证</a>
-    <a href="esports.html">赛事资讯 <span class="nav-badge">LIVE</span></a>
+    <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+    <a class="active" href="beginner.html" data-zh="新手教程" data-en="Beginner Guide">新手教程</a>
+    <a href="weapons.html" data-zh="武器图鉴" data-en="Weapons">武器图鉴</a>
+    <a href="map.html" data-zh="地图攻略" data-en="Map Guide">地图攻略</a>
+    <a href="building.html" data-zh="建造技巧" data-en="Building">建造技巧</a>
+    <a href="battlepass.html" data-zh="战斗通行证" data-en="Battle Pass">战斗通行证</a>
+    <a href="esports.html"><span data-zh="赛事资讯" data-en="Esports">赛事资讯</span> <span class="nav-badge">LIVE</span></a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" id="lang-btn" onclick="setLang(getLang()==='zh'?'en':'zh')">EN</button>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="breadcrumb"><a href="index.html">首页</a><span>›</span>新手教程</div>
-  <div class="page-title">🪂 <em>新手</em>完全指南</div>
-  <p class="page-desc">从零开始，掌握堡垒之夜的核心机制——跳机、搜刮、战斗、建造，一步步走向吃鸡。</p>
+  <div class="breadcrumb">
+    <a href="index.html" data-zh="首页" data-en="Home">首页</a><span>›</span>
+    <span data-zh="新手教程" data-en="Beginner Guide">新手教程</span>
+  </div>
+  <div class="page-title">🪂 <em data-zh="新手" data-en="Beginner">新手</em><span data-zh="完全指南" data-en="Complete Guide">完全指南</span></div>
+  <p class="page-desc" data-zh="从零开始，掌握堡垒之夜的核心机制——跳机、搜刮、战斗、建造，一步步走向吃鸡。" data-en="Start from scratch and master Fortnite's core mechanics — dropping, looting, combat, and building — step by step toward Victory Royale.">从零开始，掌握堡垒之夜的核心机制——跳机、搜刮、战斗、建造，一步步走向吃鸡。</p>
 </div>
 
 <div class="content-wrap">
   <div class="main-content">
 
-    <!-- 第一章 -->
+    <!-- Chapter 1 -->
     <div class="step-section" id="jump">
-      <div class="step-section-title">第一章：跳机与落地</div>
-
+      <div class="step-section-title" data-zh="第一章：跳机与落地" data-en="Chapter 1: Dropping & Landing">第一章：跳机与落地</div>
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-body">
-          <div class="step-title">战斗巴士的飞行路线</div>
-          <div class="step-desc">每局开始，战斗巴士会沿随机路线飞越地图。在小地图上可以看到蓝色飞行路径，提前规划好目标落点。路线决定了哪些区域竞争激烈，哪些区域相对安全。</div>
+          <div class="step-title" data-zh="战斗巴士的飞行路线" data-en="The Battle Bus Flight Path">战斗巴士的飞行路线</div>
+          <div class="step-desc" data-zh="每局开始，战斗巴士会沿随机路线飞越地图。在小地图上可以看到蓝色飞行路径，提前规划好目标落点。路线决定了哪些区域竞争激烈，哪些区域相对安全。" data-en="At the start of every match, the Battle Bus flies a random route across the map. You can see the blue flight path on the minimap — plan your drop spot in advance. The route determines which areas are hot and which are safer.">每局开始，战斗巴士会沿随机路线飞越地图。在小地图上可以看到蓝色飞行路径，提前规划好目标落点。路线决定了哪些区域竞争激烈，哪些区域相对安全。</div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">02</div>
         <div class="step-body">
-          <div class="step-title">新手推荐：等到巴士快到终点再跳</div>
-          <div class="step-desc">大多数玩家会在巴士中段跳出，越靠近终点跳出的玩家越少。作为新手，建议等巴士接近终点前 3 秒再跳，落点竞争小，有更多时间搜刮。</div>
-          <div class="step-tip">💡 <strong>小技巧：</strong>跳出后立刻收起滑翔伞俯冲，能比其他玩家更快落地，抢先一步进屋搜刮。</div>
+          <div class="step-title" data-zh="新手推荐：等到巴士快到终点再跳" data-en="Beginner Tip: Wait Until the Bus Nears Its End">新手推荐：等到巴士快到终点再跳</div>
+          <div class="step-desc" data-zh="大多数玩家会在巴士中段跳出，越靠近终点跳出的玩家越少。作为新手，建议等巴士接近终点前 3 秒再跳，落点竞争小，有更多时间搜刮。" data-en="Most players drop in the middle of the bus route. The closer to the end you jump, the fewer players compete for your landing spot. As a beginner, wait until 3 seconds before the end — less competition, more time to loot.">大多数玩家会在巴士中段跳出，越靠近终点跳出的玩家越少。作为新手，建议等巴士接近终点前 3 秒再跳，落点竞争小，有更多时间搜刮。</div>
+          <div class="step-tip" data-zh="💡 小技巧：跳出后立刻收起滑翔伞俯冲，能比其他玩家更快落地，抢先一步进屋搜刮。" data-en="💡 Pro tip: After jumping, immediately close your glider and dive to land faster than other players and enter buildings first.">💡 <strong data-zh="小技巧：" data-en="Pro tip:">小技巧：</strong><span data-zh="跳出后立刻收起滑翔伞俯冲，能比其他玩家更快落地，抢先一步进屋搜刮。" data-en="After jumping, immediately close your glider and dive to land faster than other players and enter buildings first.">跳出后立刻收起滑翔伞俯冲，能比其他玩家更快落地，抢先一步进屋搜刮。</span></div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">03</div>
         <div class="step-body">
-          <div class="step-title">选择落点：房屋 > 空地</div>
-          <div class="step-desc">优先落在建筑物上，屋内通常有宝箱和散落物资。用镐破屋顶即可进入建筑。避免落在空地上，那里几乎没有物资，还容易被发现。</div>
+          <div class="step-title" data-zh="选择落点：房屋 > 空地" data-en="Choose Your Landing Spot: Buildings > Open Ground">选择落点：房屋 > 空地</div>
+          <div class="step-desc" data-zh="优先落在建筑物上，屋内通常有宝箱和散落物资。用镐破屋顶即可进入建筑。避免落在空地上，那里几乎没有物资，还容易被发现。" data-en="Always prioritize landing on buildings — they contain chests and floor loot. Use your pickaxe to break through the roof. Avoid open fields; they have almost no loot and leave you exposed.">优先落在建筑物上，屋内通常有宝箱和散落物资。用镐破屋顶即可进入建筑。避免落在空地上，那里几乎没有物资，还容易被发现。</div>
         </div>
       </div>
     </div>
 
-    <!-- 第二章 -->
+    <!-- Chapter 2 -->
     <div class="step-section" id="loot">
-      <div class="step-section-title">第二章：搜刮与物资优先级</div>
-
+      <div class="step-section-title" data-zh="第二章：搜刮与物资优先级" data-en="Chapter 2: Looting & Item Priority">第二章：搜刮与物资优先级</div>
       <div class="tip-grid">
         <div class="tip-box">
           <div class="tip-box-icon">🗝</div>
-          <div class="tip-box-title">宝箱（金色发光）</div>
-          <div class="tip-box-desc">优先级最高，必开。通常在角落、阁楼、地下室，会发出嗡嗡声，跟着声音找。</div>
+          <div class="tip-box-title" data-zh="宝箱（金色发光）" data-en="Chests (Golden Glow)">宝箱（金色发光）</div>
+          <div class="tip-box-desc" data-zh="优先级最高，必开。通常在角落、阁楼、地下室，会发出嗡嗡声，跟着声音找。" data-en="Highest priority — always open. Found in corners, attics, and basements. They make a humming sound; follow the audio.">优先级最高，必开。通常在角落、阁楼、地下室，会发出嗡嗡声，跟着声音找。</div>
         </div>
         <div class="tip-box">
           <div class="tip-box-icon">💊</div>
-          <div class="tip-box-title">护盾药水</div>
-          <div class="tip-box-desc">蓝色护盾最多叠加到 100 点，战斗前务必喝满。小护盾每瓶 +25，大护盾 +50。</div>
+          <div class="tip-box-title" data-zh="护盾药水" data-en="Shield Potions">护盾药水</div>
+          <div class="tip-box-desc" data-zh="蓝色护盾最多叠加到 100 点，战斗前务必喝满。小护盾每瓶 +25，大护盾 +50。" data-en="Blue shield stacks up to 100. Always drink before a fight. Small shield gives +25, large gives +50.">蓝色护盾最多叠加到 100 点，战斗前务必喝满。小护盾每瓶 +25，大护盾 +50。</div>
         </div>
         <div class="tip-box">
           <div class="tip-box-icon">🔫</div>
-          <div class="tip-box-title">武器搭配</div>
-          <div class="tip-box-desc">新手建议：冲锋枪（近战）+ 步枪（中远距）+ 霰弹枪（零距离）三角配置。</div>
+          <div class="tip-box-title" data-zh="武器搭配" data-en="Weapon Loadout">武器搭配</div>
+          <div class="tip-box-desc" data-zh="新手建议：冲锋枪（近战）+ 步枪（中远距）+ 霰弹枪（零距离）三角配置。" data-en="Beginner setup: SMG (close range) + Assault Rifle (mid/long range) + Shotgun (point blank).">新手建议：冲锋枪（近战）+ 步枪（中远距）+ 霰弹枪（零距离）三角配置。</div>
         </div>
         <div class="tip-box">
           <div class="tip-box-icon">🩹</div>
-          <div class="tip-box-title">绷带 / 医疗包</div>
-          <div class="tip-box-desc">绷带回 15 血，医疗包回满血。战斗后立刻找掩体回血，不要硬撑低血量继续战斗。</div>
+          <div class="tip-box-title" data-zh="绷带 / 医疗包" data-en="Bandages / Med Kits">绷带 / 医疗包</div>
+          <div class="tip-box-desc" data-zh="绷带回 15 血，医疗包回满血。战斗后立刻找掩体回血，不要硬撑低血量继续战斗。" data-en="Bandages restore 15 HP, Med Kits restore full HP. After a fight, find cover immediately and heal — never push at low health.">绷带回 15 血，医疗包回满血。战斗后立刻找掩体回血，不要硬撑低血量继续战斗。</div>
         </div>
       </div>
-
-      <div class="warn-box"><strong>⚠️ 新手常见错误：</strong>背包满了还在捡物资，导致没时间喝护盾。建议先喝护盾再考虑整理背包。</div>
-      <div class="good-box"><strong>✅ 正确做法：</strong>落地后优先找武器 → 喝护盾 → 收集材料 → 搜完一栋楼再转移到下一栋。</div>
+      <div class="warn-box"><strong data-zh="⚠️ 新手常见错误：" data-en="⚠️ Common Beginner Mistake:">⚠️ 新手常见错误：</strong><span data-zh="背包满了还在捡物资，导致没时间喝护盾。建议先喝护盾再考虑整理背包。" data-en="Picking up loot with a full inventory instead of drinking shields first. Always shield up before managing your bag.">背包满了还在捡物资，导致没时间喝护盾。建议先喝护盾再考虑整理背包。</span></div>
+      <div class="good-box"><strong data-zh="✅ 正确做法：" data-en="✅ Correct Approach:">✅ 正确做法：</strong><span data-zh="落地后优先找武器 → 喝护盾 → 收集材料 → 搜完一栋楼再转移到下一栋。" data-en="Land → grab a weapon → drink shield → farm materials → clear one building before rotating to the next.">落地后优先找武器 → 喝护盾 → 收集材料 → 搜完一栋楼再转移到下一栋。</span></div>
     </div>
 
-    <!-- 第三章 -->
+    <!-- Chapter 3 -->
     <div class="step-section" id="combat">
-      <div class="step-section-title">第三章：基础战斗技巧</div>
-
+      <div class="step-section-title" data-zh="第三章：基础战斗技巧" data-en="Chapter 3: Basic Combat Tips">第三章：基础战斗技巧</div>
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-body">
-          <div class="step-title">蹲姿提升精准度</div>
-          <div class="step-desc">Fortnite 的枪械有弹道扩散，移动时精度最差，蹲下时精度最好。中远距离交火时，先蹲下再开枪，能显著提升命中率。</div>
+          <div class="step-title" data-zh="蹲姿提升精准度" data-en="Crouch to Improve Accuracy">蹲姿提升精准度</div>
+          <div class="step-desc" data-zh="Fortnite 的枪械有弹道扩散，移动时精度最差，蹲下时精度最好。中远距离交火时，先蹲下再开枪，能显著提升命中率。" data-en="Fortnite weapons have bullet spread (bloom). Accuracy is worst while moving and best while crouched. At medium to long range, always crouch before firing to significantly improve your hit rate.">Fortnite 的枪械有弹道扩散，移动时精度最差，蹲下时精度最好。中远距离交火时，先蹲下再开枪，能显著提升命中率。</div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">02</div>
         <div class="step-body">
-          <div class="step-title">先打护盾再打血量</div>
-          <div class="step-desc">敌人蓝色护盾（最多100点）比血量（100点）更难恢复，优先消耗对方护盾。护盾被打空时会有明显的破盾音效。</div>
-          <div class="step-tip">💡 <strong>破盾音效</strong>是进攻的信号，听到后可以加大攻势，对方没有护盾非常脆弱。</div>
+          <div class="step-title" data-zh="先打护盾再打血量" data-en="Target Shield Before Health">先打护盾再打血量</div>
+          <div class="step-desc" data-zh="敌人蓝色护盾（最多100点）比血量（100点）更难恢复，优先消耗对方护盾。护盾被打空时会有明显的破盾音效。" data-en="An enemy's blue shield (up to 100 points) is harder to recover than health (100 points). Focus on depleting their shield first. A loud crack sound signals their shield is broken.">敌人蓝色护盾（最多100点）比血量（100点）更难恢复，优先消耗对方护盾。护盾被打空时会有明显的破盾音效。</div>
+          <div class="step-tip" data-zh="💡 破盾音效是进攻的信号，听到后可以加大攻势，对方没有护盾非常脆弱。" data-en="💡 The shield-break sound is your signal to push — a shieldless opponent is extremely vulnerable.">💡 <span data-zh="破盾音效是进攻的信号，听到后可以加大攻势，对方没有护盾非常脆弱。" data-en="The shield-break sound is your signal to push — a shieldless opponent is extremely vulnerable.">破盾音效是进攻的信号，听到后可以加大攻势，对方没有护盾非常脆弱。</span></div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">03</div>
         <div class="step-body">
-          <div class="step-title">不要站在原地开枪</div>
-          <div class="step-desc">战斗时保持移动，左右横跳、跳跃都能有效规避子弹。静止不动是最危险的状态，尤其是面对狙击手时。</div>
+          <div class="step-title" data-zh="不要站在原地开枪" data-en="Never Stand Still While Shooting">不要站在原地开枪</div>
+          <div class="step-desc" data-zh="战斗时保持移动，左右横跳、跳跃都能有效规避子弹。静止不动是最危险的状态，尤其是面对狙击手时。" data-en="Always keep moving in a fight — strafing left/right and jumping makes you much harder to hit. Standing still is the most dangerous thing you can do, especially against snipers.">战斗时保持移动，左右横跳、跳跃都能有效规避子弹。静止不动是最危险的状态，尤其是面对狙击手时。</div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">04</div>
         <div class="step-body">
-          <div class="step-title">学会撤退</div>
-          <div class="step-desc">血量低于 50 时，优先撤退找掩体回血，不要硬拼。大多数新手死亡都是因为低血量时不撤退。活下去才有机会学习。</div>
+          <div class="step-title" data-zh="学会撤退" data-en="Know When to Retreat">学会撤退</div>
+          <div class="step-desc" data-zh="血量低于 50 时，优先撤退找掩体回血，不要硬拼。大多数新手死亡都是因为低血量时不撤退。活下去才有机会学习。" data-en="When your HP drops below 50, retreat and find cover to heal instead of forcing the fight. Most beginner deaths come from continuing to fight at low HP. Surviving is how you learn.">血量低于 50 时，优先撤退找掩体回血，不要硬拼。大多数新手死亡都是因为低血量时不撤退。活下去才有机会学习。</div>
         </div>
       </div>
     </div>
 
-    <!-- 第四章 -->
+    <!-- Chapter 4 -->
     <div class="step-section" id="build">
-      <div class="step-section-title">第四章：建造入门</div>
-
+      <div class="step-section-title" data-zh="第四章：建造入门" data-en="Chapter 4: Building Basics">第四章：建造入门</div>
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-body">
-          <div class="step-title">为什么要建造？</div>
-          <div class="step-desc">建造是堡垒之夜区别于其他射击游戏的核心机制。快速建一堵墙能挡住子弹，建坡道能占领高地。即使是简单的建造也能大幅提升生存率。</div>
-          <div class="difficulty-bar"><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div></div>
-          <div style="font-size:12px;color:var(--muted);margin-top:4px">难度：★★☆☆☆ 新手可快速上手</div>
+          <div class="step-title" data-zh="为什么要建造？" data-en="Why Build?">为什么要建造？</div>
+          <div class="step-desc" data-zh="建造是堡垒之夜区别于其他射击游戏的核心机制。快速建一堵墙能挡住子弹，建坡道能占领高地。即使是简单的建造也能大幅提升生存率。" data-en="Building is what separates Fortnite from every other shooter. A quick wall blocks bullets; a ramp gives you the high ground. Even basic building dramatically improves your survival rate.">建造是堡垒之夜区别于其他射击游戏的核心机制。快速建一堵墙能挡住子弹，建坡道能占领高地。即使是简单的建造也能大幅提升生存率。</div>
+          <div class="diff-bar"><div class="diff-dot diff-on"></div><div class="diff-dot diff-on"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div><div class="diff-dot diff-off"></div></div>
+          <div style="font-size:12px;color:var(--muted);margin-top:4px" data-zh="难度：★★☆☆☆ 新手可快速上手" data-en="Difficulty: ★★☆☆☆ Beginners can pick this up fast">难度：★★☆☆☆ 新手可快速上手</div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">02</div>
         <div class="step-body">
-          <div class="step-title">新手必学：紧急建墙</div>
-          <div class="step-desc">被打时第一反应是切换到建造模式，放一堵墙在自己和敌人之间。木墙建得最快（1秒），虽然血量低但能争取宝贵的逃跑或回血时间。</div>
-          <div class="step-tip">💡 <strong>快捷键建议：</strong>把建造模式绑定到鼠标侧键或 F1，能最快速度切换。</div>
+          <div class="step-title" data-zh="新手必学：紧急建墙" data-en="Must-Learn: Emergency Wall">新手必学：紧急建墙</div>
+          <div class="step-desc" data-zh="被打时第一反应是切换到建造模式，放一堵墙在自己和敌人之间。木墙建得最快（1秒），虽然血量低但能争取宝贵的逃跑或回血时间。" data-en="The moment you take damage, switch to build mode and place a wall between you and the enemy. Wood walls build fastest (1 second) — low HP but buys you precious time to escape or heal.">被打时第一反应是切换到建造模式，放一堵墙在自己和敌人之间。木墙建得最快（1秒），虽然血量低但能争取宝贵的逃跑或回血时间。</div>
+          <div class="step-tip" data-zh="💡 快捷键建议：把建造模式绑定到鼠标侧键或 F1，能最快速度切换。" data-en="💡 Keybind tip: Bind build mode to a mouse side button or F1 for the fastest possible switch.">💡 <span data-zh="快捷键建议：把建造模式绑定到鼠标侧键或 F1，能最快速度切换。" data-en="Keybind tip: Bind build mode to a mouse side button or F1 for the fastest possible switch.">快捷键建议：把建造模式绑定到鼠标侧键或 F1，能最快速度切换。</span></div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">03</div>
         <div class="step-body">
-          <div class="step-title">随时收集材料</div>
-          <div class="step-desc">跑图时随手用镐拆树木、木箱、石头、金属，目标是始终保持木头 500+ 以上。没有材料就无法建造，材料是建造的弹药。</div>
+          <div class="step-title" data-zh="随时收集材料" data-en="Always Farm Materials">随时收集材料</div>
+          <div class="step-desc" data-zh="跑图时随手用镐拆树木、木箱、石头、金属，目标是始终保持木头 500+ 以上。没有材料就无法建造，材料是建造的弹药。" data-en="While rotating, constantly use your pickaxe to chop trees, crates, rocks, and metal. Aim to always carry 500+ wood. No materials means no building — treat them like ammo.">跑图时随手用镐拆树木、木箱、石头、金属，目标是始终保持木头 500+ 以上。没有材料就无法建造，材料是建造的弹药。</div>
         </div>
       </div>
     </div>
 
-    <!-- 第五章 -->
+    <!-- Chapter 5 -->
     <div class="step-section" id="storm">
-      <div class="step-section-title">第五章：安全区与毒圈</div>
-
+      <div class="step-section-title" data-zh="第五章：安全区与毒圈" data-en="Chapter 5: Safe Zone & Storm">第五章：安全区与毒圈</div>
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-body">
-          <div class="step-title">时刻关注小地图</div>
-          <div class="step-desc">白色圆圈是安全区，蓝色圆圈是当前毒圈边界，蓝色区域每秒扣血。保持在安全区内，小地图右上角会显示下次缩圈的倒计时。</div>
+          <div class="step-title" data-zh="时刻关注小地图" data-en="Always Watch the Minimap">时刻关注小地图</div>
+          <div class="step-desc" data-zh="白色圆圈是安全区，蓝色圆圈是当前毒圈边界，蓝色区域每秒扣血。保持在安全区内，小地图右上角会显示下次缩圈的倒计时。" data-en="The white circle is the safe zone; the blue circle is the current storm wall — the blue area deals damage every second. Stay inside the white circle. The minimap shows the next storm timer in the corner.">白色圆圈是安全区，蓝色圆圈是当前毒圈边界，蓝色区域每秒扣血。保持在安全区内，小地图右上角会显示下次缩圈的倒计时。</div>
         </div>
       </div>
-
       <div class="step-card">
         <div class="step-num">02</div>
         <div class="step-body">
-          <div class="step-title">提前进圈，不要卡着缩圈跑</div>
-          <div class="step-desc">新手常见错误是一直在搜刮，忘记缩圈，被毒圈追着跑。被毒圈追着跑时，背后可能有敌人跟着补刀，非常危险。</div>
-          <div class="step-tip">💡 <strong>建议：</strong>缩圈倒计时还有 60 秒时就开始向圈内移动，提前进圈能从容应对遭遇战。</div>
+          <div class="step-title" data-zh="提前进圈，不要卡着缩圈跑" data-en="Rotate Early — Don't Chase the Storm">提前进圈，不要卡着缩圈跑</div>
+          <div class="step-desc" data-zh="新手常见错误是一直在搜刮，忘记缩圈，被毒圈追着跑。被毒圈追着跑时，背后可能有敌人跟着补刀，非常危险。" data-en="A classic beginner mistake is looting too long and getting caught by the storm. Running from the storm means enemies can follow and pick you off from behind — extremely dangerous.">新手常见错误是一直在搜刮，忘记缩圈，被毒圈追着跑。被毒圈追着跑时，背后可能有敌人跟着补刀，非常危险。</div>
+          <div class="step-tip" data-zh="💡 建议：缩圈倒计时还有 60 秒时就开始向圈内移动，提前进圈能从容应对遭遇战。" data-en="💡 Tip: Start rotating into the zone when the timer hits 60 seconds. Being early lets you set up and fight on your terms.">💡 <span data-zh="建议：缩圈倒计时还有 60 秒时就开始向圈内移动，提前进圈能从容应对遭遇战。" data-en="Tip: Start rotating into the zone when the timer hits 60 seconds. Being early lets you set up and fight on your terms.">建议：缩圈倒计时还有 60 秒时就开始向圈内移动，提前进圈能从容应对遭遇战。</span></div>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- SIDEBAR -->
+  <!-- Sidebar -->
   <div class="sidebar">
     <div class="sidebar-card">
-      <div class="sidebar-title">📋 本文目录</div>
+      <div class="sidebar-title" data-zh="📋 本文目录" data-en="📋 Contents">📋 本文目录</div>
       <ul class="toc-list">
-        <li><a href="#jump">第一章：跳机与落地</a></li>
-        <li><a href="#loot">第二章：搜刮与物资</a></li>
-        <li><a href="#combat">第三章：基础战斗</a></li>
-        <li><a href="#build">第四章：建造入门</a></li>
-        <li><a href="#storm">第五章：安全区</a></li>
+        <li><a href="#jump" data-zh="第一章：跳机与落地" data-en="Ch.1: Dropping & Landing">第一章：跳机与落地</a></li>
+        <li><a href="#loot" data-zh="第二章：搜刮与物资" data-en="Ch.2: Looting & Items">第二章：搜刮与物资</a></li>
+        <li><a href="#combat" data-zh="第三章：基础战斗" data-en="Ch.3: Basic Combat">第三章：基础战斗</a></li>
+        <li><a href="#build" data-zh="第四章：建造入门" data-en="Ch.4: Building Basics">第四章：建造入门</a></li>
+        <li><a href="#storm" data-zh="第五章：安全区" data-en="Ch.5: Storm & Safe Zone">第五章：安全区</a></li>
       </ul>
     </div>
-
     <div class="sidebar-card">
-      <div class="sidebar-title">🔥 推荐新手武器</div>
+      <div class="sidebar-title" data-zh="🔥 推荐新手武器" data-en="🔥 Beginner Weapons">🔥 推荐新手武器</div>
       <div style="display:flex;flex-direction:column;gap:10px">
         <div style="display:flex;align-items:center;gap:10px">
           <div style="font-size:20px">🎯</div>
           <div>
-            <div style="font-weight:700;font-size:13px">战略霰弹枪</div>
-            <div style="font-size:12px;color:var(--muted)">近战容错高，新手友好</div>
+            <div style="font-weight:700;font-size:13px" data-zh="战略霰弹枪" data-en="Tactical Shotgun">战略霰弹枪</div>
+            <div style="font-size:12px;color:var(--muted)" data-zh="近战容错高，新手友好" data-en="High close-range forgiveness">近战容错高，新手友好</div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:10px">
           <div style="font-size:20px">🔫</div>
           <div>
-            <div style="font-weight:700;font-size:13px">战术冲锋枪</div>
-            <div style="font-size:12px;color:var(--muted)">射速快，弹夹大</div>
+            <div style="font-weight:700;font-size:13px" data-zh="战术冲锋枪" data-en="Tactical SMG">战术冲锋枪</div>
+            <div style="font-size:12px;color:var(--muted)" data-zh="射速快，弹夹大" data-en="Fast fire rate, large magazine">射速快，弹夹大</div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:10px">
           <div style="font-size:20px">🎪</div>
           <div>
-            <div style="font-weight:700;font-size:13px">突击步枪</div>
-            <div style="font-size:12px;color:var(--muted)">中远距离主力</div>
+            <div style="font-weight:700;font-size:13px" data-zh="突击步枪" data-en="Assault Rifle">突击步枪</div>
+            <div style="font-size:12px;color:var(--muted)" data-zh="中远距离主力" data-en="Mid/long range workhorse">中远距离主力</div>
           </div>
         </div>
       </div>
     </div>
-
-    <a class="next-btn" href="weapons.html">下一篇：武器图鉴 →</a>
+    <a class="next-btn" href="weapons.html" data-zh="下一篇：武器图鉴 →" data-en="Next: Weapon Tier List →">下一篇：武器图鉴 →</a>
   </div>
 </div>
 
+<div class="comments-section">
+  <div class="comments-title">💬 <span data-zh="评论区" data-en="Comments">评论区</span></div>
+  <script src="https://giscus.app/client.js"
+        data-repo="hetao5088-cell/fortnite-guide"
+        data-repo-id="R_kgDOSuhZyQ"
+        data-category="General"
+        data-category-id="DIC_kwDOSuhZyc4C-UyT"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+  </script>
+</div>
+
+<script src="lang.js"></script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </body>
 </html>
