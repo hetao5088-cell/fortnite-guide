@@ -2,226 +2,254 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>赛事资讯 FNCS 2026 · 堡垒攻略 FortnifeHubPro</title>
-<meta name="description" content="堡垒之夜FNCS 2026赛事资讯，亚太区积分榜、赛程时间表、选手动态全覆盖。">
-<meta property="og:title" content="赛事资讯 FNCS 2026 · 堡垒攻略 FortnifeHubPro">
-<meta property="og:description" content="堡垒之夜FNCS 2026赛事资讯，亚太区积分榜、赛程时间表、选手动态全覆盖。">
+<title>Esports News FNCS 2026 · FortnifeHubPro | 赛事资讯</title>
+<meta name="description" content="Fortnite FNCS 2026 esports news — schedule, Asia-Pacific leaderboard, player updates and match recaps. 堡垒之夜赛事资讯。">
+<meta property="og:title" content="Esports News FNCS 2026 · FortnifeHubPro">
 <meta property="og:url" content="https://fortnitehubpro.com/esports.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fortnitehubpro.com/esports.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="堡垒之夜FNCS 2026赛事资讯，比赛时间表、选手排名、精彩回顾全覆盖。">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
-body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
-.logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
-.logo span{color:var(--accent2);}
-.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover,.nav-links a.active{color:var(--accent);}
-.nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
-.page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
-.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
-.breadcrumb a{color:var(--accent);text-decoration:none;}
-.breadcrumb span{margin:0 8px;}
-.page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
-.page-title em{color:var(--accent);font-style:normal;}
-.page-desc{color:var(--muted);font-size:16px;max-width:600px;}
-.section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 64px;}
-.sec-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
-.sec-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
-
-/* Live banner */
-.live-banner{background:linear-gradient(135deg,rgba(255,107,107,0.1),rgba(108,99,255,0.1));border:1px solid rgba(255,107,107,0.3);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;align-items:center;gap:20px;}
-.live-dot{width:12px;height:12px;border-radius:50%;background:var(--danger);box-shadow:0 0 10px var(--danger);animation:pulse 1s ease-in-out infinite;flex-shrink:0;}
-.live-info{flex:1;}
-.live-label{font-size:11px;font-weight:700;color:var(--danger);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
-.live-title{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;}
-.live-desc{font-size:13px;color:var(--muted);margin-top:4px;}
-.live-btn{background:var(--danger);color:#fff;font-weight:700;font-size:13px;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:all 0.2s;}
-.live-btn:hover{box-shadow:0 0 16px rgba(255,107,107,0.4);}
-
-/* Schedule */
-.schedule{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;}
-.schedule-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:20px;transition:all 0.15s;}
-.schedule-item:hover{border-color:rgba(79,195,247,0.2);}
-.schedule-date{text-align:center;flex-shrink:0;width:56px;}
-.s-month{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
-.s-day{font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;line-height:1;color:var(--accent);}
-.schedule-info{flex:1;}
-.s-title{font-weight:700;font-size:15px;margin-bottom:4px;}
-.s-meta{font-size:13px;color:var(--muted);}
-.s-prize{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);}
-.s-status{padding:4px 12px;border-radius:6px;font-size:12px;font-weight:700;flex-shrink:0;}
-.status-live{background:rgba(255,107,107,0.15);color:var(--danger);border:1px solid rgba(255,107,107,0.3);}
-.status-upcoming{background:rgba(79,195,247,0.1);color:var(--accent);border:1px solid rgba(79,195,247,0.2);}
-.status-done{background:rgba(100,116,139,0.1);color:var(--muted);border:1px solid var(--border);}
-
-/* Leaderboard */
-.leaderboard{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:40px;}
-.lb-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
-.lb-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;}
-.lb-update{font-size:12px;color:var(--muted);}
-table{width:100%;border-collapse:collapse;}
-thead th{padding:10px 20px;text-align:left;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);background:rgba(13,18,32,0.5);}
-tbody tr{border-bottom:1px solid var(--border);transition:background 0.15s;}
-tbody tr:last-child{border-bottom:none;}
-tbody tr:hover{background:rgba(79,195,247,0.03);}
-td{padding:14px 20px;font-size:14px;}
-.rank{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;}
-.rank-1{color:#FFD700;} .rank-2{color:#C0C0C0;} .rank-3{color:#CD7F32;}
-.player-name{font-weight:700;}
-.player-region{font-size:12px;color:var(--muted);margin-top:2px;}
-.earnings{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);}
-
-/* News grid */
-.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
-.news-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:all 0.2s;}
-.news-card:hover{border-color:rgba(79,195,247,0.25);transform:translateY(-2px);}
-.news-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;}
-.thumb-red{background:linear-gradient(135deg,#2d0a0a,#4a1010);}
-.thumb-blue{background:linear-gradient(135deg,#0a1828,#0d2844);}
-.thumb-gold{background:linear-gradient(135deg,#2d1a00,#4a2d00);}
-.thumb-purple{background:linear-gradient(135deg,#1a0d2d,#2d1a4a);}
-.news-body{padding:14px 16px;}
-.news-tag{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
-.news-title{font-size:14px;font-weight:700;line-height:1.4;margin-bottom:6px;}
-.news-meta{font-size:12px;color:var(--muted);}
-
-@media(max-width:900px){.news-grid{grid-template-columns:1fr;}.live-banner{flex-direction:column;align-items:flex-start;}.nav-links{display:none;}}
+  :root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+  body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+  .logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
+  .logo span{color:var(--accent2);}
+  .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .nav-links{display:flex;gap:24px;align-items:center;}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+  .nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .lang-btn{background:rgba(79,195,247,0.1);border:1px solid rgba(79,195,247,0.3);color:var(--accent);font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s;letter-spacing:1px;}
+  .lang-btn:hover{background:rgba(79,195,247,0.2);}
+  .page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
+  .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
+  .breadcrumb a{color:var(--accent);text-decoration:none;}
+  .breadcrumb span{margin:0 8px;}
+  .page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
+  .page-title em{color:var(--accent);font-style:normal;}
+  .page-desc{color:var(--muted);font-size:16px;max-width:600px;}
+  .section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 64px;}
+  .sec-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  .sec-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
+  .live-banner{background:linear-gradient(135deg,rgba(255,107,107,0.1),rgba(108,99,255,0.1));border:1px solid rgba(255,107,107,0.3);border-radius:14px;padding:24px 28px;margin-bottom:32px;display:flex;align-items:center;gap:20px;}
+  .live-dot{width:12px;height:12px;border-radius:50%;background:var(--danger);box-shadow:0 0 10px var(--danger);animation:pulse 1s ease-in-out infinite;flex-shrink:0;}
+  .live-info{flex:1;}
+  .live-label{font-size:11px;font-weight:700;color:var(--danger);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+  .live-title{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;}
+  .live-desc{font-size:13px;color:var(--muted);margin-top:4px;}
+  .live-btn{background:var(--danger);color:#fff;font-weight:700;font-size:13px;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:all 0.2s;}
+  .live-btn:hover{box-shadow:0 0 16px rgba(255,107,107,0.4);}
+  .schedule{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;}
+  .schedule-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:20px;transition:all 0.15s;}
+  .schedule-item:hover{border-color:rgba(79,195,247,0.2);}
+  .schedule-date{text-align:center;flex-shrink:0;width:56px;}
+  .s-month{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+  .s-day{font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;line-height:1;color:var(--accent);}
+  .schedule-info{flex:1;}
+  .s-title{font-weight:700;font-size:15px;margin-bottom:4px;}
+  .s-meta{font-size:13px;color:var(--muted);}
+  .s-prize{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);}
+  .s-status{padding:4px 12px;border-radius:6px;font-size:12px;font-weight:700;flex-shrink:0;}
+  .status-live{background:rgba(255,107,107,0.15);color:var(--danger);border:1px solid rgba(255,107,107,0.3);}
+  .status-upcoming{background:rgba(79,195,247,0.1);color:var(--accent);border:1px solid rgba(79,195,247,0.2);}
+  .status-done{background:rgba(100,116,139,0.1);color:var(--muted);border:1px solid var(--border);}
+  .leaderboard{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:40px;}
+  .lb-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+  .lb-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;}
+  .lb-update{font-size:12px;color:var(--muted);}
+  table{width:100%;border-collapse:collapse;}
+  thead th{padding:10px 20px;text-align:left;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);background:rgba(13,18,32,0.5);}
+  tbody tr{border-bottom:1px solid var(--border);transition:background 0.15s;}
+  tbody tr:last-child{border-bottom:none;}
+  tbody tr:hover{background:rgba(79,195,247,0.03);}
+  td{padding:14px 20px;font-size:14px;}
+  .rank{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;}
+  .rank-1{color:#FFD700;}.rank-2{color:#C0C0C0;}.rank-3{color:#CD7F32;}
+  .player-name{font-weight:700;}
+  .player-region{font-size:12px;color:var(--muted);margin-top:2px;}
+  .earnings{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);}
+  .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .news-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:all 0.2s;}
+  .news-card:hover{border-color:rgba(79,195,247,0.25);transform:translateY(-2px);}
+  .news-thumb{height:120px;display:flex;align-items:center;justify-content:center;font-size:40px;}
+  .thumb-red{background:linear-gradient(135deg,#2d0a0a,#4a1010);}
+  .thumb-blue{background:linear-gradient(135deg,#0a1828,#0d2844);}
+  .thumb-gold{background:linear-gradient(135deg,#2d1a00,#4a2d00);}
+  .thumb-purple{background:linear-gradient(135deg,#1a0d2d,#2d1a4a);}
+  .news-body{padding:14px 16px;}
+  .news-tag{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+  .news-title{font-size:14px;font-weight:700;line-height:1.4;margin-bottom:6px;}
+  .news-meta{font-size:12px;color:var(--muted);}
+  .comments-section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;}
+  .comments-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+  .comments-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
+  @media(max-width:900px){.news-grid{grid-template-columns:1fr;}.live-banner{flex-direction:column;align-items:flex-start;}.nav-links{display:none;}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </head>
 <body>
 <nav>
-  <a class="logo" href="index.html"><div class="logo-dot"></div>堡垒<span>攻略</span></a>
+  <a class="logo" href="index.html"><div class="logo-dot"></div>Fortnite<span>Hub</span></a>
   <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a href="beginner.html">新手教程</a>
-    <a href="weapons.html">武器图鉴</a>
-    <a href="map.html">地图攻略</a>
-    <a href="building.html">建造技巧</a>
-    <a href="battlepass.html">战斗通行证</a>
-    <a class="active" href="esports.html">赛事资讯 <span class="nav-badge">LIVE</span></a>
+    <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+    <a href="beginner.html" data-zh="新手教程" data-en="Beginner Guide">新手教程</a>
+    <a href="weapons.html" data-zh="武器图鉴" data-en="Weapons">武器图鉴</a>
+    <a href="map.html" data-zh="地图攻略" data-en="Map Guide">地图攻略</a>
+    <a href="building.html" data-zh="建造技巧" data-en="Building">建造技巧</a>
+    <a href="battlepass.html" data-zh="战斗通行证" data-en="Battle Pass">战斗通行证</a>
+    <a class="active" href="esports.html"><span data-zh="赛事资讯" data-en="Esports">赛事资讯</span><span class="nav-badge">LIVE</span></a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" id="lang-btn" onclick="setLang(getLang()==='zh'?'en':'zh')">EN</button>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="breadcrumb"><a href="index.html">首页</a><span>›</span>赛事资讯</div>
-  <div class="page-title">🏆 <em>赛事</em>资讯</div>
-  <p class="page-desc">FNCS 2026 赛程、积分榜、选手资讯，堡垒之夜电竞动态全覆盖。</p>
+  <div class="breadcrumb"><a href="index.html" data-zh="首页" data-en="Home">首页</a><span>›</span><span data-zh="赛事资讯" data-en="Esports">赛事资讯</span></div>
+  <div class="page-title">🏆 <em data-zh="赛事" data-en="Esports">赛事</em><span data-zh="资讯" data-en="News">资讯</span></div>
+  <p class="page-desc" data-zh="FNCS 2026 赛程、积分榜、选手资讯，堡垒之夜电竞动态全覆盖。" data-en="FNCS 2026 schedule, leaderboards, and player news — your complete Fortnite esports hub.">FNCS 2026 赛程、积分榜、选手资讯，堡垒之夜电竞动态全覆盖。</p>
 </div>
 
 <div class="section">
-  <!-- Live -->
+  <!-- Live banner -->
   <div class="live-banner">
     <div class="live-dot"></div>
     <div class="live-info">
-      <div class="live-label">🔴 正在直播</div>
-      <div class="live-title">FNCS 2026 亚太区预选赛 · Day 2</div>
-      <div class="live-desc">当前参赛队伍 128 支 · 双人组队模式 · 共 6 轮比赛</div>
+      <div class="live-label">🔴 <span data-zh="正在直播" data-en="LIVE NOW">正在直播</span></div>
+      <div class="live-title" data-zh="FNCS 2026 亚太区预选赛 · Day 2" data-en="FNCS 2026 Asia-Pacific Qualifier · Day 2">FNCS 2026 亚太区预选赛 · Day 2</div>
+      <div class="live-desc" data-zh="当前参赛队伍 128 支 · 双人组队模式 · 共 6 轮比赛" data-en="128 teams competing · Duos format · 6 games total">当前参赛队伍 128 支 · 双人组队模式 · 共 6 轮比赛</div>
     </div>
-    <a class="live-btn" href="https://www.twitch.tv/fortnite" target="_blank">观看直播 →</a>
+    <a class="live-btn" href="https://www.twitch.tv/fortnite" target="_blank" data-zh="观看直播 →" data-en="Watch Live →">观看直播 →</a>
   </div>
 
   <!-- Schedule -->
-  <div class="sec-title">赛程时间表</div>
+  <div class="sec-title" data-zh="赛程时间表" data-en="Tournament Schedule">赛程时间表</div>
   <div class="schedule">
     <div class="schedule-item">
       <div class="schedule-date"><div class="s-month">JUN</div><div class="s-day">01</div></div>
-      <div class="schedule-info"><div class="s-title">FNCS 2026 亚太区预选赛 Day 2</div><div class="s-meta">双人组队 · 18:00 开赛 · 亚太服务器</div></div>
+      <div class="schedule-info">
+        <div class="s-title" data-zh="FNCS 2026 亚太区预选赛 Day 2" data-en="FNCS 2026 Asia-Pacific Qualifier Day 2">FNCS 2026 亚太区预选赛 Day 2</div>
+        <div class="s-meta" data-zh="双人组队 · 18:00 开赛 · 亚太服务器" data-en="Duos · 6:00 PM · Asia-Pacific servers">双人组队 · 18:00 开赛 · 亚太服务器</div>
+      </div>
       <div class="s-prize">$50,000</div>
-      <div class="s-status status-live">进行中</div>
+      <div class="s-status status-live" data-zh="进行中" data-en="Live">进行中</div>
     </div>
     <div class="schedule-item">
       <div class="schedule-date"><div class="s-month">JUN</div><div class="s-day">08</div></div>
-      <div class="schedule-info"><div class="s-title">FNCS 2026 亚太区决赛</div><div class="s-meta">双人组队 · Top 50 队伍晋级 · 决赛圈</div></div>
+      <div class="schedule-info">
+        <div class="s-title" data-zh="FNCS 2026 亚太区决赛" data-en="FNCS 2026 Asia-Pacific Finals">FNCS 2026 亚太区决赛</div>
+        <div class="s-meta" data-zh="双人组队 · Top 50 队伍晋级" data-en="Duos · Top 50 teams qualify">双人组队 · Top 50 队伍晋级</div>
+      </div>
       <div class="s-prize">$100,000</div>
-      <div class="s-status status-upcoming">即将开始</div>
+      <div class="s-status status-upcoming" data-zh="即将开始" data-en="Upcoming">即将开始</div>
     </div>
     <div class="schedule-item">
       <div class="schedule-date"><div class="s-month">JUN</div><div class="s-day">15</div></div>
-      <div class="schedule-info"><div class="s-title">FNCS 2026 欧洲区决赛</div><div class="s-meta">双人组队 · EU 服务器</div></div>
+      <div class="schedule-info">
+        <div class="s-title" data-zh="FNCS 2026 欧洲区决赛" data-en="FNCS 2026 Europe Finals">FNCS 2026 欧洲区决赛</div>
+        <div class="s-meta" data-zh="双人组队 · EU 服务器" data-en="Duos · EU servers">双人组队 · EU 服务器</div>
+      </div>
       <div class="s-prize">$150,000</div>
-      <div class="s-status status-upcoming">即将开始</div>
+      <div class="s-status status-upcoming" data-zh="即将开始" data-en="Upcoming">即将开始</div>
     </div>
     <div class="schedule-item">
       <div class="schedule-date"><div class="s-month">JUL</div><div class="s-day">20</div></div>
-      <div class="schedule-info"><div class="s-title">FNCS 2026 全球总决赛</div><div class="s-meta">双人组队 · 线下赛事 · 洛杉矶</div></div>
+      <div class="schedule-info">
+        <div class="s-title" data-zh="FNCS 2026 全球总决赛" data-en="FNCS 2026 World Cup Finals">FNCS 2026 全球总决赛</div>
+        <div class="s-meta" data-zh="双人组队 · 线下赛事 · 洛杉矶" data-en="Duos · LAN Event · Los Angeles">双人组队 · 线下赛事 · 洛杉矶</div>
+      </div>
       <div class="s-prize">$3,000,000</div>
-      <div class="s-status status-upcoming">即将开始</div>
+      <div class="s-status status-upcoming" data-zh="即将开始" data-en="Upcoming">即将开始</div>
     </div>
     <div class="schedule-item">
       <div class="schedule-date"><div class="s-month">MAY</div><div class="s-day">25</div></div>
-      <div class="schedule-info"><div class="s-title">FNCS 2026 亚太区预选赛 Day 1</div><div class="s-meta">双人组队 · 已结束</div></div>
+      <div class="schedule-info">
+        <div class="s-title" data-zh="FNCS 2026 亚太区预选赛 Day 1" data-en="FNCS 2026 Asia-Pacific Qualifier Day 1">FNCS 2026 亚太区预选赛 Day 1</div>
+        <div class="s-meta" data-zh="双人组队 · 已结束" data-en="Duos · Completed">双人组队 · 已结束</div>
+      </div>
       <div class="s-prize">$50,000</div>
-      <div class="s-status status-done">已结束</div>
+      <div class="s-status status-done" data-zh="已结束" data-en="Completed">已结束</div>
     </div>
   </div>
 
   <!-- Leaderboard -->
-  <div class="sec-title">亚太区积分榜</div>
+  <div class="sec-title" data-zh="亚太区积分榜" data-en="Asia-Pacific Leaderboard">亚太区积分榜</div>
   <div class="leaderboard">
-    <div class="lb-header"><div class="lb-title">FNCS 2026 · 亚太区 Top 10</div><div class="lb-update">更新于 6月1日</div></div>
+    <div class="lb-header">
+      <div class="lb-title" data-zh="FNCS 2026 · 亚太区 Top 10" data-en="FNCS 2026 · Asia-Pacific Top 10">FNCS 2026 · 亚太区 Top 10</div>
+      <div class="lb-update" data-zh="更新于 6月1日" data-en="Updated June 1">更新于 6月1日</div>
+    </div>
     <table>
-      <thead><tr><th>排名</th><th>选手</th><th>队伍</th><th>积分</th><th>奖金</th></tr></thead>
+      <thead>
+        <tr>
+          <th data-zh="排名" data-en="Rank">排名</th>
+          <th data-zh="选手" data-en="Player">选手</th>
+          <th data-zh="队伍" data-en="Team">队伍</th>
+          <th data-zh="积分" data-en="Points">积分</th>
+          <th data-zh="奖金" data-en="Earnings">奖金</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td><div class="rank rank-1">1</div></td><td><div class="player-name">Arkhram</div><div class="player-region">🇦🇺 大洋洲</div></td><td>NRG</td><td>284</td><td class="earnings">$18,500</td></tr>
-        <tr><td><div class="rank rank-2">2</div></td><td><div class="player-name">Cented</div><div class="player-region">🇯🇵 日本</div></td><td>100T</td><td>261</td><td class="earnings">$12,000</td></tr>
-        <tr><td><div class="rank rank-3">3</div></td><td><div class="player-name">Queasy</div><div class="player-region">🇰🇷 韩国</div></td><td>FaZe</td><td>248</td><td class="earnings">$9,500</td></tr>
-        <tr><td><div class="rank" style="color:var(--text)">4</div></td><td><div class="player-name">Mero</div><div class="player-region">🇨🇳 中国</div></td><td>独立</td><td>235</td><td class="earnings">$7,000</td></tr>
-        <tr><td><div class="rank" style="color:var(--text)">5</div></td><td><div class="player-name">Deyy</div><div class="player-region">🇸🇬 新加坡</div></td><td>TSM</td><td>218</td><td class="earnings">$5,500</td></tr>
+        <tr><td><div class="rank rank-1">1</div></td><td><div class="player-name">Arkhram</div><div class="player-region">🇦🇺 <span data-zh="大洋洲" data-en="Oceania">大洋洲</span></div></td><td>NRG</td><td>284</td><td class="earnings">$18,500</td></tr>
+        <tr><td><div class="rank rank-2">2</div></td><td><div class="player-name">Cented</div><div class="player-region">🇯🇵 <span data-zh="日本" data-en="Japan">日本</span></div></td><td>100T</td><td>261</td><td class="earnings">$12,000</td></tr>
+        <tr><td><div class="rank rank-3">3</div></td><td><div class="player-name">Queasy</div><div class="player-region">🇰🇷 <span data-zh="韩国" data-en="Korea">韩国</span></div></td><td>FaZe</td><td>248</td><td class="earnings">$9,500</td></tr>
+        <tr><td><div class="rank" style="color:var(--text)">4</div></td><td><div class="player-name">Mero</div><div class="player-region">🇨🇳 <span data-zh="中国" data-en="China">中国</span></div></td><td><span data-zh="独立" data-en="Independent">独立</span></td><td>235</td><td class="earnings">$7,000</td></tr>
+        <tr><td><div class="rank" style="color:var(--text)">5</div></td><td><div class="player-name">Deyy</div><div class="player-region">🇸🇬 <span data-zh="新加坡" data-en="Singapore">新加坡</span></div></td><td>TSM</td><td>218</td><td class="earnings">$5,500</td></tr>
       </tbody>
     </table>
   </div>
 
   <!-- News -->
-  <div class="sec-title">赛事新闻</div>
+  <div class="sec-title" data-zh="赛事新闻" data-en="Esports News">赛事新闻</div>
   <div class="news-grid">
     <div class="news-card">
       <div class="news-thumb thumb-red">🏆</div>
       <div class="news-body">
-        <div class="news-tag">赛事</div>
-        <div class="news-title">FNCS 2026 全球总决赛将采用双人模式，奖金池提升至 300 万美元</div>
-        <div class="news-meta">5天前 · 5分钟阅读</div>
+        <div class="news-tag" data-zh="赛事" data-en="Tournament">赛事</div>
+        <div class="news-title" data-zh="FNCS 2026 全球总决赛将采用双人模式，奖金池提升至 300 万美元" data-en="FNCS 2026 World Cup to use Duos format with $3M prize pool">FNCS 2026 全球总决赛将采用双人模式，奖金池提升至 300 万美元</div>
+        <div class="news-meta" data-zh="5天前 · 5分钟阅读" data-en="5 days ago · 5 min read">5天前 · 5分钟阅读</div>
       </div>
     </div>
     <div class="news-card">
       <div class="news-thumb thumb-blue">⚡</div>
       <div class="news-body">
-        <div class="news-tag">选手动态</div>
-        <div class="news-title">Arkhram 亚太区预选赛 Day 1 夺冠，积分榜登顶</div>
-        <div class="news-meta">1天前 · 3分钟阅读</div>
+        <div class="news-tag" data-zh="选手动态" data-en="Player News">选手动态</div>
+        <div class="news-title" data-zh="Arkhram 亚太区预选赛 Day 1 夺冠，积分榜登顶" data-en="Arkhram wins APAC Qualifier Day 1, tops the leaderboard">Arkhram 亚太区预选赛 Day 1 夺冠，积分榜登顶</div>
+        <div class="news-meta" data-zh="1天前 · 3分钟阅读" data-en="1 day ago · 3 min read">1天前 · 3分钟阅读</div>
       </div>
     </div>
     <div class="news-card">
       <div class="news-thumb thumb-gold">📋</div>
       <div class="news-body">
-        <div class="news-tag">规则</div>
-        <div class="news-title">Epic 公布 FNCS 2026 完整赛制，新增积分双倍场次</div>
-        <div class="news-meta">1周前 · 4分钟阅读</div>
+        <div class="news-tag" data-zh="规则" data-en="Rules">规则</div>
+        <div class="news-title" data-zh="Epic 公布 FNCS 2026 完整赛制，新增积分双倍场次" data-en="Epic reveals full FNCS 2026 format including double-point sessions">Epic 公布 FNCS 2026 完整赛制，新增积分双倍场次</div>
+        <div class="news-meta" data-zh="1周前 · 4分钟阅读" data-en="1 week ago · 4 min read">1周前 · 4分钟阅读</div>
       </div>
     </div>
     <div class="news-card">
       <div class="news-thumb thumb-purple">🎮</div>
       <div class="news-body">
-        <div class="news-tag">分析</div>
-        <div class="news-title">职业选手最常用武器大揭秘：神话步枪占比超 80%</div>
-        <div class="news-meta">2天前 · 6分钟阅读</div>
+        <div class="news-tag" data-zh="分析" data-en="Analysis">分析</div>
+        <div class="news-title" data-zh="职业选手最常用武器大揭秘：神话步枪占比超 80%" data-en="Pro players' most-used weapons revealed: Mythic Rifle used in over 80% of games">职业选手最常用武器大揭秘：神话步枪占比超 80%</div>
+        <div class="news-meta" data-zh="2天前 · 6分钟阅读" data-en="2 days ago · 6 min read">2天前 · 6分钟阅读</div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="comments-section">
+  <div class="comments-title">💬 <span data-zh="评论区" data-en="Comments">评论区</span></div>
+  <script src="https://giscus.app/client.js" data-repo="hetao5088-cell/fortnite-guide" data-repo-id="R_kgDOSuhZyQ" data-category="General" data-category-id="DIC_kwDOSuhZyc4C-UyT" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" async></script>
+</div>
+
+<script src="lang.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </body>
 </html>

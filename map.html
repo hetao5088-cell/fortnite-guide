@@ -2,123 +2,115 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>地图攻略热点分析 · 堡垒攻略 FortnifeHubPro</title>
-<meta name="description" content="堡垒之夜第七章第三赛季地图热点分析，物资密度、安全落点、Boss位置全覆盖。">
-<meta property="og:title" content="地图攻略热点分析 · 堡垒攻略 FortnifeHubPro">
-<meta property="og:description" content="堡垒之夜第七章第三赛季地图热点分析，物资密度、安全落点、Boss位置全覆盖。">
+<title>Map Guide · FortnifeHubPro | 地图攻略热点分析</title>
+<meta name="description" content="Fortnite Chapter 7 Season 3 map hotspot guide — loot density, safe landing spots, Boss locations. 堡垒之夜地图热点分析。">
+<meta property="og:title" content="Map Guide · FortnifeHubPro">
 <meta property="og:url" content="https://fortnitehubpro.com/map.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="堡垒攻略 FortnifeHubPro">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fortnitehubpro.com/map.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="堡垒之夜第七章第三赛季地图热点分析，物资密度、安全落点、Boss位置全覆盖。">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
-body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
-.logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
-.logo span{color:var(--accent2);}
-.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover,.nav-links a.active{color:var(--accent);}
-.nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
-.page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
-.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
-.breadcrumb a{color:var(--accent);text-decoration:none;}
-.breadcrumb span{margin:0 8px;}
-.page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
-.page-title em{color:var(--accent);font-style:normal;}
-.page-desc{color:var(--muted);font-size:16px;max-width:600px;}
-.section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 64px;}
-.section-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
-.section-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
-
-/* Map SVG area */
-.map-container{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:32px;}
-.map-area{position:relative;background:linear-gradient(135deg,#0a1628 0%,#0d2040 50%,#0a1628 100%);height:480px;display:flex;align-items:center;justify-content:center;}
-.map-svg-wrap{position:relative;width:440px;height:440px;}
-.map-bg{position:absolute;inset:0;border-radius:12px;background:linear-gradient(135deg,#0f2535,#1a3a5c,#0f2535);border:2px solid rgba(79,195,247,0.2);}
-.map-label{position:absolute;font-size:11px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:0.5px;text-align:center;pointer-events:none;}
-.map-pin{position:absolute;transform:translate(-50%,-50%);cursor:pointer;transition:transform 0.2s;}
-.map-pin:hover{transform:translate(-50%,-50%) scale(1.2);}
-.pin-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 0 12px currentColor;}
-.pin-hot{background:rgba(255,107,107,0.3);border:2px solid #FF6B6B;color:#FF6B6B;}
-.pin-mid{background:rgba(246,185,59,0.3);border:2px solid #F6B93B;color:#F6B93B;}
-.pin-safe{background:rgba(82,196,26,0.3);border:2px solid #52C41A;color:#52C41A;}
-.pin-boss{background:rgba(108,99,255,0.3);border:2px solid #6C63FF;color:#6C63FF;}
-.pin-name{font-size:10px;font-weight:700;color:#fff;margin-top:2px;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,0.8);}
-
-.map-legend{display:flex;gap:20px;padding:16px 24px;border-top:1px solid var(--border);flex-wrap:wrap;}
-.legend-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);}
-.legend-dot{width:12px;height:12px;border-radius:50%;}
-
-/* Location cards */
-.locations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
-.loc-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:all 0.2s;cursor:pointer;}
-.loc-card:hover{transform:translateY(-2px);border-color:rgba(79,195,247,0.25);box-shadow:0 8px 24px rgba(0,0,0,0.3);}
-.loc-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
-.loc-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
-.loc-name{font-weight:700;font-size:15px;}
-.loc-type{font-size:11px;color:var(--muted);margin-top:2px;}
-.loc-bars{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
-.bar-row{display:flex;align-items:center;gap:8px;}
-.bar-label{font-size:11px;color:var(--muted);width:48px;flex-shrink:0;}
-.bar-track{flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;}
-.bar-fill{height:100%;border-radius:2px;}
-.fill-red{background:#FF6B6B;} .fill-gold{background:#F6B93B;} .fill-green{background:#52C41A;} .fill-blue{background:var(--accent);}
-.loc-tags{display:flex;gap:6px;flex-wrap:wrap;}
-.loc-tag{padding:2px 8px;border-radius:4px;font-size:11px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--muted);}
-.loc-tag.hot{background:rgba(255,107,107,0.1);border-color:rgba(255,107,107,0.2);color:#FF6B6B;}
-.loc-tag.boss{background:rgba(108,99,255,0.1);border-color:rgba(108,99,255,0.2);color:#9D8FFF;}
-.loc-tag.safe{background:rgba(82,196,26,0.1);border-color:rgba(82,196,26,0.2);color:#52C41A;}
-
-/* Tips */
-.tips-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-.tip-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;gap:14px;}
-.tip-icon{font-size:24px;flex-shrink:0;}
-.tip-title{font-weight:700;font-size:14px;margin-bottom:4px;}
-.tip-desc{font-size:13px;color:var(--muted);line-height:1.6;}
-
-@media(max-width:900px){.locations-grid{grid-template-columns:1fr;}.tips-row{grid-template-columns:1fr;}.nav-links{display:none;}.map-svg-wrap{width:300px;height:300px;}}
+  :root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+  body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+  .logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
+  .logo span{color:var(--accent2);}
+  .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .nav-links{display:flex;gap:24px;align-items:center;}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--accent);}
+  .nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .lang-btn{background:rgba(79,195,247,0.1);border:1px solid rgba(79,195,247,0.3);color:var(--accent);font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s;letter-spacing:1px;}
+  .lang-btn:hover{background:rgba(79,195,247,0.2);}
+  .page-hero{position:relative;z-index:1;padding:56px 32px 32px;max-width:1200px;margin:0 auto;}
+  .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:16px;}
+  .breadcrumb a{color:var(--accent);text-decoration:none;}
+  .breadcrumb span{margin:0 8px;}
+  .page-title{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;line-height:1.1;margin-bottom:12px;}
+  .page-title em{color:var(--accent);font-style:normal;}
+  .page-desc{color:var(--muted);font-size:16px;max-width:600px;}
+  .section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 64px;}
+  .sec-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  .sec-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
+  .map-container{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:32px;}
+  .map-area{position:relative;background:linear-gradient(135deg,#0a1628 0%,#0d2040 50%,#0a1628 100%);height:480px;display:flex;align-items:center;justify-content:center;}
+  .map-svg-wrap{position:relative;width:440px;height:440px;}
+  .map-bg{position:absolute;inset:0;border-radius:12px;background:linear-gradient(135deg,#0f2535,#1a3a5c,#0f2535);border:2px solid rgba(79,195,247,0.2);}
+  .map-pin{position:absolute;transform:translate(-50%,-50%);cursor:pointer;transition:transform 0.2s;text-align:center;}
+  .map-pin:hover{transform:translate(-50%,-50%) scale(1.2);}
+  .pin-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;margin:0 auto;}
+  .pin-hot{background:rgba(255,107,107,0.3);border:2px solid #FF6B6B;}
+  .pin-mid{background:rgba(246,185,59,0.3);border:2px solid #F6B93B;}
+  .pin-safe{background:rgba(82,196,26,0.3);border:2px solid #52C41A;}
+  .pin-boss{background:rgba(108,99,255,0.3);border:2px solid #6C63FF;}
+  .pin-name{font-size:10px;font-weight:700;color:#fff;margin-top:2px;white-space:nowrap;text-shadow:0 1px 4px rgba(0,0,0,0.8);}
+  .map-legend{display:flex;gap:20px;padding:16px 24px;border-top:1px solid var(--border);flex-wrap:wrap;}
+  .legend-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);}
+  .legend-dot{width:12px;height:12px;border-radius:50%;}
+  .locations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
+  .loc-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:all 0.2s;cursor:pointer;}
+  .loc-card:hover{transform:translateY(-2px);border-color:rgba(79,195,247,0.25);box-shadow:0 8px 24px rgba(0,0,0,0.3);}
+  .loc-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+  .loc-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+  .loc-name{font-weight:700;font-size:15px;}
+  .loc-type{font-size:11px;color:var(--muted);margin-top:2px;}
+  .loc-bars{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
+  .bar-row{display:flex;align-items:center;gap:8px;}
+  .bar-label{font-size:11px;color:var(--muted);width:48px;flex-shrink:0;}
+  .bar-track{flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:2px;}
+  .fill-red{background:#FF6B6B;} .fill-gold{background:#F6B93B;} .fill-green{background:#52C41A;}
+  .loc-tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .loc-tag{padding:2px 8px;border-radius:4px;font-size:11px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--muted);}
+  .loc-tag.hot{background:rgba(255,107,107,0.1);border-color:rgba(255,107,107,0.2);color:#FF6B6B;}
+  .loc-tag.boss{background:rgba(108,99,255,0.1);border-color:rgba(108,99,255,0.2);color:#9D8FFF;}
+  .loc-tag.safe{background:rgba(82,196,26,0.1);border-color:rgba(82,196,26,0.2);color:#52C41A;}
+  .tips-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .tip-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;gap:14px;}
+  .tip-icon{font-size:24px;flex-shrink:0;}
+  .tip-title{font-weight:700;font-size:14px;margin-bottom:4px;}
+  .tip-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+  .comments-section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;}
+  .comments-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+  .comments-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
+  @media(max-width:900px){.locations-grid{grid-template-columns:1fr;}.tips-row{grid-template-columns:1fr;}.map-svg-wrap{width:300px;height:300px;}.nav-links{display:none;}}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </head>
 <body>
 <nav>
-  <a class="logo" href="index.html"><div class="logo-dot"></div>堡垒<span>攻略</span></a>
+  <a class="logo" href="index.html"><div class="logo-dot"></div>Fortnite<span>Hub</span></a>
   <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a href="beginner.html">新手教程</a>
-    <a href="weapons.html">武器图鉴</a>
-    <a class="active" href="map.html">地图攻略</a>
-    <a href="building.html">建造技巧</a>
-    <a href="battlepass.html">战斗通行证</a>
-    <a href="esports.html">赛事资讯 <span class="nav-badge">LIVE</span></a>
+    <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+    <a href="beginner.html" data-zh="新手教程" data-en="Beginner Guide">新手教程</a>
+    <a href="weapons.html" data-zh="武器图鉴" data-en="Weapons">武器图鉴</a>
+    <a class="active" href="map.html" data-zh="地图攻略" data-en="Map Guide">地图攻略</a>
+    <a href="building.html" data-zh="建造技巧" data-en="Building">建造技巧</a>
+    <a href="battlepass.html" data-zh="战斗通行证" data-en="Battle Pass">战斗通行证</a>
+    <a href="esports.html"><span data-zh="赛事资讯" data-en="Esports">赛事资讯</span><span class="nav-badge">LIVE</span></a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" id="lang-btn" onclick="setLang(getLang()==='zh'?'en':'zh')">EN</button>
   </div>
 </nav>
 
 <div class="page-hero">
-  <div class="breadcrumb"><a href="index.html">首页</a><span>›</span>地图攻略</div>
-  <div class="page-title">🗺 <em>地图</em>攻略</div>
-  <p class="page-desc">第七章第三赛季地图热点分析，物资密度、竞争强度、Boss 位置全覆盖。</p>
+  <div class="breadcrumb"><a href="index.html" data-zh="首页" data-en="Home">首页</a><span>›</span><span data-zh="地图攻略" data-en="Map Guide">地图攻略</span></div>
+  <div class="page-title">🗺 <em data-zh="地图" data-en="Map">地图</em><span data-zh="攻略" data-en="Guide">攻略</span></div>
+  <p class="page-desc" data-zh="第七章第三赛季地图热点分析，物资密度、竞争强度、Boss 位置全覆盖。" data-en="Chapter 7 Season 3 map hotspot breakdown — loot density, competition level, and Boss spawn locations all covered.">第七章第三赛季地图热点分析，物资密度、竞争强度、Boss 位置全覆盖。</p>
 </div>
 
 <div class="section">
-  <div class="section-title">热点地图总览</div>
+  <div class="sec-title" data-zh="热点地图总览" data-en="Hotspot Map Overview">热点地图总览</div>
   <div class="map-container">
     <div class="map-area">
       <div class="map-svg-wrap">
         <div class="map-bg"></div>
-        <!-- Grid lines -->
         <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.15" viewBox="0 0 440 440">
           <line x1="110" y1="0" x2="110" y2="440" stroke="#4FC3F7" stroke-width="0.5"/>
           <line x1="220" y1="0" x2="220" y2="440" stroke="#4FC3F7" stroke-width="0.5"/>
@@ -133,133 +125,97 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
           <text x="210" y="438" fill="#4FC3F7" font-size="10">2</text>
           <text x="320" y="438" fill="#4FC3F7" font-size="10">3</text>
         </svg>
-        <!-- Pins -->
-        <div class="map-pin" style="left:22%;top:20%">
-          <div class="pin-dot pin-hot">🔥</div>
-          <div class="pin-name">风暴要塞</div>
-        </div>
-        <div class="map-pin" style="left:65%;top:18%">
-          <div class="pin-dot pin-boss">👑</div>
-          <div class="pin-name">极地前哨</div>
-        </div>
-        <div class="map-pin" style="left:50%;top:45%">
-          <div class="pin-dot pin-hot">🔥</div>
-          <div class="pin-name">中央枢纽</div>
-        </div>
-        <div class="map-pin" style="left:18%;top:60%">
-          <div class="pin-dot pin-safe">🌿</div>
-          <div class="pin-name">林间小镇</div>
-        </div>
-        <div class="map-pin" style="left:78%;top:55%">
-          <div class="pin-dot pin-mid">⚡</div>
-          <div class="pin-name">工业港口</div>
-        </div>
-        <div class="map-pin" style="left:38%;top:75%">
-          <div class="pin-dot pin-boss">👑</div>
-          <div class="pin-name">地下基地</div>
-        </div>
-        <div class="map-pin" style="left:72%;top:80%">
-          <div class="pin-dot pin-safe">🌿</div>
-          <div class="pin-name">海滨度假村</div>
-        </div>
+        <div class="map-pin" style="left:22%;top:20%"><div class="pin-dot pin-hot">🔥</div><div class="pin-name" data-zh="风暴要塞" data-en="Storm Fortress">风暴要塞</div></div>
+        <div class="map-pin" style="left:65%;top:18%"><div class="pin-dot pin-boss">👑</div><div class="pin-name" data-zh="极地前哨" data-en="Arctic Outpost">极地前哨</div></div>
+        <div class="map-pin" style="left:50%;top:45%"><div class="pin-dot pin-hot">🔥</div><div class="pin-name" data-zh="中央枢纽" data-en="Central Hub">中央枢纽</div></div>
+        <div class="map-pin" style="left:18%;top:60%"><div class="pin-dot pin-safe">🌿</div><div class="pin-name" data-zh="林间小镇" data-en="Forest Town">林间小镇</div></div>
+        <div class="map-pin" style="left:78%;top:55%"><div class="pin-dot pin-mid">⚡</div><div class="pin-name" data-zh="工业港口" data-en="Industrial Port">工业港口</div></div>
+        <div class="map-pin" style="left:38%;top:75%"><div class="pin-dot pin-boss">👑</div><div class="pin-name" data-zh="地下基地" data-en="Underground Base">地下基地</div></div>
+        <div class="map-pin" style="left:72%;top:80%"><div class="pin-dot pin-safe">🌿</div><div class="pin-name" data-zh="海滨度假村" data-en="Beach Resort">海滨度假村</div></div>
       </div>
     </div>
     <div class="map-legend">
-      <div class="legend-item"><div class="legend-dot" style="background:#FF6B6B"></div>激烈竞争区</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#F6B93B"></div>中等竞争区</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#52C41A"></div>安全落点</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#6C63FF"></div>Boss 刷新点</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FF6B6B"></div><span data-zh="激烈竞争区" data-en="Hot Drop Zone">激烈竞争区</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#F6B93B"></div><span data-zh="中等竞争区" data-en="Medium Competition">中等竞争区</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#52C41A"></div><span data-zh="安全落点" data-en="Safe Landing">安全落点</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#6C63FF"></div><span data-zh="Boss 刷新点" data-en="Boss Spawn">Boss 刷新点</span></div>
     </div>
   </div>
 
-  <div class="section-title">各区域详解</div>
+  <div class="sec-title" data-zh="各区域详解" data-en="Location Breakdown">各区域详解</div>
   <div class="locations-grid">
     <div class="loc-card">
-      <div class="loc-header">
-        <div class="loc-icon" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3)">🏰</div>
-        <div><div class="loc-name">风暴要塞</div><div class="loc-type">A1 区域</div></div>
-      </div>
+      <div class="loc-header"><div class="loc-icon" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3)">🏰</div><div><div class="loc-name" data-zh="风暴要塞" data-en="Storm Fortress">风暴要塞</div><div class="loc-type" data-zh="A1 区域" data-en="Zone A1">A1 区域</div></div></div>
       <div class="loc-bars">
-        <div class="bar-row"><div class="bar-label">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:95%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:90%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:20%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="物资" data-en="Loot">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:95%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="竞争" data-en="Competition">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:90%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="安全" data-en="Safety">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:20%"></div></div></div>
       </div>
-      <div class="loc-tags"><span class="loc-tag hot">激烈竞争</span><span class="loc-tag">宝箱密集</span><span class="loc-tag">高风险高回报</span></div>
+      <div class="loc-tags"><span class="loc-tag hot" data-zh="激烈竞争" data-en="Hot Drop">激烈竞争</span><span class="loc-tag" data-zh="宝箱密集" data-en="Chest Dense">宝箱密集</span></div>
     </div>
-
     <div class="loc-card">
-      <div class="loc-header">
-        <div class="loc-icon" style="background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.3)">❄️</div>
-        <div><div class="loc-name">极地前哨</div><div class="loc-type">A3 区域 · Boss点</div></div>
-      </div>
+      <div class="loc-header"><div class="loc-icon" style="background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.3)">❄️</div><div><div class="loc-name" data-zh="极地前哨" data-en="Arctic Outpost">极地前哨</div><div class="loc-type" data-zh="A3 区域 · Boss点" data-en="Zone A3 · Boss Spawn">A3 区域 · Boss点</div></div></div>
       <div class="loc-bars">
-        <div class="bar-row"><div class="bar-label">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:100%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:85%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:15%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="物资" data-en="Loot">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:100%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="竞争" data-en="Competition">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:85%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="安全" data-en="Safety">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:15%"></div></div></div>
       </div>
-      <div class="loc-tags"><span class="loc-tag boss">Boss刷新</span><span class="loc-tag hot">神话掉落</span><span class="loc-tag">高手必争</span></div>
+      <div class="loc-tags"><span class="loc-tag boss" data-zh="Boss刷新" data-en="Boss Spawn">Boss刷新</span><span class="loc-tag hot" data-zh="神话掉落" data-en="Mythic Drop">神话掉落</span></div>
     </div>
-
     <div class="loc-card">
-      <div class="loc-header">
-        <div class="loc-icon" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3)">🏙</div>
-        <div><div class="loc-name">中央枢纽</div><div class="loc-type">B2 区域 · 地图中心</div></div>
-      </div>
+      <div class="loc-header"><div class="loc-icon" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3)">🏙</div><div><div class="loc-name" data-zh="中央枢纽" data-en="Central Hub">中央枢纽</div><div class="loc-type" data-zh="B2 区域 · 地图中心" data-en="Zone B2 · Map Center">B2 区域 · 地图中心</div></div></div>
       <div class="loc-bars">
-        <div class="bar-row"><div class="bar-label">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:88%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:95%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:10%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="物资" data-en="Loot">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:88%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="竞争" data-en="Competition">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:95%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="安全" data-en="Safety">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:10%"></div></div></div>
       </div>
-      <div class="loc-tags"><span class="loc-tag hot">最激烈</span><span class="loc-tag">地图中心</span><span class="loc-tag">不推荐新手</span></div>
+      <div class="loc-tags"><span class="loc-tag hot" data-zh="最激烈" data-en="Hottest Drop">最激烈</span><span class="loc-tag" data-zh="不推荐新手" data-en="Avoid as Beginner">不推荐新手</span></div>
     </div>
-
     <div class="loc-card">
-      <div class="loc-header">
-        <div class="loc-icon" style="background:rgba(82,196,26,0.15);border:1px solid rgba(82,196,26,0.3)">🌲</div>
-        <div><div class="loc-name">林间小镇</div><div class="loc-type">B1 区域 · 新手推荐</div></div>
-      </div>
+      <div class="loc-header"><div class="loc-icon" style="background:rgba(82,196,26,0.15);border:1px solid rgba(82,196,26,0.3)">🌲</div><div><div class="loc-name" data-zh="林间小镇" data-en="Forest Town">林间小镇</div><div class="loc-type" data-zh="B1 区域 · 新手推荐" data-en="Zone B1 · Beginner Pick">B1 区域 · 新手推荐</div></div></div>
       <div class="loc-bars">
-        <div class="bar-row"><div class="bar-label">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:65%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:25%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:85%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="物资" data-en="Loot">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:65%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="竞争" data-en="Competition">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:25%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="安全" data-en="Safety">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:85%"></div></div></div>
       </div>
-      <div class="loc-tags"><span class="loc-tag safe">新手友好</span><span class="loc-tag">木材丰富</span><span class="loc-tag">竞争低</span></div>
+      <div class="loc-tags"><span class="loc-tag safe" data-zh="新手友好" data-en="Beginner Friendly">新手友好</span><span class="loc-tag" data-zh="木材丰富" data-en="Wood Rich">木材丰富</span></div>
     </div>
-
     <div class="loc-card">
-      <div class="loc-header">
-        <div class="loc-icon" style="background:rgba(246,185,59,0.15);border:1px solid rgba(246,185,59,0.3)">⚓</div>
-        <div><div class="loc-name">工业港口</div><div class="loc-type">B3 区域</div></div>
-      </div>
+      <div class="loc-header"><div class="loc-icon" style="background:rgba(246,185,59,0.15);border:1px solid rgba(246,185,59,0.3)">⚓</div><div><div class="loc-name" data-zh="工业港口" data-en="Industrial Port">工业港口</div><div class="loc-type" data-zh="B3 区域" data-en="Zone B3">B3 区域</div></div></div>
       <div class="loc-bars">
-        <div class="bar-row"><div class="bar-label">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:78%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:55%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:50%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="物资" data-en="Loot">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:78%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="竞争" data-en="Competition">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:55%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="安全" data-en="Safety">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:50%"></div></div></div>
       </div>
-      <div class="loc-tags"><span class="loc-tag">金属丰富</span><span class="loc-tag">中等竞争</span><span class="loc-tag">进阶推荐</span></div>
+      <div class="loc-tags"><span class="loc-tag" data-zh="金属丰富" data-en="Metal Rich">金属丰富</span><span class="loc-tag" data-zh="中等竞争" data-en="Medium Competition">中等竞争</span></div>
     </div>
-
     <div class="loc-card">
-      <div class="loc-header">
-        <div class="loc-icon" style="background:rgba(79,195,247,0.15);border:1px solid rgba(79,195,247,0.3)">🏖</div>
-        <div><div class="loc-name">海滨度假村</div><div class="loc-type">C3 区域 · 新手推荐</div></div>
-      </div>
+      <div class="loc-header"><div class="loc-icon" style="background:rgba(79,195,247,0.15);border:1px solid rgba(79,195,247,0.3)">🏖</div><div><div class="loc-name" data-zh="海滨度假村" data-en="Beach Resort">海滨度假村</div><div class="loc-type" data-zh="C3 区域 · 新手推荐" data-en="Zone C3 · Beginner Pick">C3 区域 · 新手推荐</div></div></div>
       <div class="loc-bars">
-        <div class="bar-row"><div class="bar-label">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:70%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:20%"></div></div></div>
-        <div class="bar-row"><div class="bar-label">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:90%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="物资" data-en="Loot">物资</div><div class="bar-track"><div class="bar-fill fill-gold" style="width:70%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="竞争" data-en="Competition">竞争</div><div class="bar-track"><div class="bar-fill fill-red" style="width:20%"></div></div></div>
+        <div class="bar-row"><div class="bar-label" data-zh="安全" data-en="Safety">安全</div><div class="bar-track"><div class="bar-fill fill-green" style="width:90%"></div></div></div>
       </div>
-      <div class="loc-tags"><span class="loc-tag safe">最安全</span><span class="loc-tag">物资充足</span><span class="loc-tag">新手首选</span></div>
+      <div class="loc-tags"><span class="loc-tag safe" data-zh="最安全" data-en="Safest Drop">最安全</span><span class="loc-tag" data-zh="新手首选" data-en="Top Beginner Pick">新手首选</span></div>
     </div>
   </div>
 
-  <div class="section-title">落点选择技巧</div>
+  <div class="sec-title" data-zh="落点选择技巧" data-en="Drop Spot Tips">落点选择技巧</div>
   <div class="tips-row">
-    <div class="tip-card"><div class="tip-icon">🪂</div><div><div class="tip-title">根据巴士路线选落点</div><div class="tip-desc">巴士路线距离落点越远，竞争越少。新手优先选离巴士路线末端较远的区域，能有更多搜刮时间。</div></div></div>
-    <div class="tip-card"><div class="tip-icon">👑</div><div><div class="tip-title">Boss 点高风险高回报</div><div class="tip-desc">极地前哨和地下基地有 Boss 刷新，击杀 Boss 可获得神话武器，但竞争极激烈，不推荐新手。</div></div></div>
-    <div class="tip-card"><div class="tip-icon">🔄</div><div><div class="tip-title">搜完一区转移到邻近区</div><div class="tip-desc">单个区域搜刮完毕后，向圈心方向转移，沿途继续搜刮建筑，保持物资充足进入决赛圈。</div></div></div>
-    <div class="tip-card"><div class="tip-icon">📍</div><div><div class="tip-title">记住固定宝箱刷新点</div><div class="tip-desc">每个建筑物的宝箱位置是固定的（角落、阁楼、地下室），多玩几局就能记住，搜刮效率大幅提升。</div></div></div>
+    <div class="tip-card"><div class="tip-icon">🪂</div><div><div class="tip-title" data-zh="根据巴士路线选落点" data-en="Pick Your Drop Based on the Bus Route">根据巴士路线选落点</div><div class="tip-desc" data-zh="巴士路线距离落点越远，竞争越少。新手优先选离巴士路线末端较远的区域，能有更多搜刮时间。" data-en="The farther from the bus route, the less competition. Beginners should prioritize landing far from the path's end — more time to loot safely.">根据巴士路线选落点</div></div></div>
+    <div class="tip-card"><div class="tip-icon">👑</div><div><div class="tip-title" data-zh="Boss 点高风险高回报" data-en="Boss Locations: High Risk, High Reward">Boss 点高风险高回报</div><div class="tip-desc" data-zh="极地前哨和地下基地有 Boss 刷新，击杀 Boss 可获得神话武器，但竞争极激烈，不推荐新手。" data-en="Arctic Outpost and Underground Base have Boss spawns. Eliminating the Boss drops a Mythic weapon — but competition is fierce. Not recommended for beginners.">Boss 点高风险高回报</div></div></div>
+    <div class="tip-card"><div class="tip-icon">🔄</div><div><div class="tip-title" data-zh="搜完一区转移到邻近区" data-en="Rotate After Clearing a Zone">搜完一区转移到邻近区</div><div class="tip-desc" data-zh="单个区域搜刮完毕后，向圈心方向转移，沿途继续搜刮建筑，保持物资充足进入决赛圈。" data-en="After clearing one area, rotate toward the circle center and keep looting buildings along the way. Arrive at the final zone well-supplied.">搜完一区转移到邻近区</div></div></div>
+    <div class="tip-card"><div class="tip-icon">📍</div><div><div class="tip-title" data-zh="记住固定宝箱刷新点" data-en="Memorize Fixed Chest Spawn Locations">记住固定宝箱刷新点</div><div class="tip-desc" data-zh="每个建筑物的宝箱位置是固定的（角落、阁楼、地下室），多玩几局就能记住，搜刮效率大幅提升。" data-en="Chest locations in buildings are fixed — corners, attics, basements. A few matches is enough to memorize them, dramatically improving your looting speed.">记住固定宝箱刷新点</div></div></div>
   </div>
 </div>
+
+<div class="comments-section">
+  <div class="comments-title">💬 <span data-zh="评论区" data-en="Comments">评论区</span></div>
+  <script src="https://giscus.app/client.js" data-repo="hetao5088-cell/fortnite-guide" data-repo-id="R_kgDOSuhZyQ" data-category="General" data-category-id="DIC_kwDOSuhZyc4C-UyT" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" async></script>
+</div>
+
+<script src="lang.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
 </body>
 </html>
