@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Fortnite v34.20 Patch Notes — Boss Mythic Nerfed, Overshield Removed | FortnifeHubPro</title>
+<meta name="description" content="Fortnite v34.20 patch notes breakdown — Boss Mythic items nerfed, Overshield removed, Boss loadout limited to one player. Full analysis and what it means for your gameplay. 堡垒之夜v34.20补丁全解析。">
+<meta property="og:title" content="Fortnite v34.20 Patch Notes Analysis · FortnifeHubPro">
+<meta property="og:description" content="Boss Mythic nerfed, Overshield gone, Boss loadout capped at one — here's what changed and what it means.">
+<meta property="og:url" content="https://fortnitehubpro.com/news-v3420-patch.html">
+<meta property="og:type" content="article">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fortnitehubpro.com/news-v3420-patch.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--surface:#0d1220;--card:#111827;--border:rgba(99,179,237,0.12);--accent:#4FC3F7;--accent2:#F6B93B;--accent3:#6C63FF;--danger:#FF6B6B;--text:#E2E8F0;--muted:#64748B;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Noto Sans SC',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+  body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(79,195,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,195,247,0.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0;}
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(8,11,18,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+  .logo{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;display:flex;align-items:center;gap:8px;text-decoration:none;}
+  .logo span{color:var(--accent2);}
+  .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .nav-links{display:flex;gap:24px;align-items:center;}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-badge{background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:4px;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .lang-btn{background:rgba(79,195,247,0.1);border:1px solid rgba(79,195,247,0.3);color:var(--accent);font-size:12px;font-weight:700;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s;letter-spacing:1px;}
+  .lang-btn:hover{background:rgba(79,195,247,0.2);}
+
+  /* Article layout */
+  .article-wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:40px 32px 80px;display:grid;grid-template-columns:1fr 300px;gap:48px;}
+  .article-main{min-width:0;}
+  .article-sidebar{position:sticky;top:80px;height:fit-content;}
+
+  /* Breadcrumb */
+  .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:20px;}
+  .breadcrumb a{color:var(--accent);text-decoration:none;}
+  .breadcrumb span{margin:0 8px;}
+
+  /* Article header */
+  .article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.25);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:700;color:var(--danger);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+  .article-title{font-family:'Rajdhani',sans-serif;font-size:42px;font-weight:700;line-height:1.15;margin-bottom:16px;}
+  .article-title em{color:var(--accent);font-style:normal;}
+  .article-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--muted);margin-bottom:32px;flex-wrap:wrap;}
+  .meta-item{display:flex;align-items:center;gap:6px;}
+  .meta-divider{color:var(--border);}
+
+  /* Summary box */
+  .summary-box{background:linear-gradient(135deg,rgba(79,195,247,0.06),rgba(108,99,255,0.06));border:1px solid rgba(79,195,247,0.2);border-radius:12px;padding:20px 24px;margin-bottom:32px;}
+  .summary-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .summary-list{display:flex;flex-direction:column;gap:8px;}
+  .summary-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;}
+  .summary-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;}
+
+  /* Article body */
+  .article-body{font-size:15px;line-height:1.8;color:var(--text);}
+  .article-body h2{font-family:'Rajdhani',sans-serif;font-size:26px;font-weight:700;color:var(--text);margin:40px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
+  .article-body h2::before{content:'';display:block;width:4px;height:22px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);flex-shrink:0;}
+  .article-body h3{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:var(--text);margin:28px 0 12px;}
+  .article-body p{margin-bottom:16px;color:var(--text);}
+  .article-body strong{color:var(--accent2);}
+
+  /* Change cards */
+  .change-cards{display:flex;flex-direction:column;gap:14px;margin:20px 0;}
+  .change-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;}
+  .change-card.nerf{border-left:3px solid var(--danger);}
+  .change-card.buff{border-left:3px solid #52C41A;}
+  .change-card.neutral{border-left:3px solid var(--accent2);}
+  .change-icon{font-size:28px;flex-shrink:0;width:40px;text-align:center;}
+  .change-body{flex:1;}
+  .change-name{font-weight:700;font-size:15px;margin-bottom:4px;}
+  .change-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:8px;}
+  .change-badge{display:inline-block;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:0.5px;}
+  .badge-nerf{background:rgba(255,107,107,0.12);color:var(--danger);}
+  .badge-removed{background:rgba(255,107,107,0.2);color:#FF4444;}
+  .badge-neutral{background:rgba(246,185,59,0.12);color:var(--accent2);}
+
+  /* Before/After */
+  .before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+  .ba-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .ba-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+  .ba-label.before{color:var(--danger);}
+  .ba-label.after{color:#52C41A;}
+  .ba-content{font-size:13px;color:var(--muted);line-height:1.6;}
+
+  /* Impact rating */
+  .impact-row{display:flex;align-items:center;gap:12px;margin:20px 0;}
+  .impact-label{font-size:13px;color:var(--muted);width:80px;flex-shrink:0;}
+  .impact-bar-wrap{flex:1;display:flex;align-items:center;gap:10px;}
+  .impact-bar{height:6px;flex:1;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;}
+  .impact-fill{height:100%;border-radius:3px;}
+  .impact-high{background:var(--danger);}
+  .impact-mid{background:var(--accent2);}
+  .impact-low{background:var(--accent);}
+  .impact-num{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;width:32px;}
+
+  /* Tip box */
+  .tip-box{background:rgba(79,195,247,0.06);border:1px solid rgba(79,195,247,0.2);border-radius:10px;padding:16px 20px;margin:20px 0;font-size:14px;}
+  .tip-box-title{font-weight:700;color:var(--accent);margin-bottom:6px;}
+  .warn-box{background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.2);border-radius:10px;padding:16px 20px;margin:20px 0;font-size:14px;color:#FFB3B3;}
+
+  /* Related articles */
+  .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px;}
+  .related-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;text-decoration:none;transition:all 0.2s;display:block;}
+  .related-card:hover{border-color:rgba(79,195,247,0.3);transform:translateY(-2px);}
+  .related-cat{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+  .related-title{font-size:13px;font-weight:700;color:var(--text);line-height:1.4;}
+
+  /* Sidebar */
+  .sb-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px;}
+  .sb-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;margin-bottom:14px;color:var(--text);}
+  .toc-list{list-style:none;}
+  .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);}
+  .toc-list li:last-child{border-bottom:none;}
+  .toc-list a{font-size:13px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s;}
+  .toc-list a:hover{color:var(--accent);}
+  .toc-list a::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+  .patch-stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+  .patch-stat:last-child{border-bottom:none;}
+  .patch-stat-label{color:var(--muted);}
+  .patch-stat-val{font-weight:700;color:var(--text);}
+
+  /* Comments */
+  .comments-section{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 32px 80px;}
+  .comments-title{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+  .comments-title::before{content:'';display:block;width:4px;height:20px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px var(--accent);}
+
+  @media(max-width:900px){.article-wrap{grid-template-columns:1fr;}.article-sidebar{position:static;}.before-after{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html"><div class="logo-dot"></div>Fortnite<span>Hub</span></a>
+  <div class="nav-links">
+    <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+    <a href="beginner.html" data-zh="新手教程" data-en="Beginner Guide">新手教程</a>
+    <a href="weapons.html" data-zh="武器图鉴" data-en="Weapons">武器图鉴</a>
+    <a href="map.html" data-zh="地图攻略" data-en="Map Guide">地图攻略</a>
+    <a href="building.html" data-zh="建造技巧" data-en="Building">建造技巧</a>
+    <a href="battlepass.html" data-zh="战斗通行证" data-en="Battle Pass">战斗通行证</a>
+    <a href="esports.html"><span data-zh="赛事资讯" data-en="Esports">赛事资讯</span><span class="nav-badge">LIVE</span></a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" id="lang-btn" onclick="setLang(getLang()==='zh'?'en':'zh')">EN</button>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <div class="article-main">
+    <div class="breadcrumb">
+      <a href="index.html" data-zh="首页" data-en="Home">首页</a><span>›</span>
+      <a href="index.html#news" data-zh="最新动态" data-en="News">最新动态</a><span>›</span>
+      <span>v34.20</span>
+    </div>
+
+    <div class="article-tag">🔴 <span data-zh="补丁速报" data-en="Patch Notes">补丁速报</span></div>
+
+    <h1 class="article-title">
+      <span data-zh="v34.20 补丁全解析：" data-en="v34.20 Patch Notes: ">v34.20 补丁全解析：</span><br>
+      <em data-zh="神话削弱、护盾移除、Boss 装备限制" data-en="Mythic Nerfed, Overshield Removed, Boss Loadout Capped">神话削弱、护盾移除、Boss 装备限制</em>
+    </h1>
+
+    <div class="article-meta">
+      <div class="meta-item">📅 <span data-zh="2026年6月4日" data-en="June 4, 2026">2026年6月4日</span></div>
+      <div class="meta-divider">·</div>
+      <div class="meta-item">⏱ <span data-zh="5 分钟阅读" data-en="5 min read">5 分钟阅读</span></div>
+      <div class="meta-divider">·</div>
+      <div class="meta-item">🏷 <span data-zh="第七章第三赛季" data-en="Chapter 7 Season 3">第七章第三赛季</span></div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary-box">
+      <div class="summary-title">⚡ <span data-zh="补丁要点速览" data-en="Patch Highlights">补丁要点速览</span></div>
+      <div class="summary-list">
+        <div class="summary-item"><div class="summary-dot"></div><span data-zh="Boss 神话步枪伤害从 120 降至 105，DPS 同步削减" data-en="Boss Mythic Rifle damage reduced from 120 to 105, DPS reduced accordingly">Boss 神话步枪伤害从 120 降至 105，DPS 同步削减</span></div>
+        <div class="summary-item"><div class="summary-dot"></div><span data-zh="超级护盾（Overshield）机制完全移除" data-en="Overshield mechanic completely removed from the game">超级护盾（Overshield）机制完全移除</span></div>
+        <div class="summary-item"><div class="summary-dot"></div><span data-zh="同一场比赛中 Boss 套装现在只能由一名玩家携带" data-en="Boss loadout can now only be carried by one player per match">同一场比赛中 Boss 套装现在只能由一名玩家携带</span></div>
+        <div class="summary-item"><div class="summary-dot"></div><span data-zh="武器平衡小幅调整，战术步枪精度微增" data-en="Minor weapon balance tweaks — Tactical AR accuracy slightly increased">武器平衡小幅调整，战术步枪精度微增</span></div>
+      </div>
+    </div>
+
+    <div class="article-body">
+
+      <!-- Change 1 -->
+      <h2 id="mythic" data-zh="Boss 神话步枪削弱" data-en="Boss Mythic Rifle Nerf">Boss 神话步枪削弱</h2>
+
+      <p data-zh="自第七章第三赛季开始，Boss 神话步枪一直是绝对的 S 级武器，DPS 高达 312，全距离通杀，主导了大量竞技对局。Epic 在这次补丁中终于动刀，将其拉回到合理区间。" data-en="Since Chapter 7 Season 3 launched, the Boss Mythic Rifle has been the undisputed S-tier weapon — 312 DPS, effective at all ranges, dominating competitive play. Epic finally stepped in with this patch to bring it back into a reasonable range.">自第七章第三赛季开始，Boss 神话步枪一直是绝对的 S 级武器，DPS 高达 312，全距离通杀，主导了大量竞技对局。Epic 在这次补丁中终于动刀，将其拉回到合理区间。</p>
+
+      <div class="change-cards">
+        <div class="change-card nerf">
+          <div class="change-icon">🌀</div>
+          <div class="change-body">
+            <div class="change-name" data-zh="Boss 神话步枪" data-en="Boss Mythic Rifle">Boss 神话步枪</div>
+            <div class="change-desc" data-zh="单发伤害降低，射速不变，整体 DPS 下降约 12%。仍是强力武器但不再一家独大。" data-en="Base damage reduced, fire rate unchanged, overall DPS down ~12%. Still a powerful weapon but no longer completely dominant.">单发伤害降低，射速不变，整体 DPS 下降约 12%。仍是强力武器但不再一家独大。</div>
+            <span class="change-badge badge-nerf" data-zh="削弱" data-en="NERF">削弱</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="before-after">
+        <div class="ba-box">
+          <div class="ba-label before" data-zh="削弱前" data-en="Before">削弱前</div>
+          <div class="ba-content">
+            <div data-zh="单发伤害：120" data-en="Damage per shot: 120">单发伤害：120</div>
+            <div>DPS：312</div>
+            <div data-zh="弹夹：30发" data-en="Magazine: 30 rounds">弹夹：30发</div>
+          </div>
+        </div>
+        <div class="ba-box">
+          <div class="ba-label after" data-zh="削弱后" data-en="After">削弱后</div>
+          <div class="ba-content">
+            <div data-zh="单发伤害：105 (-12.5%)" data-en="Damage per shot: 105 (-12.5%)">单发伤害：105 (-12.5%)</div>
+            <div>DPS：274 (-12%)</div>
+            <div data-zh="弹夹：30发（不变）" data-en="Magazine: 30 rounds (unchanged)">弹夹：30发（不变）</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-title" data-zh="📊 对游戏的影响" data-en="📊 Impact on Gameplay">📊 对游戏的影响</div>
+        <p data-zh="神话步枪仍然值得争抢，但不再是必须拿到的胜负手。现在重型霰弹枪在近战中的优势更加突出，玩家需要更注重武器搭配而不是只依赖神话。" data-en="The Mythic Rifle is still worth fighting for, but no longer a must-have win condition. The Heavy Shotgun now has a stronger edge at close range. Players need to think more about weapon combos rather than relying purely on the Mythic.">神话步枪仍然值得争抢，但不再是必须拿到的胜负手。现在重型霰弹枪在近战中的优势更加突出，玩家需要更注重武器搭配而不是只依赖神话。</p>
+      </div>
+
+      <div class="impact-row">
+        <div class="impact-label" data-zh="竞技影响" data-en="Comp Impact">竞技影响</div>
+        <div class="impact-bar-wrap"><div class="impact-bar"><div class="impact-fill impact-high" style="width:85%"></div></div><div class="impact-num" style="color:var(--danger)">8.5</div></div>
+      </div>
+      <div class="impact-row">
+        <div class="impact-label" data-zh="休闲影响" data-en="Casual Impact">休闲影响</div>
+        <div class="impact-bar-wrap"><div class="impact-bar"><div class="impact-fill impact-mid" style="width:55%"></div></div><div class="impact-num" style="color:var(--accent2)">5.5</div></div>
+      </div>
+
+      <!-- Change 2 -->
+      <h2 id="overshield" data-zh="超级护盾彻底移除" data-en="Overshield Completely Removed">超级护盾彻底移除</h2>
+
+      <p data-zh="超级护盾（Overshield）是上赛季引入的机制，在普通护盾之外额外提供 50 点自动恢复的护盾层。这个机制显著降低了战斗节奏，让玩家更难一击制敌，社区对此争议较大。" data-en="The Overshield was introduced last season — an extra 50-point auto-regenerating shield layer on top of your normal shield. It noticeably slowed combat pace and made eliminations harder to secure. The community has been divided on it.">超级护盾（Overshield）是上赛季引入的机制，在普通护盾之外额外提供 50 点自动恢复的护盾层。这个机制显著降低了战斗节奏，让玩家更难一击制敌，社区对此争议较大。</p>
+
+      <div class="change-cards">
+        <div class="change-card nerf">
+          <div class="change-icon">🛡</div>
+          <div class="change-body">
+            <div class="change-name" data-zh="超级护盾（Overshield）" data-en="Overshield">超级护盾（Overshield）</div>
+            <div class="change-desc" data-zh="该机制从游戏中完全移除。玩家最大有效血量从 250 点（100血+100盾+50超级盾）恢复到 200 点（100血+100盾）。" data-en="Completely removed from the game. Max effective HP returns to 200 (100 HP + 100 Shield), down from 250 (100 HP + 100 Shield + 50 Overshield).">该机制从游戏中完全移除。玩家最大有效血量从 250 点（100血+100盾+50超级盾）恢复到 200 点（100血+100盾）。</div>
+            <span class="change-badge badge-removed" data-zh="移除" data-en="REMOVED">移除</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="warn-box">
+        <strong data-zh="⚠️ 新手注意：" data-en="⚠️ Beginners Note:">⚠️ 新手注意：</strong>
+        <span data-zh="如果你习惯了有超级护盾的打法，现在需要适应更低的有效血量。遭遇战中要更加谨慎，优先建墙保护自己。" data-en="If you're used to playing with the Overshield, adjust to your lower effective HP. Be more cautious in fights and prioritize building cover.">如果你习惯了有超级护盾的打法，现在需要适应更低的有效血量。遭遇战中要更加谨慎，优先建墙保护自己。</span>
+      </div>
+
+      <div class="impact-row">
+        <div class="impact-label" data-zh="竞技影响" data-en="Comp Impact">竞技影响</div>
+        <div class="impact-bar-wrap"><div class="impact-bar"><div class="impact-fill impact-high" style="width:90%"></div></div><div class="impact-num" style="color:var(--danger)">9.0</div></div>
+      </div>
+      <div class="impact-row">
+        <div class="impact-label" data-zh="休闲影响" data-en="Casual Impact">休闲影响</div>
+        <div class="impact-bar-wrap"><div class="impact-bar"><div class="impact-fill impact-high" style="width:75%"></div></div><div class="impact-num" style="color:var(--danger)">7.5</div></div>
+      </div>
+
+      <!-- Change 3 -->
+      <h2 id="boss-loadout" data-zh="Boss 套装限一人" data-en="Boss Loadout Capped at One Player">Boss 套装限一人</h2>
+
+      <p data-zh="此前，一个队伍可以让多名玩家同时携带 Boss 掉落的全套神话装备，在团队模式中造成极大的不平衡。现在每局比赛中 Boss 套装只能由一名玩家持有。" data-en="Previously, a squad could have multiple players all carrying the Boss's full Mythic loadout, creating severe imbalance in team modes. Now the Boss loadout can only be held by one player per match.">此前，一个队伍可以让多名玩家同时携带 Boss 掉落的全套神话装备，在团队模式中造成极大的不平衡。现在每局比赛中 Boss 套装只能由一名玩家持有。</p>
+
+      <div class="change-cards">
+        <div class="change-card neutral">
+          <div class="change-icon">👑</div>
+          <div class="change-body">
+            <div class="change-name" data-zh="Boss 套装携带限制" data-en="Boss Loadout Restriction">Boss 套装携带限制</div>
+            <div class="change-desc" data-zh="击杀 Boss 后，掉落的神话武器和套装只能由一名玩家拾取并完整使用。其他队友无法获得相同的 Boss 专属道具。" data-en="After eliminating the Boss, the dropped Mythic weapon and full loadout can only be picked up and used by one player. Teammates cannot obtain the same Boss-exclusive items.">击杀 Boss 后，掉落的神话武器和套装只能由一名玩家拾取并完整使用。其他队友无法获得相同的 Boss 专属道具。</div>
+            <span class="change-badge badge-neutral" data-zh="平衡调整" data-en="BALANCE">平衡调整</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-box-title" data-zh="💡 策略建议" data-en="💡 Strategy Tip">💡 策略建议</div>
+        <p data-zh="现在挑战 Boss 点的价值有所降低，因为整队只有一人能拿到神话。建议让队伍中战斗能力最强的玩家负责拾取 Boss 套装，其他队员专注抢占高地和保护。" data-en="Contesting Boss locations is now slightly less rewarding since only one teammate gets the Mythic. Have your strongest player pick up the Boss loadout while teammates focus on high ground control and protection.">现在挑战 Boss 点的价值有所降低，因为整队只有一人能拿到神话。建议让队伍中战斗能力最强的玩家负责拾取 Boss 套装，其他队员专注抢占高地和保护。</p>
+      </div>
+
+      <!-- Minor changes -->
+      <h2 id="minor" data-zh="其他小幅调整" data-en="Minor Balance Changes">其他小幅调整</h2>
+
+      <div class="change-cards">
+        <div class="change-card buff">
+          <div class="change-icon">🎯</div>
+          <div class="change-body">
+            <div class="change-name" data-zh="战术步枪 MK-7" data-en="Tactical AR MK-7">战术步枪 MK-7</div>
+            <div class="change-desc" data-zh="ADS（瞄准时）精度提升 5%，中距离命中率更稳定。" data-en="ADS accuracy improved by 5%, making mid-range shots more consistent.">ADS（瞄准时）精度提升 5%，中距离命中率更稳定。</div>
+            <span class="change-badge" style="background:rgba(82,196,26,0.12);color:#52C41A" data-zh="小幅增强" data-en="BUFF">小幅增强</span>
+          </div>
+        </div>
+        <div class="change-card nerf">
+          <div class="change-icon">💊</div>
+          <div class="change-body">
+            <div class="change-name" data-zh="护盾药水使用时间" data-en="Shield Potion Use Time">护盾药水使用时间</div>
+            <div class="change-desc" data-zh="大护盾饮用时间从 4.5 秒延长至 5 秒，战斗中使用风险更高。" data-en="Large Shield Potion drink time increased from 4.5s to 5s, making it riskier to use mid-fight.">大护盾饮用时间从 4.5 秒延长至 5 秒，战斗中使用风险更高。</div>
+            <span class="change-badge badge-nerf" data-zh="微削" data-en="NERF">微削</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verdict -->
+      <h2 id="verdict" data-zh="总结：这次补丁怎么看？" data-en="Verdict: What to Make of This Patch?">总结：这次补丁怎么看？</h2>
+
+      <p data-zh="v34.20 是一次明确的平衡性补丁，三项主要改动都指向同一个目标：降低单点强度，还原更平衡的对局节奏。超级护盾的移除影响最大，所有玩家都需要重新适应 200 点有效血量的战斗感。" data-en="v34.20 is a clear balance patch — all three major changes point toward the same goal: reducing single-point power spikes and restoring a more balanced game pace. The Overshield removal has the biggest impact; every player needs to readjust to fighting at 200 effective HP.">v34.20 是一次明确的平衡性补丁，三项主要改动都指向同一个目标：降低单点强度，还原更平衡的对局节奏。超级护盾的移除影响最大，所有玩家都需要重新适应 200 点有效血量的战斗感。</p>
+
+      <p data-zh="对于新手来说，这次改动总体是正向的：神话武器不再那么碾压，Boss 点的极端优势被削弱，游戏对普通玩家更友好。对于竞技玩家，超级护盾的消失意味着战斗节奏加快，建造和走位的重要性进一步提升。" data-en="For beginners, these changes are broadly positive — Mythic weapons are less oppressive, Boss locations are less of a guaranteed win, and the game is friendlier to average players. For competitive players, the Overshield removal speeds up combat, making building and rotation even more critical.">对于新手来说，这次改动总体是正向的：神话武器不再那么碾压，Boss 点的极端优势被削弱，游戏对普通玩家更友好。对于竞技玩家，超级护盾的消失意味着战斗节奏加快，建造和走位的重要性进一步提升。</p>
+
+      <!-- Related -->
+      <h2 data-zh="相关攻略" data-en="Related Guides">相关攻略</h2>
+      <div class="related-grid">
+        <a href="weapons.html" class="related-card">
+          <div class="related-cat" data-zh="武器图鉴" data-en="Weapons">武器图鉴</div>
+          <div class="related-title" data-zh="S3 武器强度排行：削弱后哪把枪最强？" data-en="S3 Weapon Tier List: Best Guns After the Nerf?">S3 武器强度排行：削弱后哪把枪最强？</div>
+        </a>
+        <a href="beginner.html" class="related-card">
+          <div class="related-cat" data-zh="新手教程" data-en="Beginner Guide">新手教程</div>
+          <div class="related-title" data-zh="护盾机制完全指南：如何在新版本管理血量" data-en="Complete Shield Guide: Managing HP in the New Meta">护盾机制完全指南：如何在新版本管理血量</div>
+        </a>
+        <a href="map.html" class="related-card">
+          <div class="related-cat" data-zh="地图攻略" data-en="Map Guide">地图攻略</div>
+          <div class="related-title" data-zh="Boss 点还值得去吗？v34.20 后的落点选择" data-en="Is Boss Location Still Worth It After v34.20?">Boss 点还值得去吗？v34.20 后的落点选择</div>
+        </a>
+        <a href="building.html" class="related-card">
+          <div class="related-cat" data-zh="建造技巧" data-en="Building">建造技巧</div>
+          <div class="related-title" data-zh="护盾削弱后，建造变得更重要了" data-en="With Less HP, Building Matters Even More">护盾削弱后，建造变得更重要了</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="article-sidebar">
+    <div class="sb-card">
+      <div class="sb-title" data-zh="📋 文章目录" data-en="📋 Contents">📋 文章目录</div>
+      <ul class="toc-list">
+        <li><a href="#mythic" data-zh="Boss 神话步枪削弱" data-en="Mythic Rifle Nerf">Boss 神话步枪削弱</a></li>
+        <li><a href="#overshield" data-zh="超级护盾移除" data-en="Overshield Removed">超级护盾移除</a></li>
+        <li><a href="#boss-loadout" data-zh="Boss 套装限一人" data-en="Boss Loadout Capped">Boss 套装限一人</a></li>
+        <li><a href="#minor" data-zh="其他小幅调整" data-en="Minor Changes">其他小幅调整</a></li>
+        <li><a href="#verdict" data-zh="总结" data-en="Verdict">总结</a></li>
+      </ul>
+    </div>
+    <div class="sb-card">
+      <div class="sb-title" data-zh="📦 补丁信息" data-en="📦 Patch Info">📦 补丁信息</div>
+      <div class="patch-stat"><div class="patch-stat-label" data-zh="版本号" data-en="Version">版本号</div><div class="patch-stat-val">v34.20</div></div>
+      <div class="patch-stat"><div class="patch-stat-label" data-zh="发布日期" data-en="Release Date">发布日期</div><div class="patch-stat-val" data-zh="2026年6月4日" data-en="June 4, 2026">2026年6月4日</div></div>
+      <div class="patch-stat"><div class="patch-stat-label" data-zh="赛季" data-en="Season">赛季</div><div class="patch-stat-val">Ch.7 S3</div></div>
+      <div class="patch-stat"><div class="patch-stat-label" data-zh="主要改动" data-en="Major Changes">主要改动</div><div class="patch-stat-val">3</div></div>
+      <div class="patch-stat"><div class="patch-stat-label" data-zh="次要改动" data-en="Minor Changes">次要改动</div><div class="patch-stat-val">2</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="comments-section">
+  <div class="comments-title">💬 <span data-zh="评论区" data-en="Comments">评论区</span></div>
+  <script src="https://giscus.app/client.js" data-repo="hetao5088-cell/fortnite-guide" data-repo-id="R_kgDOSuhZyQ" data-category="General" data-category-id="DIC_kwDOSuhZyc4C-UyT" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" async></script>
+</div>
+
+<script src="lang.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYZDSFELWH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SYZDSFELWH');</script>
+</body>
+</html>
